@@ -1,0 +1,607 @@
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  25% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  25% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+  scroll-margin-top: 6rem;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto, "system ui", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0.625rem;
+}
+
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 0.625rem;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #80808081;
+}
+
+body::-webkit-scrollbar-thumb:active,
+textarea::-webkit-scrollbar-thumb:active {
+  background: gray;
+}
+
+body {
+  background-color: #c4ced0;
+}
+
+img {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+button:focus, button:active {
+  outline: none;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+}
+
+.btn:active {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.btn.yellow {
+  background-color: #f5af31;
+}
+
+.btn.black {
+  background-color: #2a2a2a;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.aic {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.acc {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.jcc {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cg-05 {
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
+.cg-1 {
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.cg-2 {
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.cg-3 {
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+}
+
+.cg-4 {
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+}
+
+.col-2 {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.mt-05 {
+  margin-top: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  padding: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+@media (height: 600px) and (width: 1024px) {
+  section .intro {
+    margin-top: 4.5rem !important;
+  }
+}
+
+@media screen and (max-width: 1212px) {
+  main {
+    background-position: 100% 100%;
+    background-size: 110vw;
+  }
+  main .buttons .yellow {
+    -webkit-box-shadow: 0 3px 15px -4px #808080 !important;
+            box-shadow: 0 3px 15px -4px #808080 !important;
+  }
+}
+
+@media screen and (max-width: 1102px) {
+  main nav {
+    background-color: #fff;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  main {
+    background-size: 120vw;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  main {
+    background-position: 90% 100%;
+    background-size: 130vw;
+  }
+}
+
+@media screen and (max-width: 854px) {
+  main {
+    background-position: 80% 100%;
+    background-size: 150vw;
+  }
+}
+
+@media screen and (max-width: 737px) {
+  main {
+    background-position: 80% 100%;
+    background-size: 180vw;
+  }
+}
+
+@media screen and (max-width: 737px) {
+  main {
+    background-position: 77% 100%;
+    background-size: 180vw;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main {
+    background-position: 75% 0%;
+    background-size: 180vw;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  main {
+    background-position: 80% 0%;
+    background-size: 250vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    background-position: 80% 10%;
+    background-size: 250vw;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  main section .about .imgcont {
+    max-width: 90%;
+    max-height: 90%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main nav .navinner {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+  main nav .navinner .menu {
+    position: relative;
+    z-index: 50;
+  }
+  main nav .navinner .menu i.fa-bars {
+    display: block;
+  }
+  main nav .navinner .menu ul {
+    width: 100vw;
+    -webkit-box-shadow: 0 9px 15px -4px #808080ab;
+            box-shadow: 0 9px 15px -4px #808080ab;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    background-color: #fff;
+    display: none;
+    row-gap: 1rem;
+    position: absolute;
+    right: 0;
+    margin-right: -1rem;
+    margin-top: 1rem;
+  }
+  main nav .navinner .menu ul.show {
+    display: -ms-grid;
+    display: grid;
+  }
+  main nav .navinner .menu ul li {
+    border-bottom: 1px solid rgba(117, 117, 117, 0.24);
+  }
+  main nav .navinner .menu ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+  main section .intro .check-cont,
+  main section .about,
+  main section .skills,
+  main section .services,
+  main section .portfolio,
+  main section .testimonials,
+  main section .contact {
+    background-color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+  main section .intro .check-cont h4,
+  main section .about h4,
+  main section .skills h4,
+  main section .services h4,
+  main section .portfolio h4,
+  main section .testimonials h4,
+  main section .contact h4 {
+    font-size: 1.125rem !important;
+  }
+  main section .intro .check-cont span,
+  main section .intro .check-cont label,
+  main section .intro .check-cont input::-webkit-input-placeholder,
+  main section .intro .check-cont textarea::-webkit-input-placeholder,
+  main section .about span,
+  main section .about label,
+  main section .about input::-webkit-input-placeholder,
+  main section .about textarea::-webkit-input-placeholder,
+  main section .skills span,
+  main section .skills label,
+  main section .skills input::-webkit-input-placeholder,
+  main section .skills textarea::-webkit-input-placeholder,
+  main section .services span,
+  main section .services label,
+  main section .services input::-webkit-input-placeholder,
+  main section .services textarea::-webkit-input-placeholder,
+  main section .portfolio span,
+  main section .portfolio label,
+  main section .portfolio input::-webkit-input-placeholder,
+  main section .portfolio textarea::-webkit-input-placeholder,
+  main section .testimonials span,
+  main section .testimonials label,
+  main section .testimonials input::-webkit-input-placeholder,
+  main section .testimonials textarea::-webkit-input-placeholder,
+  main section .contact span,
+  main section .contact label,
+  main section .contact input::-webkit-input-placeholder,
+  main section .contact textarea::-webkit-input-placeholder {
+    font-size: 0.875rem !important;
+  }
+  main section .intro .check-cont span,
+  main section .intro .check-cont label,
+  main section .intro .check-cont input:-ms-input-placeholder,
+  main section .intro .check-cont textarea:-ms-input-placeholder,
+  main section .about span,
+  main section .about label,
+  main section .about input:-ms-input-placeholder,
+  main section .about textarea:-ms-input-placeholder,
+  main section .skills span,
+  main section .skills label,
+  main section .skills input:-ms-input-placeholder,
+  main section .skills textarea:-ms-input-placeholder,
+  main section .services span,
+  main section .services label,
+  main section .services input:-ms-input-placeholder,
+  main section .services textarea:-ms-input-placeholder,
+  main section .portfolio span,
+  main section .portfolio label,
+  main section .portfolio input:-ms-input-placeholder,
+  main section .portfolio textarea:-ms-input-placeholder,
+  main section .testimonials span,
+  main section .testimonials label,
+  main section .testimonials input:-ms-input-placeholder,
+  main section .testimonials textarea:-ms-input-placeholder,
+  main section .contact span,
+  main section .contact label,
+  main section .contact input:-ms-input-placeholder,
+  main section .contact textarea:-ms-input-placeholder {
+    font-size: 0.875rem !important;
+  }
+  main section .intro .check-cont span,
+  main section .intro .check-cont label,
+  main section .intro .check-cont input::-ms-input-placeholder,
+  main section .intro .check-cont textarea::-ms-input-placeholder,
+  main section .about span,
+  main section .about label,
+  main section .about input::-ms-input-placeholder,
+  main section .about textarea::-ms-input-placeholder,
+  main section .skills span,
+  main section .skills label,
+  main section .skills input::-ms-input-placeholder,
+  main section .skills textarea::-ms-input-placeholder,
+  main section .services span,
+  main section .services label,
+  main section .services input::-ms-input-placeholder,
+  main section .services textarea::-ms-input-placeholder,
+  main section .portfolio span,
+  main section .portfolio label,
+  main section .portfolio input::-ms-input-placeholder,
+  main section .portfolio textarea::-ms-input-placeholder,
+  main section .testimonials span,
+  main section .testimonials label,
+  main section .testimonials input::-ms-input-placeholder,
+  main section .testimonials textarea::-ms-input-placeholder,
+  main section .contact span,
+  main section .contact label,
+  main section .contact input::-ms-input-placeholder,
+  main section .contact textarea::-ms-input-placeholder {
+    font-size: 0.875rem !important;
+  }
+  main section .intro .check-cont span,
+  main section .intro .check-cont label,
+  main section .intro .check-cont input::placeholder,
+  main section .intro .check-cont textarea::placeholder,
+  main section .about span,
+  main section .about label,
+  main section .about input::placeholder,
+  main section .about textarea::placeholder,
+  main section .skills span,
+  main section .skills label,
+  main section .skills input::placeholder,
+  main section .skills textarea::placeholder,
+  main section .services span,
+  main section .services label,
+  main section .services input::placeholder,
+  main section .services textarea::placeholder,
+  main section .portfolio span,
+  main section .portfolio label,
+  main section .portfolio input::placeholder,
+  main section .portfolio textarea::placeholder,
+  main section .testimonials span,
+  main section .testimonials label,
+  main section .testimonials input::placeholder,
+  main section .testimonials textarea::placeholder,
+  main section .contact span,
+  main section .contact label,
+  main section .contact input::placeholder,
+  main section .contact textarea::placeholder {
+    font-size: 0.875rem !important;
+  }
+  main section .intro .check-cont p,
+  main section .intro .check-cont span:first-of-type,
+  main section .about p,
+  main section .about span:first-of-type,
+  main section .skills p,
+  main section .skills span:first-of-type,
+  main section .services p,
+  main section .services span:first-of-type,
+  main section .portfolio p,
+  main section .portfolio span:first-of-type,
+  main section .testimonials p,
+  main section .testimonials span:first-of-type,
+  main section .contact p,
+  main section .contact span:first-of-type {
+    font-size: 1rem !important;
+  }
+  main section .intro .check-cont,
+  main section .about,
+  main section .skills,
+  main section .contact {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+  main section .intro {
+    margin-top: 3.7rem;
+  }
+  main section .intro .name h2:last-of-type {
+    width: 70%;
+  }
+  main section .intro .name > p .location {
+    display: none;
+  }
+  main section .intro .email {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 0.4rem;
+  }
+  main section .intro .name .buttons .btn {
+    width: 50%;
+  }
+  main section .intro .check-cont {
+    margin-top: 3rem;
+  }
+  main section .intro .check-cont .check {
+    -ms-grid-columns: 1fr 8fr 1fr;
+        grid-template-columns: 1fr 8fr 1fr;
+    padding: 0.8rem 1rem;
+  }
+  main section .intro .check-cont .check i {
+    display: block;
+  }
+  main section .about .imgcont {
+    margin: auto;
+    width: 40%;
+  }
+  main section .skills .stackboxcont {
+    row-gap: 1rem !important;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  main section .skills .stackboxcont .stackbox {
+    height: 98px;
+    width: auto !important;
+  }
+  main section .skills .stackboxcont .stackbox img {
+    display: block;
+    width: 42px;
+    height: 42px;
+  }
+  main section .services > div,
+  main section .portfolio > div {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  main section .services .servicebox .text {
+    background-color: #fff;
+  }
+  footer {
+    display: -ms-grid;
+    display: grid;
+    row-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  main {
+    background-position: 100% 0%;
+    background-size: 200vw;
+  }
+  main section {
+    -webkit-transform: translateY(32vh);
+            transform: translateY(32vh);
+    background-color: #fff;
+    border-radius: 1rem;
+  }
+  main section .intro .name {
+    padding-top: 0.5rem;
+  }
+  main section .intro .name h2:last-of-type {
+    width: 100%;
+    font-size: 28px;
+  }
+  main section .intro .name p {
+    max-width: 100%;
+  }
+  main section .skills .stackboxcont {
+    -webkit-column-gap: 0.5rem !important;
+            column-gap: 0.5rem !important;
+  }
+  main section .skills .stackboxcont .stackbox {
+    height: 75px !important;
+    width: auto !important;
+  }
+  main section .skills .stackboxcont .stackbox img {
+    width: 38px;
+    height: 38px;
+  }
+  footer {
+    margin-top: 40vh;
+  }
+}
+/*# sourceMappingURL=mediaqueries.css.map */

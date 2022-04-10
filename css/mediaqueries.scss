@@ -1,0 +1,268 @@
+@import "./_globals";
+// for nest hub
+@media (height: 600px) and (width: 1024px) {
+  section .intro {
+    margin-top: 4.5rem !important;
+  }
+}
+
+// background
+@media screen and (max-width: 1212px) {
+  main {
+    background-position: 100% 100%;
+    background-size: 110vw;
+    .buttons .yellow {
+      box-shadow: 0 3px 15px -4px #808080 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1102px) {
+  main {
+    nav {
+      background-color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  main {
+    background-size: 120vw;
+  }
+}
+@media screen and (max-width: 925px) {
+  main {
+    background-position: 90% 100%;
+    background-size: 130vw;
+  }
+}
+@media screen and (max-width: 854px) {
+  main {
+    background-position: 80% 100%;
+    background-size: 150vw;
+  }
+}
+@media screen and (max-width: 737px) {
+  main {
+    background-position: 80% 100%;
+    background-size: 180vw;
+  }
+}
+@media screen and (max-width: 737px) {
+  main {
+    background-position: 77% 100%;
+    background-size: 180vw;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main {
+    background-position: 75% 0%;
+    background-size: 180vw;
+  }
+}
+@media screen and (max-width: 560px) {
+  main {
+    background-position: 80% 0%;
+    background-size: 250vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  main {
+    background-position: 80% 10%;
+    background-size: 250vw;
+  }
+}
+
+// styles
+@media screen and (max-width: 720px) {
+  main section .about {
+    .imgcont {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main {
+    // nav
+    nav .navinner {
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      .menu {
+        position: relative;
+        z-index: 50;
+        i.fa-bars {
+          display: block;
+        }
+        ul {
+          width: 100vw;
+          box-shadow: 0 9px 15px -4px #808080ab;
+          border-radius: $defaultBorderRadius;
+          padding: $defaultPadding;
+          padding-bottom: 1rem;
+          padding-top: 1.5rem;
+          background-color: #fff;
+          display: none;
+          row-gap: 1rem;
+          position: absolute;
+          // transform: translateX(calc(0.5rem - 100%));
+          right: 0;
+          margin-right: -1rem;
+          margin-top: 1rem;
+          &.show {
+            display: grid;
+          }
+          li {
+            border-bottom: 1px solid rgba(117, 117, 117, 0.24);
+            a {
+              display: block;
+              padding: 0.5rem 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    section {
+      .intro .check-cont,
+      .about,
+      .skills,
+      .services,
+      .portfolio,
+      .testimonials,
+      .contact {
+        background-color: #fff;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: $defaultBorderRadius;
+        h4 {
+          font-size: 1.125rem !important;
+        }
+        span,
+        label,
+        input::placeholder,
+        textarea::placeholder {
+          font-size: 0.875rem !important;
+        }
+        p,
+        span:first-of-type {
+          font-size: 1rem !important;
+        }
+      }
+      .intro .check-cont,
+      .about,
+      .skills,
+      .contact {
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+      }
+
+      .intro {
+        margin-top: 3.7rem;
+        .name {
+          h2:last-of-type {
+            width: 70%;
+          }
+          > p .location {
+            display: none;
+          }
+        }
+        .email {
+          flex-direction: column;
+          row-gap: 0.4rem;
+        }
+        .name .buttons .btn {
+          width: 50%;
+        }
+        .check-cont {
+          margin-top: 3rem;
+          .check {
+            grid-template-columns: 1fr 8fr 1fr;
+            padding: 0.8rem 1rem;
+            i {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .about .imgcont {
+        margin: auto;
+        width: 40%;
+      }
+
+      .skills .stackboxcont {
+        row-gap: 1rem !important;
+        column-gap: 1rem;
+        .stackbox {
+          height: 98px;
+          width: auto !important;
+          img {
+            display: block;
+            width: 42px;
+            height: 42px;
+          }
+        }
+      }
+      .services,
+      .portfolio {
+        > div {
+          grid-template-columns: 1fr;
+          height: max-content;
+        }
+      }
+
+      .services .servicebox {
+        .text {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: grid;
+    row-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  main {
+    background-position: 100% 0%;
+    background-size: 200vw;
+    section {
+      transform: translateY(32vh);
+      background-color: #fff;
+      border-radius: 1rem;
+      .intro {
+        .name {
+          padding-top: 0.5rem;
+          h2:last-of-type {
+            width: 100%;
+            font-size: 28px;
+          }
+          p {
+            max-width: 100%;
+          }
+        }
+      }
+
+      .skills .stackboxcont {
+        column-gap: 0.5rem !important;
+        .stackbox {
+          height: 75px !important;
+          width: auto !important;
+          img {
+            width: 38px;
+            height: 38px;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    margin-top: 40vh;
+  }
+}

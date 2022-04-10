@@ -1,0 +1,192 @@
+$defaultPadding: 0.5rem 1rem;
+$defaultPaddingSmall: 0.4rem 0.7rem;
+
+$defaultBorderRadius: 0.5rem;
+
+$logoRed: #e60023;
+$logoYellow: #f5af31;
+// $logoYellow: #7c3efa;
+$logoBlack: #2a2a2a;
+// $logoBlack: #2a2a2a;
+$logoGrey: #c4ced0;
+$fontGrey: #5e5e5e;
+$hoverGrey: #8080802f;
+$muted: #80808081;
+
+$defaultWidth: 1190px;
+$defaultWidth1: 1100px;
+$defaultWidth2: 700px;
+
+$shad: 0 6px 15px -5px #80808049;
+$shad1: 0 6px 30px -10px #80808049;
+$shad2: 0 3px 15px -4px #808080ab;
+
+$time: 0.3s;
+$time1: 1s;
+
+// animation
+@keyframes grow {
+  0% {
+    transform: scale(0.8);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+// setup
+* {
+  scroll-behavior: smooth;
+  scroll-margin-top: 6rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: "system ui", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  //   Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Roboto, "system ui", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+body,
+textarea {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0.625rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 0.625rem;
+    &:hover {
+      background: #80808081;
+    }
+    &:active {
+      background: gray;
+    }
+  }
+}
+
+body {
+  background-color: $logoGrey;
+}
+
+// general styles
+// i.fa,
+// i.fab {
+//   font-size: 1.1rem;
+// }
+
+img {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+// general classes
+.btn {
+  background-color: transparent;
+  padding: 0.75rem 1.5rem;
+  border-radius: $defaultBorderRadius;
+  color: white;
+  font-weight: 600;
+  &:active {
+    transform: scale(1.05);
+  }
+  &.yellow {
+    background-color: $logoYellow;
+  }
+  &.black {
+    background-color: $logoBlack;
+  }
+}
+
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
+
+.aic {
+  align-items: center;
+}
+.acc {
+  align-content: center;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+// columg-gaps
+.cg-05 {
+  column-gap: 0.5rem;
+}
+.cg-1 {
+  column-gap: 1rem;
+}
+.cg-2 {
+  column-gap: 2rem;
+}
+.cg-3 {
+  column-gap: 3rem;
+}
+.cg-4 {
+  column-gap: 4rem;
+}
+
+// columns
+.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+// margins
+.mt-05 {
+  margin-top: 0.5rem;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  padding: 2rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
