@@ -248,13 +248,6 @@ main .contact {
   margin-top: 6rem;
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
-  -webkit-transform: translateY(10rem);
-          transform: translateY(10rem);
-  opacity: 0;
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, -webkit-transform 1s;
-  transition: transform 1s, opacity 1s;
-  transition: transform 1s, opacity 1s, -webkit-transform 1s;
 }
 
 main .about h3,

@@ -2,25 +2,8 @@ backend_URL = "https://chineduisraeleportfolio.herokuapp.com/";
 let form = document.querySelector(".contact-form");
 let submitBtn = form.querySelector("button");
 let alerts = document.querySelector(".alert");
-var cordinate = 0;
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > cordinate) {
-    let nav = document.querySelector("nav");
-    nav.style.position = "static";
-    nav.style.zIndex = "10";
-    nav.style.backgroundColor = "transparent";
-    nav.style.opacity = "0";
-    cordinate = window.scrollY;
-  } else if (window.scrollY < cordinate) {
-    let nav = document.querySelector("nav");
-    nav.style.position = "sticky";
-    nav.style.zIndex = "10";
-    nav.style.backgroundColor = "#fff";
-    nav.style.opacity = "1";
-    cordinate = window.scrollY;
-  }
-});
+let menu = document.querySelector(".menu");
+let topbtn = document.querySelector(".topbtn");
 
 let switch_buttons = document.querySelector(".switch").children;
 let set_boxes = document.querySelector(".sets").children;
@@ -101,7 +84,6 @@ switch_buttons[1].addEventListener("click", () => {
 });
 
 // nav
-let menu = document.querySelector(".menu");
 menu.querySelector("i").addEventListener("click", () => {
   menu.querySelector("ul").classList.toggle("show");
 });
@@ -117,54 +99,49 @@ links.forEach((li) => {
   });
 });
 
-// form handler
+// form handler accesory functions
+const submitButtonChange = (opacity, inner, disabled) => {
+  submitBtn.style.opacity = opacity;
+  submitBtn.innerHTML = inner;
+  submitBtn.disabled = disabled;
+};
 
+const formAlert = (errorcls, message) => {
+  alerts.classList.add(errorcls);
+  alerts.classList.add("show");
+  alerts.querySelector(".text").innerHTML = message;
+
+  setTimeout(() => {
+    // enable submit btn
+    submitButtonChange(1, "Send", false);
+
+    alerts.classList.remove(errorcls);
+    alerts.classList.remove("show");
+  }, 1500);
+};
+
+// form hander
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let data = new FormData(e.target);
 
-  submitBtn.style.opacity = "0.5";
-  submitBtn.innerHTML = "Sending...";
-  submitBtn.disabled = true;
+  // disable submit btn
+  submitButtonChange(0.5, "Sending...", true);
 
   fetch(backend_URL + "message/", { method: "POST", body: data })
-    .then((res) => {
+    .then(() => {
+      // reset form
       form.reset();
-      alerts.classList.add("success");
-      alerts.classList.add("show");
-      alerts.querySelector(".text").innerHTML =
-        "Your Message was sent successfully!";
 
-      submitBtn.style.opacity = "1";
-      submitBtn.innerHTML = "Send";
-      submitBtn.disabled = false;
-
-      setTimeout(() => {
-        alerts.classList.remove("success");
-        alerts.classList.remove("show");
-      }, 1500);
+      formAlert("success", "Your Message was sent successfully!");
     })
-    .catch((err) => {
-      // form.reset();
-      alerts.classList.add("error");
-      alerts.classList.add("show");
-      alerts.querySelector(".text").innerHTML =
-        "There was a problem sending your message!";
-
-      submitBtn.style.opacity = "1";
-      submitBtn.innerHTML = "Send";
-      submitBtn.disabled = false;
-
-      setTimeout(() => {
-        alerts.classList.remove("error");
-        alerts.classList.remove("show");
-      }, 1500);
+    .catch(() => {
+      formAlert("error", "There was a problem sending your message!");
     });
 });
 
 // top button
 window.addEventListener("scroll", () => {
-  let topbtn = document.querySelector(".topbtn");
   if (window.scrollY > window.innerHeight * 1.5) {
     topbtn.classList.add("show");
   } else {

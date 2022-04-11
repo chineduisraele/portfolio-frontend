@@ -35,9 +35,6 @@ main {
     margin-top: 6rem;
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
-    transform: translateY(10rem);
-    opacity: 0;
-    transition: transform $time1, opacity $time1;
 
     h3 {
       padding: $defaultPaddingSmall;
