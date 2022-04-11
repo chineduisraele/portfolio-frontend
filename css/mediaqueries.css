@@ -309,8 +309,17 @@ button:focus, button:active {
   main nav .navinner .menu i.fa-bars {
     display: block;
   }
-  main nav .navinner .menu ul {
+  main nav .navinner .menu .listcont {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 1rem;
+    right: -1rem;
     width: 100vw;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  main nav .navinner .menu .listcont ul {
     -webkit-box-shadow: 0 9px 15px -4px #808080ab;
             box-shadow: 0 9px 15px -4px #808080ab;
     border-radius: 0.5rem;
@@ -318,21 +327,14 @@ button:focus, button:active {
     padding-bottom: 1rem;
     padding-top: 1.5rem;
     background-color: #fff;
-    display: none;
-    row-gap: 1rem;
-    position: absolute;
-    right: 0;
-    margin-right: -1rem;
-    margin-top: 1rem;
-  }
-  main nav .navinner .menu ul.show {
     display: -ms-grid;
     display: grid;
+    row-gap: 1rem;
   }
-  main nav .navinner .menu ul li {
+  main nav .navinner .menu .listcont ul li {
     border-bottom: 1px solid rgba(117, 117, 117, 0.24);
   }
-  main nav .navinner .menu ul li a {
+  main nav .navinner .menu .listcont ul li a {
     display: block;
     padding: 0.5rem 1rem;
   }

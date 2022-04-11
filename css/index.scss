@@ -318,6 +318,9 @@ main {
 
           &.show {
             display: grid;
+            .stackbox {
+              transition: all 0.3s;
+            }
           }
           .stackbox {
             cursor: pointer;
@@ -333,7 +336,6 @@ main {
             align-items: center;
             justify-content: center;
             background-color: #fff;
-
             img {
               display: block;
               width: 42px;

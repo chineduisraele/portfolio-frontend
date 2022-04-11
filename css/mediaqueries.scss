@@ -96,29 +96,30 @@
         i.fa-bars {
           display: block;
         }
-        ul {
-          width: 100vw;
-          box-shadow: 0 9px 15px -4px #808080ab;
-          border-radius: $defaultBorderRadius;
-          padding: $defaultPadding;
-          padding-bottom: 1rem;
-          padding-top: 1.5rem;
-          background-color: #fff;
-          display: none;
-          row-gap: 1rem;
+        .listcont {
+          height: 0;
+          overflow: hidden;
           position: absolute;
-          // transform: translateX(calc(0.5rem - 100%));
-          right: 0;
-          margin-right: -1rem;
           margin-top: 1rem;
-          &.show {
+          right: -1rem;
+          width: 100vw;
+          transition: all 0.3s;
+          ul {
+            box-shadow: 0 9px 15px -4px #808080ab;
+            border-radius: $defaultBorderRadius;
+            padding: $defaultPadding;
+            padding-bottom: 1rem;
+            padding-top: 1.5rem;
+            background-color: #fff;
             display: grid;
-          }
-          li {
-            border-bottom: 1px solid rgba(117, 117, 117, 0.24);
-            a {
-              display: block;
-              padding: 0.5rem 1rem;
+            row-gap: 1rem;
+
+            li {
+              border-bottom: 1px solid rgba(117, 117, 117, 0.24);
+              a {
+                display: block;
+                padding: 0.5rem 1rem;
+              }
             }
           }
         }
