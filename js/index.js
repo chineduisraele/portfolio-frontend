@@ -1,102 +1,84 @@
-backend_URL = "https://chineduisraeleportfolio.herokuapp.com/";
-let form = document.querySelector(".contact-form");
-let submitBtn = form.querySelector("button");
-let alerts = document.querySelector(".alert");
-let menu = document.querySelector(".menu");
-let topbtn = document.querySelector(".topbtn");
+let backend_URL = "https://chineduisraeleportfolio.herokuapp.com/",
+  // nav
+  menu = document.querySelector(".menu"),
+  menubar = menu.querySelector("i"),
+  listCont = document.querySelector(".listcont"),
+  menuList = menu.querySelector("ul"),
+  links = menu.querySelectorAll("li"),
+  // tool boxes
+  switch_buttons = document.querySelector(".switch").children,
+  set_boxes = document.querySelector(".sets").children,
+  skillBox = set_boxes[0].querySelectorAll(".stackbox"),
+  toolBox = set_boxes[1].querySelectorAll(".stackbox"),
+  // form
+  form = document.querySelector(".contact-form"),
+  submitBtn = form.querySelector("button"),
+  alerts = document.querySelector(".alert"),
+  topbtn = document.querySelector(".topbtn");
 
-let switch_buttons = document.querySelector(".switch").children;
-let set_boxes = document.querySelector(".sets").children;
+// nav
+menubar.addEventListener("click", () => {
+  let contHeight = listCont.clientHeight,
+    menuHeight = menuList.clientHeight;
 
-window.addEventListener("load", () => {
-  let time = 150;
-  switch_buttons[2].classList.remove("move");
-  set_boxes[0].classList.add("show");
-  set_boxes[1].classList.remove("show");
+  // toggle height
+  contHeight === 0
+    ? (listCont.style.height = `${menuHeight}px`)
+    : (listCont.style.height = 0);
+});
 
-  set_boxes[0].querySelectorAll(".stackbox").forEach((e, i) => {
-    setTimeout(() => {
-      e.style.opacity = "1";
-      e.style.visibility = "visible";
-      e.style.transform = "translate(0,0)";
-      e.style.transition = "all 0.3s";
-    }, time * i);
-  });
-
-  set_boxes[1].querySelectorAll(".stackbox").forEach((e, i) => {
-    setTimeout(() => {
-      e.style.opacity = "0";
-      e.style.visibility = "hidden";
-      e.style.transform = "translate(50%,50%)";
-    }, time * i);
+//change nav links color
+links.forEach((li) => {
+  li.addEventListener("click", (e) => {
+    menuList.querySelector("li.active").classList.remove("active");
+    e.currentTarget.classList.add("active");
+    listCont.style.height = 0;
   });
 });
 
+// tool boxes
+// toolbox accessory function
+const showBox = (e, i, show) => {
+  setTimeout(() => {
+    e.style.opacity = show ? "1" : "0";
+    e.style.visibility = show ? "visible" : "hidden";
+    e.style.transform = show ? "translate(0,0)" : "translate(50%,50%)";
+  }, 75 * i);
+};
+
+const toggleBox = (show, hide) => {
+  show === skillBox &&
+    (switch_buttons[2].classList.remove("move"),
+    set_boxes[0].classList.add("show"),
+    set_boxes[1].classList.remove("show"));
+
+  show === toolBox &&
+    (switch_buttons[2].classList.add("move"),
+    set_boxes[0].classList.remove("show"),
+    set_boxes[1].classList.add("show"));
+
+  show.forEach((e, i) => {
+    showBox(e, i, true);
+  });
+
+  hide.forEach((e, i) => {
+    showBox(e, i, false);
+  });
+};
+
+window.addEventListener("load", () => {
+  skillBox.forEach((e, i) => {
+    showBox(e, i, true);
+  });
+});
+
+// switch buttons
 switch_buttons[0].addEventListener("click", () => {
-  let time = 150;
-  switch_buttons[2].classList.remove("move");
-  set_boxes[0].classList.add("show");
-  set_boxes[1].classList.remove("show");
-
-  set_boxes[0].querySelectorAll(".stackbox").forEach((e, i) => {
-    setTimeout(() => {
-      e.style.opacity = "1";
-      e.style.visibility = "visible";
-      e.style.transform = "translate(0,0)";
-
-      e.style.transition = "all 0.3s";
-    }, time * i);
-  });
-
-  set_boxes[1].querySelectorAll(".stackbox").forEach((e, i) => {
-    setTimeout(() => {
-      e.style.opacity = "0";
-      e.style.visibility = "hidden";
-      e.style.transform = "translate(50%,50%)";
-    }, time * i);
-  });
+  toggleBox(skillBox, toolBox);
 });
 
 switch_buttons[1].addEventListener("click", () => {
-  let time = 150;
-
-  switch_buttons[2].classList.add("move");
-  set_boxes[0].classList.remove("show");
-  set_boxes[1].classList.add("show");
-
-  set_boxes[1].querySelectorAll(".stackbox").forEach((e, i) => {
-    setTimeout(() => {
-      e.style.opacity = "1";
-      e.style.visibility = "visible";
-      e.style.transform = "translate(0,0)";
-
-      e.style.transition = "all 0.3s";
-    }, time * i);
-  });
-
-  set_boxes[0].querySelectorAll(".stackbox").forEach((e, i) => {
-    setTimeout(() => {
-      e.style.opacity = "0";
-      e.style.visibility = "hidden";
-      e.style.transform = "translate(50%,50%)";
-    }, time * i);
-  });
-});
-
-// nav
-menu.querySelector("i").addEventListener("click", () => {
-  menu.querySelector("ul").classList.toggle("show");
-});
-
-// nav links color
-let links = document.querySelectorAll("li");
-
-links.forEach((li) => {
-  li.addEventListener("click", (e) => {
-    document.querySelector("li.active").classList.remove("active");
-    e.currentTarget.classList.add("active");
-    menu.querySelector("ul").classList.toggle("show");
-  });
+  toggleBox(toolBox, skillBox);
 });
 
 // form handler accesory functions
@@ -106,6 +88,7 @@ const submitButtonChange = (opacity, inner, disabled) => {
   submitBtn.disabled = disabled;
 };
 
+// form alert
 const formAlert = (errorcls, message) => {
   alerts.classList.add(errorcls);
   alerts.classList.add("show");
