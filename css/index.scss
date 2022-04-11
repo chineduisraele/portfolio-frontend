@@ -135,8 +135,7 @@ main {
       .name {
         transform: translateX(-20%);
         opacity: 0;
-        visibility: hidden;
-        transition: transform $time1, opacity $time1, visibility $time1;
+        transition: transform $time1, opacity $time1;
         p {
           max-width: 60%;
         }
@@ -171,8 +170,7 @@ main {
         padding: $defaultPaddingSmall;
         transform: translateY(100%);
         opacity: 0;
-        visibility: hidden;
-        transition: transform $time1, opacity $time1, visibility $time1;
+        transition: transform $time1, opacity $time1;
       }
 
       p > span:first-of-type {

@@ -8,6 +8,5 @@ window.addEventListener("load", () => {
   intro.forEach((it) => {
     it.style.transform = "translateX(0)";
     it.style.opacity = "1";
-    it.style.visibility = "visible";
   });
 });

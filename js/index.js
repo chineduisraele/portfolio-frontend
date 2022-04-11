@@ -1,7 +1,7 @@
 let backend_URL = "https://chineduisraeleportfolio.herokuapp.com/",
   // nav
   menu = document.querySelector(".menu"),
-  menubar = menu.querySelector("i"),
+  menubar = menu.querySelector("svg"),
   listCont = document.querySelector(".listcont"),
   menuList = menu.querySelector("ul"),
   links = menu.querySelectorAll("li"),

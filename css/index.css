@@ -374,11 +374,10 @@ main section .intro .name {
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
   opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 1s, visibility 1s, -webkit-transform 1s;
-  transition: opacity 1s, visibility 1s, -webkit-transform 1s;
-  transition: transform 1s, opacity 1s, visibility 1s;
-  transition: transform 1s, opacity 1s, visibility 1s, -webkit-transform 1s;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
 }
 
 main section .intro .name p {
@@ -422,11 +421,10 @@ main section .intro .check-cont {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 1s, visibility 1s, -webkit-transform 1s;
-  transition: opacity 1s, visibility 1s, -webkit-transform 1s;
-  transition: transform 1s, opacity 1s, visibility 1s;
-  transition: transform 1s, opacity 1s, visibility 1s, -webkit-transform 1s;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
 }
 
 main section .intro p > span:first-of-type {
