@@ -52,6 +52,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Roboto, "system ui", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-display: swap;
 }
 
 body::-webkit-scrollbar,
@@ -227,9 +228,6 @@ main {
   background-size: 100vw;
   max-width: 1190px;
   margin: auto;
-  margin-bottom: 6rem;
-  -webkit-box-shadow: 0 6px 30px -10px #80808049;
-          box-shadow: 0 6px 30px -10px #80808049;
   background-color: #fff;
   border-radius: 0.5rem;
 }
@@ -266,8 +264,9 @@ main .contact h3 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: Roboto;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.3rem;
+  font-display: swap;
   margin-bottom: 1rem;
 }
 
@@ -331,50 +330,40 @@ main nav .navinner {
   padding: 0.5rem 1rem;
   max-width: 1100px;
   margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main nav .navinner img {
   cursor: pointer;
-  width: 2.5rem;
+  width: 40px;
   height: auto;
   animation: grow 0.78s alternate-reverse infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
-main nav .navinner p {
-  font-family: cursive;
+main nav .navinner svg {
+  cursor: pointer;
 }
 
-main nav .navinner p,
 main nav .navinner li {
   font-weight: bold;
   font-size: 0.875rem;
   color: #2a2a2a;
 }
 
-main nav .navinner .menu {
+main nav .navinner .linkscont {
   margin-left: auto;
-  position: relative;
+  width: 100%;
 }
 
-main nav .navinner .menu i.fa-bars {
-  display: none;
-  cursor: pointer;
-  font-size: 1.3rem;
-}
-
-main nav .navinner .menu ul {
+main nav .navinner .linkscont ul {
   font-size: 0.875rem;
 }
 
-main nav .navinner .menu ul li.active a {
+main nav .navinner .linkscont ul li.active a {
   color: #f5af31;
-}
-
-main nav .navinner .menu ul li i {
-  font-size: 0.9rem;
-  margin-right: 0.1rem;
 }
 
 main section .intro {
