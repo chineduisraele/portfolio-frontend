@@ -1,4 +1,4 @@
-@import "./_globals";
+@import "./index.scss";
 // for nest hub
 @media (height: 600px) and (width: 1024px) {
   section .intro {
@@ -96,6 +96,9 @@
       }
 
       .linkscont {
+        &.show {
+          height: 324px;
+        }
         height: 0;
         overflow: hidden;
         position: absolute;
@@ -133,7 +136,9 @@
       .portfolio,
       .testimonials,
       .contact {
+        border-radius: $defaultBorderRadius;
         background-color: #fff;
+        box-shadow: none;
 
         h4 {
           font-size: 1.125rem !important;

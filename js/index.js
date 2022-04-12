@@ -16,17 +16,25 @@ let backend_URL = "https://chineduisraeleportfolio.herokuapp.com/",
   topbtn = document.querySelector(".topbtn");
 
 // nav
-toggleButton.addEventListener("click", () => {
-  linksCont.classList.toggle("show");
-});
+toggleButton.addEventListener(
+  "click",
+  () => {
+    linksCont.classList.toggle("show");
+  },
+  { passive: true }
+);
 
 //change nav links color
-links.forEach((li) => {
-  li.addEventListener("click", (e) => {
-    linksCont.querySelector("li.active").classList.remove("active");
-    e.currentTarget.classList.add("active");
-  });
-});
+links.forEach(
+  (li) => {
+    li.addEventListener("click", (e) => {
+      linksCont.querySelector("li.active").classList.remove("active");
+      e.currentTarget.classList.add("active");
+      linksCont.classList.toggle("show");
+    });
+  },
+  { passive: true }
+);
 
 // tool boxes
 // toolbox accessory function
@@ -57,20 +65,32 @@ const toggleBox = (show, hide) => {
   });
 };
 
-window.addEventListener("load", () => {
-  skillBox.forEach((e, i) => {
-    showBox(e, i, true);
-  });
-});
+window.addEventListener(
+  "load",
+  () => {
+    skillBox.forEach((e, i) => {
+      showBox(e, i, true);
+    });
+  },
+  { passive: true }
+);
 
 // switch buttons
-switch_buttons[0].addEventListener("click", () => {
-  toggleBox(skillBox, toolBox);
-});
+switch_buttons[0].addEventListener(
+  "click",
+  () => {
+    toggleBox(skillBox, toolBox);
+  },
+  { passive: true }
+);
 
-switch_buttons[1].addEventListener("click", () => {
-  toggleBox(toolBox, skillBox);
-});
+switch_buttons[1].addEventListener(
+  "click",
+  () => {
+    toggleBox(toolBox, skillBox);
+  },
+  { passive: true }
+);
 
 // form handler accesory functions
 const submitButtonChange = (opacity, inner, disabled) => {
@@ -95,30 +115,59 @@ const formAlert = (errorcls, message) => {
 };
 
 // form hander
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let data = new FormData(e.target);
+form.addEventListener(
+  "submit",
+  (e) => {
+    e.preventDefault();
+    let data = new FormData(e.target);
 
-  // disable submit btn
-  submitButtonChange(0.5, "Sending...", true);
+    // disable submit btn
+    submitButtonChange(0.5, "Sending...", true);
 
-  fetch(backend_URL + "message/", { method: "POST", body: data })
-    .then(() => {
-      // reset form
-      form.reset();
+    fetch(backend_URL + "message/", { method: "POST", body: data })
+      .then(() => {
+        // reset form
+        form.reset();
 
-      formAlert("success", "Your Message was sent successfully!");
-    })
-    .catch(() => {
-      formAlert("error", "There was a problem sending your message!");
-    });
-});
+        formAlert("success", "Your Message was sent successfully!");
+      })
+      .catch(() => {
+        formAlert("error", "There was a problem sending your message!");
+      });
+  },
+  { passive: true }
+);
 
 // top button
+window.addEventListener(
+  "scroll",
+  () => {
+    if (window.scrollY > 1200) {
+      topbtn.classList.add("show");
+    } else {
+      topbtn.classList.remove("show");
+    }
+  },
+  { passive: true }
+);
+
+// On load animation
+
+let others = [
+  document.querySelector(".about"),
+  document.querySelector(".skills"),
+  document.querySelector("#services"),
+  document.querySelector("#portfolio"),
+  document.querySelector(".contact"),
+];
+
+others.forEach((it) => console.log(it));
 window.addEventListener("scroll", () => {
-  if (window.scrollY > window.innerHeight * 1.5) {
-    topbtn.classList.add("show");
-  } else {
-    topbtn.classList.remove("show");
-  }
+  others.forEach((it, i) => {
+    if (it.getBoundingClientRect().top - window.innerHeight < 0) {
+      it.style.transform = "translate(0)";
+      it.style.opacity = "1";
+      it.style.zIndex = "0";
+    }
+  });
 });
