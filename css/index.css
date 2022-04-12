@@ -766,16 +766,17 @@ main section .contact form label {
 main section .contact form label svg {
   fill: rgba(128, 128, 128, 0.637);
   position: absolute;
-  height: 13px;
-  -webkit-transform: translate(0.15rem, 36px);
-          transform: translate(0.15rem, 36px);
+  height: 14px;
+  width: 14px;
+  -webkit-transform: translate(0.6rem, 33px);
+          transform: translate(0.6rem, 33px);
 }
 
 main section .contact form label input,
 main section .contact form label textarea {
   border: none;
   border-radius: 0.5rem;
-  padding: 0.75rem 0.75rem 0.75rem 2.1rem;
+  padding: 0.6rem 0.6rem 0.6rem 2.1rem;
   line-height: 1.2rem;
 }
 
@@ -801,18 +802,13 @@ main section .contact form label textarea::placeholder {
 
 main section .contact form label input:focus,
 main section .contact form label textarea:focus {
-  outline: none;
+  outline: 2.5px solid #f5af31;
 }
 
 main section .contact form label textarea {
-  padding-left: 0.45rem;
-  height: 6rem;
+  padding-left: 0.6rem;
+  height: 7rem;
   resize: none;
-}
-
-main section .contact form label textarea::first-line {
-  padding-left: 2rem;
-  margin-left: 2rem;
 }
 
 footer {
@@ -840,26 +836,10 @@ footer p {
   padding: 0.8rem;
 }
 
-footer p i {
-  color: red;
-  font-size: 1.1rem;
-  padding: 0.2rem;
-}
-
 footer p span {
-  display: inline-block;
   font-family: cursive;
   font-weight: bold;
   font-size: 1.1rem;
-  margin-right: auto;
-}
-
-footer p span img {
-  width: 2.5rem;
-  padding: 0.2rem 0.1rem 0.2rem 0.2rem;
-  height: auto;
-  -webkit-transform: translateY(30%);
-          transform: translateY(30%);
 }
 
 .alert {
@@ -868,27 +848,16 @@ footer p span img {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.74);
-  z-index: 75;
-  visibility: hidden;
+  background-color: #000000bd;
+  z-index: -10;
   opacity: 0;
-  -webkit-transition: visibility 0.5s, opacity 0.5s;
-  transition: visibility 0.5s, opacity 0.5s;
+  -webkit-transition: z-index 0.5s, opacity 0.5s;
+  transition: z-index 0.5s, opacity 0.5s;
 }
 
 .alert.show {
-  visibility: visible;
+  z-index: 1500;
   opacity: 1;
-}
-
-.alert.show.success i.fa-check-circle {
-  color: green;
-  visibility: visible;
-}
-
-.alert.show.error i.fa-info-circle {
-  visibility: visible;
-  color: red;
 }
 
 .alert .inner {
@@ -897,13 +866,6 @@ footer p span img {
   background-color: #fff;
   border-radius: 0.5rem;
   position: relative;
-}
-
-.alert .inner i {
-  visibility: hidden;
-  position: absolute;
-  left: 1rem;
-  font-size: 2rem;
 }
 
 .topbtn {
@@ -918,11 +880,11 @@ footer p span img {
   border-radius: 50%;
   -webkit-box-shadow: 0 3px 15px -4px #808080ab;
           box-shadow: 0 3px 15px -4px #808080ab;
+  z-index: -10;
   animation: grow 2s infinite alternate-reverse ease-in;
-  visibility: hidden;
 }
 
 .topbtn.show {
-  visibility: visible;
+  z-index: 100;
 }
 /*# sourceMappingURL=index.css.map */

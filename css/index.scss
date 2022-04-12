@@ -457,30 +457,27 @@ main {
           svg {
             fill: rgba(128, 128, 128, 0.637);
             position: absolute;
-            height: 13px;
-            transform: translate(0.15rem, 36px);
+            height: 14px;
+            width: 14px;
+            transform: translate(0.6rem, 33px);
           }
           input,
           textarea {
             border: none;
             border-radius: $defaultBorderRadius;
-            padding: 0.75rem 0.75rem 0.75rem 2.1rem;
+            padding: 0.6rem 0.6rem 0.6rem 2.1rem;
             line-height: 1.2rem;
             &::placeholder {
               color: gray;
             }
             &:focus {
-              outline: none;
+              outline: 2.5px solid $logoYellow;
             }
           }
           textarea {
-            padding-left: 0.45rem;
-            height: 6rem;
+            padding-left: 0.6rem;
+            height: 7rem;
             resize: none;
-            &::first-line {
-              padding-left: 2rem;
-              margin-left: 2rem;
-            }
           }
         }
       }
@@ -506,24 +503,10 @@ footer {
     background-color: #fff;
     border-radius: $defaultBorderRadius;
     padding: 0.8rem;
-
-    i {
-      color: red;
-      font-size: 1.1rem;
-      padding: 0.2rem;
-    }
     span {
-      display: inline-block;
       font-family: cursive;
       font-weight: bold;
       font-size: 1.1rem;
-      margin-right: auto;
-      img {
-        width: 2.5rem;
-        padding: 0.2rem 0.1rem 0.2rem 0.2rem;
-        height: auto;
-        transform: translateY(30%);
-      }
     }
   }
 }
@@ -534,27 +517,14 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.74);
-  z-index: 75;
-  visibility: hidden;
+  background-color: #000000bd;
+  z-index: -10;
   opacity: 0;
-  transition: visibility 0.5s, opacity 0.5s;
+  transition: z-index 0.5s, opacity 0.5s;
 
   &.show {
-    visibility: visible;
+    z-index: 1500;
     opacity: 1;
-    &.success {
-      i.fa-check-circle {
-        color: green;
-        visibility: visible;
-      }
-    }
-    &.error {
-      i.fa-info-circle {
-        visibility: visible;
-        color: red;
-      }
-    }
   }
   .inner {
     padding: 2rem;
@@ -562,12 +532,6 @@ footer {
     background-color: #fff;
     border-radius: $defaultBorderRadius;
     position: relative;
-    i {
-      visibility: hidden;
-      position: absolute;
-      left: 1rem;
-      font-size: 2rem;
-    }
   }
 }
 
@@ -582,9 +546,9 @@ footer {
   height: 40px;
   border-radius: 50%;
   box-shadow: $shad2;
+  z-index: -10;
   animation: grow 2s infinite alternate-reverse ease-in;
-  visibility: hidden;
   &.show {
-    visibility: visible;
+    z-index: 100;
   }
 }

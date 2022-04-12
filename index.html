@@ -12,7 +12,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/mediaqueries.css" />
+    <!-- <link rel="stylesheet" href="./css/mediaqueries.css" /> -->
 
     
       <!-- animate script -->
@@ -63,7 +63,7 @@
             Founder of Five Fingers Dev.</br> Professional UI/UX Designer and Full Stack Web developer based in Nigeria. </br>Sometimes works as a freelancer.
           </p>
           <!-- email and phone -->
-          <div class="email">
+          <div class="email d-flex">
             <p>
               <span class="d-block">Email:</span
               >
@@ -224,7 +224,7 @@
         <article class="services" >
         <h3>My Services</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ullam facere! Eum, nam voluptatibus! Veritatis?</p>
-        <div class="d-grid">
+        <div class="d-grid col-2">
           <div class="d-flex jcc servicebox">
             <img src="./images/124-1247377_website-development-png.webp" alt="web design" loading="lazy">
             <div class="overlay">
@@ -244,12 +244,43 @@
       </div>
 
       <!-- portfolio -->
-      <div id="portfolio">
-        <article class="portfolio">
+      <div id="services">
+        <article class="services">
         <h3>Portfolio</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ullam facere! Eum, nam voluptatibus! Veritatis?</p>
 
-        <div class="d-grid">
+        <div class="d-grid col-2">
+          <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
+            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
+            <div class="overlay">
+              <div class="text"><h4>Friendly Store</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
+            </div>
+          </a>
+          <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
+            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
+            <div class="overlay">
+              <div class="text"><h4>Neuron Network</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur lit.</p></div>
+            </div>
+          </a>
+          <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
+            <img src="./images/124-1247377_website-development-png.webp" alt="web design" loading="lazy">
+            <div class="overlay">
+              <div class="text"><h4>Chatty</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
+            </div>
+          </a>
+      </article>
+      </div>
+      
+      <!-- portfolio -->
+      <div id="services">
+        <article class="services">
+        <h3>Portfolio</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ullam facere! Eum, nam voluptatibus! Veritatis?</p>
+
+        <div class="d-grid col-2">
           <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
             <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
             <div class="overlay">
@@ -282,108 +313,117 @@
 
     
       <!-- contact -->
-        <div id="contact">
-        <article class="contact d-grid">
-        
-          <div class="contact-details">
-            <h3>Contact</h3>
-            <p>Get in touch and let me know how i can help. Fill out the form and i’ll be in touch as soon as possible.</p>
+      <div id="contact">
+          <article class="contact d-grid col-2">
+<!-- contact details -->
+              <div class="contact-details">
+                <h3>Contact</h3>
+                <p>Get in touch and let me know how i can help. Fill out the form and i’ll be in touch as soon as possible.</p>
 
-            <div class="contactbox d-flex">
-              <svg viewBox="0 0 556.000000 747.000000">
-                <use href="sprite.svg#address"></use>
-              </svg>
-              <p>
-                <span>Address</span>
-                <span>Central Hospital, Warri, </br> 311215, Delta, </br> Nigeria</span>
-              </p>
-            </div>
-
-            <div class="contactbox d-flex">
-                <svg viewBox="0 0 980.000000 976.000000">
-                  <use href="sprite.svg#phonetalk"></use>
-                </svg>
-                <p>
-                  <span>Phone</span>
-                  <span>(+234) 90 646 876 26</span>
-                </p>
-            </div>
-            <div class="contactbox d-flex">
-              <svg viewBox="0 0 730.000000 483.000000">
-                <use href="sprite.svg#envelope"></use>
-              </svg>
-              <p>
-                <span>Email</span>
-                <span>Israelfivefingers@gmail.com</span>
-              </p>
-            </div>
-
-          <!-- social links -->
-          <div class="d-flex social cg-05">
-            <a href="#" aria-label="linkedin link">
-              <svg viewBox="0 0 2000.000000 2000.000000">
-                <use href="sprite.svg#linkedin"></use>
-              </svg>
-            </a>
-            <a href="#" aria-label="twitter link">
-              <svg viewBox="0 0 365.000000 319.000000" >
-                <use href="sprite.svg#twitter"></use>
-              </svg>
-            </a>
-            <a href="#" aria-label="github link">
-              <svg viewBox="0 0 460.000000 450.000000">
-                <use href="sprite.svg#github"></use>
-              </svg>
-            </a>
-            <a href="#" aria-label="facebook link">
-              <svg viewBox="0 0 980.000000 980.000000" >
-                <use href="sprite.svg#facebook"></use>
-              </svg>
-            </a>
-          </div>
-            </div>
-
-      
-
-            <form class="contact-form d-grid">
-              <label>
-                Name*
-                <input required type="text" name="name" placeholder="e.g john doe"> 
-                <svg viewBox="0 0 2502.000000 2503.000000">
-                  <use href="sprite.svg#user"></use>
-                </svg>
-              </label>
-
-              <label>
-                Email*
-                <input required type="email" name="email" placeholder="e.g johndoe@email.com"> 
-                  <svg viewBox="0 0 730.000000 483.000000">
-                      <use href="sprite.svg#envelope"></use>
-                    </svg>              
-                  </label>
-              <label>
-                Phone Number
-                <input type="tel" name="phone" placeholder="eg. 12345678"> 
-                  <svg viewBox="0 0 981.000000 934.000000">
-                    <use href="sprite.svg#phone"></use>
+                <div class="contactbox d-flex">
+                  <svg viewBox="0 0 556.000000 747.000000">
+                    <use href="sprite.svg#address"></use>
                   </svg>
-              </label>
-              <label>
-                Message*
-                <textarea required name="message" placeholder="type message here..."></textarea> 
-                
-              </label>
+                  <p>
+                    <span>Address</span>
+                    <span>Central Hospital, Warri, </br> 311215, Delta, </br> Nigeria</span>
+                  </p>
+                </div>
 
-              <button type="submit" class="btn yellow">Send</button>
-            </form>
-          </div>
-        </div>
-      </article>
+                <div class="contactbox d-flex">
+                    <svg viewBox="0 0 980.000000 976.000000">
+                      <use href="sprite.svg#phonetalk"></use>
+                    </svg>
+                    <p>
+                      <span>Phone</span>
+                      <span>(+234) 90 646 876 26</span>
+                    </p>
+                </div>
+                <div class="contactbox d-flex">
+                  <svg viewBox="0 0 730.000000 483.000000">
+                    <use href="sprite.svg#envelope"></use>
+                  </svg>
+                  <p>
+                    <span>Email</span>
+                    <span>Israelfivefingers@gmail.com</span>
+                  </p>
+                </div>
+
+              <!-- social links -->
+                <div class="d-flex social cg-05">
+                  <a href="#" aria-label="linkedin link">
+                    <svg viewBox="0 0 2000.000000 2000.000000">
+                      <use href="sprite.svg#linkedin"></use>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="twitter link">
+                    <svg viewBox="0 0 365.000000 319.000000" >
+                      <use href="sprite.svg#twitter"></use>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="github link">
+                    <svg viewBox="0 0 460.000000 450.000000">
+                      <use href="sprite.svg#github"></use>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="facebook link">
+                    <svg viewBox="0 0 980.000000 980.000000" >
+                      <use href="sprite.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+        
+  <!-- form -->
+              <form class="contact-form d-grid">
+                <label>
+                  Name*
+                  <input required type="text" name="name" placeholder="e.g john doe"> 
+                  <svg viewBox="0 0 2502.000000 2503.000000">
+                    <use href="sprite.svg#user"></use>
+                  </svg>
+                </label>
+
+                <label>
+                  Email*
+                  <input required type="email" name="email" placeholder="e.g johndoe@email.com"> 
+                    <svg viewBox="0 0 730.000000 483.000000">
+                        <use href="sprite.svg#envelope"></use>
+                      </svg>              
+                    </label>
+                <label>
+                  Phone Number
+                  <input type="tel" name="phone" placeholder="eg. 12345678"> 
+                    <svg viewBox="0 0 981.000000 934.000000">
+                      <use href="sprite.svg#phone"></use>
+                    </svg>
+                </label>
+                <label>
+                  Message*
+                  <textarea required name="message" placeholder="type message here..."></textarea> 
+                  
+                </label>
+
+                <button type="submit" class="btn yellow">Send</button>
+              </form>
+            
+          </article>
       </div>
     </section>
 
     <footer>
-      <p>Created with Love by <span><img src="./images/logo.webp" alt="" loading="lazy">ive Fingers Dev.</span></p>
+      <p>Created with 
+        
+        <svg viewBox="0 0 974.000000 738.000000" style="fill:red;height:34px;width:34px;display:inline-block;transform:translate(-5%,28%);padding:0.25rem">
+              <use href="sprite.svg#hearts" ></use>
+        </svg>
+         by <span style="margin-left: 0.5rem;">
+         <svg viewBox="0 0 68.000000 68.000000" style="background:#f5af31;height:30px;width:30px;display:inline-block;transform:translate(-5%,28%);border-radius:50%;">
+              <use href="sprite.svg#logo" ></use>
+        </svg>ingers Dev.
+      </span>
+    </p>
      <p>Powered by Django. &copy; 2022</p>
    </footer>
    </main>
@@ -401,7 +441,6 @@
    <!-- top button -->
    <a href="#" class="topbtn d-flex aic jcc" aria-label="to top">up</a>
 
-   <div class="bottomshaddow"></div>
    
    <script src="./js/index.js" defer></script>
   </body>
