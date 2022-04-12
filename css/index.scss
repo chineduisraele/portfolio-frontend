@@ -88,10 +88,8 @@ main {
       max-width: $defaultWidth1;
       margin: auto;
       flex-wrap: wrap;
-      img {
-        cursor: pointer;
-        width: 40px;
-        height: auto;
+      position: relative;
+      .logo {
         animation: grow 0.78s alternate-reverse infinite;
         animation-timing-function: linear;
       }
@@ -100,22 +98,51 @@ main {
         cursor: pointer;
       }
 
-      li {
-        font-weight: bold;
-        font-size: 0.875rem;
-        color: $logoBlack;
-      }
       .linkscont {
-        margin-left: auto;
-        width: 100%;
-        ul {
-          font-size: 0.875rem;
-          li {
-            &.active a {
-              color: $logoYellow;
-            }
-          }
-        }
+        // // margin-left: auto;
+        // transition: transform 0.35s;
+        // transform: translateX(-110%);
+        // width: 100%;
+        // position: absolute;
+        // z-index: 100;
+        // top: 3.5rem;
+        // left: 0;
+        // height: 100vh;
+        // background-color: #fff;
+        // box-shadow: 0 9px 15px -4px #808080ab;
+        // position: fixed;
+        // &.show {
+        //   transform: translateX(0);
+        // }
+        // ul {
+        //   align-items: start;
+        //   border-radius: $defaultBorderRadius;
+        //   padding: $defaultPadding;
+        //   padding-bottom: 1rem;
+        //   padding-top: 1.5rem;
+        //   background-color: #fff;
+        //   display: grid;
+        //   row-gap: 1rem;
+
+        //   li {
+        //     border-bottom: 1px solid rgba(117, 117, 117, 0.24);
+        //     a {
+        //       display: block;
+        //       padding: 0.5rem 1rem;
+        //     }
+        //   }
+        //   font-size: 0.875rem;
+        //   // li {
+        //   //   font-weight: bold;
+        //   //   font-size: 0.875rem;
+        //   //   color: $logoBlack;
+        //   // }
+        //   // li {
+        //   //   &.active a {
+        //   //     color: $logoYellow;
+        //   //   }
+        //   // }
+        // }
       }
     }
   }
@@ -124,8 +151,10 @@ main {
     .intro {
       margin-top: 5.5rem;
       .name {
+        position: relative;
         transform: translateX(-20%);
         opacity: 0;
+        z-index: -10;
         transition: transform $time1, opacity $time1;
         p {
           max-width: 60%;
@@ -135,10 +164,19 @@ main {
         > div {
           padding: $defaultPaddingSmall;
         }
-        > p,
-        p > a {
-          color: $fontGrey !important;
+
+        // email
+        p {
+          color: $fontGrey;
+          span {
+            color: black;
+            font-weight: bold;
+          }
+          a {
+            color: $fontGrey;
+          }
         }
+
         .buttons {
           margin-top: 1rem;
           width: 100%;
@@ -164,9 +202,6 @@ main {
         transition: transform $time1, opacity $time1;
       }
 
-      p > span:first-of-type {
-        font-weight: bold;
-      }
       // checks
       .check-cont {
         grid-template-columns: repeat(3, 1fr);
@@ -191,40 +226,11 @@ main {
             }
             > span:first-of-type {
               font-size: 1.2rem;
-
               color: $logoYellow;
             }
             > span:last-of-type {
               font-size: 0.825rem;
             }
-          }
-          div {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            padding: 0.4rem;
-            background-color: rgba(128, 128, 128, 0.233);
-            justify-self: center;
-
-            img {
-              width: 100%;
-              height: 100%;
-              &.invert {
-                filter: invert(1);
-              }
-            }
-            &.black {
-              background-color: $logoBlack;
-            }
-            &.yellow {
-              background-color: $logoYellow;
-            }
-          }
-          i {
-            justify-self: center;
-            display: none;
-            font-weight: 400;
-            font-size: 1.2rem;
           }
         }
       }
@@ -285,9 +291,6 @@ main {
 
             font-weight: 500;
             color: #fff;
-            // &.active {
-            //   color: #fff;
-            // }
           }
           .switchcontrol {
             position: absolute;
@@ -336,49 +339,29 @@ main {
       }
     }
 
-    // services
-    .services,
+    // service, portfolio
     .portfolio {
-      > div {
-        margin: $defaultPaddingSmall;
-        gap: 1rem;
-      }
       > p {
         padding: $defaultPaddingSmall;
         color: $fontGrey;
       }
-
-      .servicebox {
-        background-color: #fff;
-        flex-direction: column;
-        padding: 1.3rem;
-        border-radius: $defaultBorderRadius;
-        position: relative;
-        overflow: hidden;
-        box-shadow: $shad2;
-
-        img {
-          width: 100%;
-          display: block;
-        }
-        .overlay {
-          // display: none;
-          position: absolute;
-          // background-color: rgba(135, 207, 235, 0.25);
-          // background-color: #2a2a2a25;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
+      > div {
+        margin: $defaultPaddingSmall;
+        margin-top: 1rem;
+        gap: 1rem;
+        .portfoliobox {
+          background-color: #fff;
+          border-radius: $defaultBorderRadius;
+          box-shadow: $shad2;
+          img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+          }
 
           .text {
-            // transform: translateY(110%);
             padding: 1rem;
-            border-radius: $defaultBorderRadius;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-
             h4 {
               color: $logoYellow;
               font-weight: bold;
@@ -390,22 +373,6 @@ main {
               color: $fontGrey;
             }
           }
-        }
-      }
-    }
-
-    .services {
-      > div {
-        height: 300px;
-      }
-    }
-    .portfolio .servicebox {
-      .overlay {
-        // background-color: #2a2a2aad;
-        position: relative;
-        .text {
-          position: relative !important;
-          padding-bottom: 0 !important;
         }
       }
     }
@@ -444,7 +411,7 @@ main {
       }
       form {
         margin: $defaultPaddingSmall;
-        row-gap: 1.2rem;
+        row-gap: 1rem;
         padding: 1.5rem 1rem;
         border-radius: $defaultBorderRadius;
         background-color: $logoBlack;

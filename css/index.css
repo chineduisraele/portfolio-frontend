@@ -332,12 +332,10 @@ main nav .navinner {
   margin: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
 }
 
-main nav .navinner img {
-  cursor: pointer;
-  width: 40px;
-  height: auto;
+main nav .navinner .logo {
   animation: grow 0.78s alternate-reverse infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
@@ -347,33 +345,16 @@ main nav .navinner svg {
   cursor: pointer;
 }
 
-main nav .navinner li {
-  font-weight: bold;
-  font-size: 0.875rem;
-  color: #2a2a2a;
-}
-
-main nav .navinner .linkscont {
-  margin-left: auto;
-  width: 100%;
-}
-
-main nav .navinner .linkscont ul {
-  font-size: 0.875rem;
-}
-
-main nav .navinner .linkscont ul li.active a {
-  color: #f5af31;
-}
-
 main section .intro {
   margin-top: 5.5rem;
 }
 
 main section .intro .name {
+  position: relative;
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
   opacity: 0;
+  z-index: -10;
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, -webkit-transform 1s;
   transition: transform 1s, opacity 1s;
@@ -390,9 +371,17 @@ main section .intro .name > div {
   padding: 0.4rem 0.7rem;
 }
 
-main section .intro .name > p,
-main section .intro .name p > a {
-  color: #5e5e5e !important;
+main section .intro .name p {
+  color: #5e5e5e;
+}
+
+main section .intro .name p span {
+  color: black;
+  font-weight: bold;
+}
+
+main section .intro .name p a {
+  color: #5e5e5e;
 }
 
 main section .intro .name .buttons {
@@ -425,10 +414,6 @@ main section .intro .check-cont {
   transition: opacity 1s, -webkit-transform 1s;
   transition: transform 1s, opacity 1s;
   transition: transform 1s, opacity 1s, -webkit-transform 1s;
-}
-
-main section .intro p > span:first-of-type {
-  font-weight: bold;
 }
 
 main section .intro .check-cont {
@@ -467,42 +452,6 @@ main section .intro .check-cont .check p > span:first-of-type {
 
 main section .intro .check-cont .check p > span:last-of-type {
   font-size: 0.825rem;
-}
-
-main section .intro .check-cont .check div {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  padding: 0.4rem;
-  background-color: rgba(128, 128, 128, 0.233);
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-main section .intro .check-cont .check div img {
-  width: 100%;
-  height: 100%;
-}
-
-main section .intro .check-cont .check div img.invert {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
-main section .intro .check-cont .check div.black {
-  background-color: #2a2a2a;
-}
-
-main section .intro .check-cont .check div.yellow {
-  background-color: #f5af31;
-}
-
-main section .intro .check-cont .check i {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  display: none;
-  font-weight: 400;
-  font-size: 1.2rem;
 }
 
 main section .about {
@@ -633,82 +582,46 @@ main section .skills .sets .stackboxcont img {
   transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
 
-main section .services > div,
-main section .portfolio > div {
-  margin: 0.4rem 0.7rem;
-  gap: 1rem;
-}
-
-main section .services > p,
 main section .portfolio > p {
   padding: 0.4rem 0.7rem;
   color: #5e5e5e;
 }
 
-main section .services .servicebox,
-main section .portfolio .servicebox {
+main section .portfolio > div {
+  margin: 0.4rem 0.7rem;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+main section .portfolio > div .portfoliobox {
   background-color: #fff;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1.3rem;
   border-radius: 0.5rem;
-  position: relative;
-  overflow: hidden;
   -webkit-box-shadow: 0 3px 15px -4px #808080ab;
           box-shadow: 0 3px 15px -4px #808080ab;
 }
 
-main section .services .servicebox img,
-main section .portfolio .servicebox img {
+main section .portfolio > div .portfoliobox img {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 
-main section .services .servicebox .overlay,
-main section .portfolio .servicebox .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-main section .services .servicebox .overlay .text,
-main section .portfolio .servicebox .overlay .text {
+main section .portfolio > div .portfoliobox .text {
   padding: 1rem;
-  border-radius: 0.5rem;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
-main section .services .servicebox .overlay .text h4,
-main section .portfolio .servicebox .overlay .text h4 {
+main section .portfolio > div .portfoliobox .text h4 {
   color: #f5af31;
   font-weight: bold;
   text-align: center;
 }
 
-main section .services .servicebox .overlay .text p,
-main section .portfolio .servicebox .overlay .text p {
+main section .portfolio > div .portfoliobox .text p {
   text-align: center;
   font-size: 0.75rem;
   color: #5e5e5e;
-}
-
-main section .services > div {
-  height: 300px;
-}
-
-main section .portfolio .servicebox .overlay {
-  position: relative;
-}
-
-main section .portfolio .servicebox .overlay .text {
-  position: relative !important;
-  padding-bottom: 0 !important;
 }
 
 main section .contact .contact-details .social {
@@ -748,7 +661,7 @@ main section .contact .contact-details .contactbox p span:last-of-type {
 
 main section .contact form {
   margin: 0.4rem 0.7rem;
-  row-gap: 1.2rem;
+  row-gap: 1rem;
   padding: 1.5rem 1rem;
   border-radius: 0.5rem;
   background-color: #2a2a2a;

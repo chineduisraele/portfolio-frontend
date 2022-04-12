@@ -1,9 +1,8 @@
 let backend_URL = "https://chineduisraeleportfolio.herokuapp.com/",
   // nav
   nav = document.querySelector(".navinner"),
-  toggleButton = nav.querySelector("svg"),
-  linksCont = document.querySelector(".linkscont"),
-  navList = nav.querySelector("ul"),
+  toggleButton = nav.querySelector(".togglebtn"),
+  linksCont = nav.querySelector(".linkscont"),
   links = nav.querySelectorAll("li"),
   // tool boxes
   switch_buttons = document.querySelector(".switch").children,
@@ -18,21 +17,15 @@ let backend_URL = "https://chineduisraeleportfolio.herokuapp.com/",
 
 // nav
 toggleButton.addEventListener("click", () => {
-  let contHeight = linksCont.clientHeight,
-    navHeight = navList.clientHeight;
-
-  // toggle height
-  contHeight === 0
-    ? (linksCont.style.height = `${navHeight}px`)
-    : (linksCont.style.height = 0);
+  linksCont.classList.toggle("show");
 });
 
 //change nav links color
 links.forEach((li) => {
   li.addEventListener("click", (e) => {
+    linksCont.classList.toggle("show");
     navList.querySelector("li.active").classList.remove("active");
     e.currentTarget.classList.add("active");
-    linksCont.style.height = 0;
   });
 });
 

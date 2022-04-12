@@ -157,7 +157,7 @@
       .skills,
       .contact {
         grid-template-columns: 1fr;
-        row-gap: 1.5rem;
+        row-gap: 2rem;
       }
 
       .intro {
@@ -239,7 +239,7 @@
       border-radius: 1rem;
       .intro {
         .name {
-          padding-top: 0.5rem;
+          padding-top: 1.5rem;
           h2:last-of-type {
             width: 100%;
             font-size: 28px;
@@ -251,14 +251,16 @@
       }
 
       .skills .stackboxcont {
-        column-gap: 0.5rem !important;
-        .stackbox {
+        display: none !important;
+        // column-gap: 0.5rem !important;
+        // display: flex !important;
+        // width: 100% !important;
+        // flex-wrap: wrap;
+
+        img {
           height: 75px !important;
-          width: auto !important;
-          img {
-            width: 38px;
-            height: 38px;
-          }
+          width: 23.2% !important;
+          padding: 1rem !important;
         }
       }
     }

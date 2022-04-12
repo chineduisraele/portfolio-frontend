@@ -12,7 +12,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./css/index.css" />
-    <!-- <link rel="stylesheet" href="./css/mediaqueries.css" /> -->
+    <link rel="stylesheet" href="./css/mediaqueries.css" />
 
     
       <!-- animate script -->
@@ -26,12 +26,14 @@
       <!-- navbar -->
     <nav >
       <div class="navinner d-flex aic jcsb">
-        <!-- logo image -->
-        <img class="d-block" src="./images/logo.webp" alt="dev logo" />
+        <!-- logo svg -->
+        <svg class="logo" viewBox="0 0 68.000000 68.000000" style="background:#f5af31;height:40px;width:40px;display:inline-block;transform:translate(-5%,28%);border-radius:50%; outline:2px #000000 solid;outline-offset:-1px;">
+              <use href="sprite.svg#logo" ></use>
+        </svg>
 
         <!-- toggle button -->
-        <svg viewBox="0 0 1750.000000 1250.000000" style="width:30px;height:30px">
-            <use href="sprite.svg#menubar" role="button"></use>
+        <svg class="togglebtn" viewBox="0 0 1750.000000 1250.000000" style="width:30px;height:30px" role="button" aria-labelledby="toggle button">
+            <use href="sprite.svg#menubar" ></use>
         </svg>
 
         <!-- nav links -->
@@ -63,7 +65,7 @@
             Founder of Five Fingers Dev.</br> Professional UI/UX Designer and Full Stack Web developer based in Nigeria. </br>Sometimes works as a freelancer.
           </p>
           <!-- email and phone -->
-          <div class="email d-flex">
+          <div class="email d-flex cg-1">
             <p>
               <span class="d-block">Email:</span
               >
@@ -71,7 +73,7 @@
             </p>
             <p>
               <span class="d-block">Phone:</span>
-              <a href="tel:+234 90 646 876 26">234 90 646 876 26</a>
+              <a href="tel:+234 90 646 876 26">(+234) 90 646 876 26</a>
             </p>
           </div>
 
@@ -219,91 +221,65 @@
       </article>
       </div>
 
+      
+
       <!-- services -->
-      <div id="services">
-        <article class="services" >
-        <h3>My Services</h3>
+      <article class="portfolio" id="services">
+        <h3>Services</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ullam facere! Eum, nam voluptatibus! Veritatis?</p>
+
         <div class="d-grid col-2">
-          <div class="d-flex jcc servicebox">
+          <a href="#" class="d-grid jcc portfoliobox">
             <img src="./images/124-1247377_website-development-png.webp" alt="web design" loading="lazy">
-            <div class="overlay">
-              <div class="text"><h4>Web Design</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
-            </div>
-          </div>
-          <div class="d-flex jcc servicebox">
+            
+              <div class="text">
+                <h4>Web Design</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipi.</p>
+              </div>
+            
+          </a>
+          <a href="#" class="d-grid jcc portfoliobox">
+            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
+            
+              <div class="text">
+                <h4>Web Development</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur lit.</p>
+              </div>
+            
+          </a>
+        </div>
+
+      </article>
+
+      <!-- portfolio -->
+      <article class="portfolio" id="portfolio">
+        <h3>Portfolio</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ullam facere! Eum, nam voluptatibus! Veritatis?</p>
+
+        <div class="d-grid col-2">
+          <a href="http://localhost:3000/" target="_blank" class="d-grid jcc portfoliobox">
             <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
             <div class="overlay">
-              <div class="text"><h4>Web Development</h4>
+              <div class="text"><h4>Friendly Store</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
+            </div>
+          </a>
+          <a href="http://localhost:3000/" target="_blank" class="d-grid jcc portfoliobox">
+            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
+            <div class="overlay">
+              <div class="text"><h4>Neuron Network</h4>
               <p>Lorem ipsum, dolor sit amet consectetur lit.</p></div>
             </div>
-          </div>
+          </a>
+          <a href="http://localhost:3000/" target="_blank" class="d-grid jcc portfoliobox">
+            <img src="./images/124-1247377_website-development-png.webp" alt="web design" loading="lazy">
+            <div class="overlay">
+              <div class="text"><h4>Chatty</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
+            </div>
+          </a>
         </div>
       </article>
-      </div>
-
-      <!-- portfolio -->
-      <div id="services">
-        <article class="services">
-        <h3>Portfolio</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ullam facere! Eum, nam voluptatibus! Veritatis?</p>
-
-        <div class="d-grid col-2">
-          <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
-            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
-            <div class="overlay">
-              <div class="text"><h4>Friendly Store</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
-            </div>
-          </a>
-          <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
-            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
-            <div class="overlay">
-              <div class="text"><h4>Neuron Network</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur lit.</p></div>
-            </div>
-          </a>
-          <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
-            <img src="./images/124-1247377_website-development-png.webp" alt="web design" loading="lazy">
-            <div class="overlay">
-              <div class="text"><h4>Chatty</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
-            </div>
-          </a>
-      </article>
-      </div>
-      
-      <!-- portfolio -->
-      <div id="services">
-        <article class="services">
-        <h3>Portfolio</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ullam facere! Eum, nam voluptatibus! Veritatis?</p>
-
-        <div class="d-grid col-2">
-          <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
-            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
-            <div class="overlay">
-              <div class="text"><h4>Friendly Store</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
-            </div>
-          </a>
-          <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
-            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
-            <div class="overlay">
-              <div class="text"><h4>Neuron Network</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur lit.</p></div>
-            </div>
-          </a>
-          <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
-            <img src="./images/124-1247377_website-development-png.webp" alt="web design" loading="lazy">
-            <div class="overlay">
-              <div class="text"><h4>Chatty</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
-            </div>
-          </a>
-      </article>
-      </div>
 
       <!-- testimonials -->
       <!-- <article class="testimonials">
@@ -419,7 +395,7 @@
               <use href="sprite.svg#hearts" ></use>
         </svg>
          by <span style="margin-left: 0.5rem;">
-         <svg viewBox="0 0 68.000000 68.000000" style="background:#f5af31;height:30px;width:30px;display:inline-block;transform:translate(-5%,28%);border-radius:50%;">
+         <svg viewBox="0 0 68.000000 68.000000" style="background:#f5af31;height:28px;width:28px;display:inline-block;transform:translate(-5%,28%);border-radius:50%; outline:2px #000000 solid;outline-offset:-1px;">
               <use href="sprite.svg#logo" ></use>
         </svg>ingers Dev.
       </span>
