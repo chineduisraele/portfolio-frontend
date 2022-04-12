@@ -186,17 +186,25 @@ main {
           border-radius: $defaultBorderRadius;
           grid-template-columns: 1fr 8fr;
           background-color: #fff;
+          svg {
+            width: 45px;
+            height: 45px;
+            padding: 10px;
+            border-radius: 50%;
+          }
           p {
-            > span:first-of-type {
-              font-size: 1.2rem;
+            span {
+              display: block;
               text-align: center;
-              color: $logoYellow;
               font-weight: bold;
             }
+            > span:first-of-type {
+              font-size: 1.2rem;
+
+              color: $logoYellow;
+            }
             > span:last-of-type {
-              text-align: center;
               font-size: 0.825rem;
-              font-weight: bold;
             }
           }
           div {
@@ -320,25 +328,18 @@ main {
               transition: all 0.3s;
             }
           }
-          .stackbox {
+          img {
             cursor: pointer;
-            visibility: hidden;
             opacity: 0;
             transform: translate(50%, 50%);
-            height: 98px;
-            width: 98px;
             border-radius: $defaultBorderRadius;
             box-shadow: $shad2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             background-color: #fff;
-            img {
-              display: block;
-              width: 42px;
-              height: 42px;
-            }
+            display: block;
+            width: 98px;
+            height: 98px;
+            padding: 28px;
+            transition: opacity 0.35s, transform 0.35s;
           }
         }
       }

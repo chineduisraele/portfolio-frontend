@@ -4,38 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio website for Five fingers dev. Created by Israel fivefingers">
+    <meta name="description" content="Portfolio website for Five fingers dev. Created by Chinedu Israele">
     <title>Five fingers dev</title>
 
+    <!-- preload hero image -->
     <link rel="preload" href="./images/hero.webp" as="image">
+
+    <!-- css -->
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/mediaqueries.css" />
-    
-    
 
-    <style>
-      svg{fill: red;height: 30px;width: 30px;}
-    </style>
+    
+      <!-- animate script -->
+      <script src="./js/animate.js"></script>
   </head>
   <body>
   
-
+<style>
+  svg{width: 30px; height: 30px;}
+</style>
 
    <main>
       <!-- navbar -->
     <nav >
-      <div class="navinner d-flex aic"><div class="d-flex aic jcc logo">
+      <div class="navinner d-flex aic jcsb">
+        <!-- logo image -->
         <img class="d-block" src="./images/logo.webp" alt="dev logo" />
-        <p>ingers</p>
-      </div>
 
-      <div class="menu">
         <!-- toggle button -->
-        <svg style="height:30px;width:30px;" viewBox="0 0 1750.000000 1250.000000">
+        <svg viewBox="0 0 1750.000000 1250.000000">
             <use href="sprite.svg#menubar" role="button"></use>
         </svg>
-        <div class="listcont">
-          <ul class="d-flex cg-1">
+
+        <!-- nav links -->
+        <div class="linkscont">
+          <ul>
             <li class="active">  <a href="#">Home</a></li>
             <li>  <a href="#about">About</a></li>
             <li>  <a href="#skills">Skills</a></li>
@@ -43,7 +46,6 @@
             <li>  <a href="#portfolio">Portfolio</a></li>
             <li>  <a href="#contact">Contact</a></li>
           </ul>
-      </div>
       </div>
     </div>
     </nav>
@@ -63,7 +65,7 @@
             Founder of Five Fingers Dev.</br> Professional UI/UX Designer and Full Stack Web developer based in Nigeria. </br>Sometimes works as a freelancer.
           </p>
           <!-- email and phone -->
-          <div class="d-flex cg-1 email">
+          <div class="email">
             <p>
               <span class="d-block">Email:</span
               >
@@ -75,76 +77,83 @@
             </p>
           </div>
 
-          <!-- buttons -->
+          <!-- Download Cv and Hire me buttons -->
           <div class="d-flex cg-1 buttons ">
-            <a href="./files/cv.pdf" class="btn black">Hire Me</a
+            <a href="#" class="btn black">Hire Me</a
             >
-            
             <a href="./files/cv.pdf" class="btn yellow" download>Download CV</a>
           </div>
         </div>
 
-
-        
-    
-    
         <!-- social links -->
         <div class="d-flex social cg-05">
-          <a href="#" aria-label="linkedin link"><svg viewBox="0 0 2000.000000 2000.000000">
-      <use href="sprite.svg#linkedin"></use>
-    </svg></a>
-          <a href="#" aria-label="twitter link"><svg viewBox="0 0 365.000000 319.000000" >
-      <use href="sprite.svg#twitter"></use>
-    </svg></a>
-          <a href="#" aria-label="github link"><svg viewBox="0 0 460.000000 450.000000">
-      <use href="sprite.svg#github"></use>
-    </svg></a>
-          <a href="#" aria-label="facebook link"><svg viewBox="0 0 980.000000 980.000000" >
-      <use href="sprite.svg#facebook"></use>
-    </svg>
-    </a>
+          <!-- linkedin -->
+          <a href="#" aria-label="linkedin link">
+            <svg viewBox="0 0 2000.000000 2000.000000">
+              <use href="sprite.svg#linkedin"></use>
+            </svg>
+          </a>
+          <!-- twitter -->
+          <a href="#" aria-label="twitter link">
+            <svg viewBox="0 0 365.000000 319.000000" >
+              <use href="sprite.svg#twitter"></use>
+            </svg>
+          </a>
+          <!-- facebook -->
+          <a href="#" aria-label="facebook link">
+            <svg viewBox="0 0 980.000000 980.000000" >
+              <use href="sprite.svg#facebook"></use>
+            </svg>
+          </a>
+          <!-- github -->
+          <a href="#" aria-label="github link">
+            <svg viewBox="0 0 460.000000 450.000000">
+              <use href="sprite.svg#github"></use>
+            </svg>
+          </a>
+
         </div>
 
         <!-- checks -->
         <div class="d-grid cg-1 aic jcc check-cont">
+          <!-- experience -->
           <div class="check d-grid aic ">
-            <div class="gray">
-              <img  src="./images/tools/emblem.png" alt="happy clients"></div>
+            <svg viewBox="0 0 52.000000 64.000000" style="background-color: #8080803b;">
+              <use href="sprite.svg#emblem"></use>
+            </svg>
             <p>
-              <span class="d-block">2+</span>
-              <span class="d-block">Years of Experience</span>
+              <span>2+</span>
+              <span>Years of Experience</span>
             </p>
-            <i class="fa fa-angle-right"></i>
           </div>
-
+          <!-- completed projects -->
           <div class="check d-grid aic">
-            <div class="yellow">
-              <img class="invert" src="./images/tools/check-mark.png" alt="completed projects">
-            </div>
+            <svg viewBox="0 0 64.000000 64.000000" style="background-color:#f5af31; fill:#fff">
+              <use href="sprite.svg#check"></use>
+            </svg>
             <p>
-              <span class="d-block">10+</span>
-              <span class="d-block">Completed Projects</span>
+              <span>10+</span>
+              <span>Completed Projects</span>
             </p>
-            <i class="fa fa-angle-right"></i>
           </div>
-
+          <!-- happy clients -->
           <div class="check d-grid aic">
-            <div class="black">
-              <img class="invert" src="./images/tools/happy.png" alt="happy clients">
-            </div>
+            <svg viewBox="0 0 64.000000 60.000000" style="background-color: #2a2a2a; fill:#fff" >
+              <use href="sprite.svg#happy"></use>
+            </svg>
+              
             <p>
-              <span class="d-block">5+</span>
-              <span class="d-block">Happy Clients</span>
+              <span>5+</span>
+              <span>Happy Clients</span>
             </p>
-            <i class="fa fa-angle-right"></i>
           </div>
         </div>
       </article>
 
       <!-- about -->
       <div id="about">
-        <article class="about d-grid cg-4 col-2 " >
-        <div class="imgcont"><img src="./images/profile.webp" alt="my image 2"></div>
+        <article class="about d-grid cg-4 " >
+        <div class="imgcont"><img src="./images/profile.webp" alt="my image 2" loading="lazy"></div>
         <div>
           <h3>About Me</h3>
           <p>Hi! I’m Chinedu Israel and I’m a developer who has passion for building clean web applications with intuitive functionality. I enjoy the process of turning ideas into reality using creative solutions. I’m always curious about learning new skills, tools, and concepts.</p>
@@ -156,7 +165,7 @@
 
       <!-- skills -->
       <div id="skills">
-        <article class="skills d-grid col-2 cg-1">
+        <article class="skills d-grid cg-1">
         <div class="stackscont">
           <h3>My Skills</h3>
           <p>I develop simple, intuitive and responsive user interface that helps users get things done with less effort and time with those technologies.</p>
@@ -171,58 +180,43 @@
 
         <div class="sets">
           <!-- skillset -->
-        <div class="d-grid cg-05 stackboxcont  show">
-          <div class="stackbox" title="HTML5">
-            <img src="./images/tools/html5.png" alt="html" >
+          <div class="d-grid cg-05 stackboxcont  show">
+            
+              <img src="./images/tools/html5.png" alt="html" loading="lazy" title="HTML5">
+
+              <img src="./images/tools/css3.png" alt="css" loading="lazy" title="CSS3">
+            
+              <img src="./images/tools/bootstrap.png" alt="bootstrap" loading="lazy" title="BOOTSTRAP5">
+            
+              <img src="./images/tools/sass.png" alt="sass" loading="lazy" title="SASS">
+            
+              <img src="./images/tools/javascript.png" alt="js" loading="lazy" title="JAVASCRIPT">
+            
+              <img src="./images/tools/react.png" alt="react" loading="lazy" title="REACT">
+            
+              <img src="./images/tools/python.png" alt="python" loading="lazy" title="PYTHON">
+            
+              <img src="./images/tools/sql.png" alt="sql" loading="lazy" title="SQL">
           </div>
-          <div class="stackbox" title="CSS3">
-            <img src="./images/tools/css3.png" alt="css" >
-          </div>
-          <div class="stackbox" title="BOOTSTRAP5">
-            <img src="./images/tools/bootstrap.png" alt="bootstrap" >
-          </div>
-          <div class="stackbox" title="SASS">
-            <img src="./images/tools/sass.png" alt="sass" >
-          </div>
-          <div class="stackbox" title="JAVASCRIPT">
-            <img src="./images/tools/javascript.png" alt="js" >
-          </div>
-          <div class="stackbox" title="REACT">
-            <img src="./images/tools/react.png" alt="react" >
-          </div>
-          <div class="stackbox"  title="PYTHON">
-            <img src="./images/tools/python.png" alt="python">
-          </div>
-          
-          <div class="stackbox" title="SQL">
-            <img src="./images/tools/sql.png" alt="sql" >
-          </div>
-        </div>
 
 
-        <!-- toolset -->
-        <div class="d-grid cg-05 stackboxcont ">
-          <div class="stackbox" title="VSCODE">
-            <img src="./images/tools/vs-code.png" alt="vs-code">
-          </div>
-          <div class="stackbox" title="COMMAND LINE">
-            <img src="./images/tools/command.png" alt="command">
-          </div>
-          <div class="stackbox" title="GIT">
-            <img src="./images/tools/git.png" alt="git">
-          </div>
-          <div class="stackbox" title="NPM">
-            <img src="./images/tools/npm.png" alt="npm">
-          </div>
-          <div class="stackbox" title="AJAX">
-            <img src="./images/tools/ajax.png" alt="ajax">
-          </div>
-          <div class="stackbox" title="PHOTOSHOP">
-            <img src="./images/tools/photoshop.png" alt="ps">
-          </div>
+          <!-- toolset -->
+          <div class="d-grid cg-05 stackboxcont ">
           
+              <img src="./images/tools/vs-code.png" alt="vs-code" loading="lazy" title="VSCODE">
           
-        </div>
+              <img src="./images/tools/command.png" alt="command" loading="lazy" title="COMMAND LINE">
+          
+              <img src="./images/tools/git.png" alt="git" loading="lazy" title="GIT">
+          
+              <img src="./images/tools/npm.png" alt="npm" loading="lazy" title="NPM">
+          
+              <img src="./images/tools/ajax.png" alt="ajax" loading="lazy" title="AJAX">
+          
+              <img src="./images/tools/photoshop.png" alt="ps" loading="lazy" title="PHOTOSHOP">
+            
+            
+          </div>
         </div>
       </article>
       </div>
@@ -232,24 +226,22 @@
         <article class="services" >
         <h3>My Services</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ullam facere! Eum, nam voluptatibus! Veritatis?</p>
-        <div class="d-grid col-2">
+        <div class="d-grid">
           <div class="d-flex jcc servicebox">
-            <img src="./images/124-1247377_website-development-png.webp" alt="web design">
+            <img src="./images/124-1247377_website-development-png.webp" alt="web design" loading="lazy">
             <div class="overlay">
               <div class="text"><h4>Web Design</h4>
               <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
             </div>
           </div>
           <div class="d-flex jcc servicebox">
-            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design">
+            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
             <div class="overlay">
               <div class="text"><h4>Web Development</h4>
               <p>Lorem ipsum, dolor sit amet consectetur lit.</p></div>
             </div>
           </div>
         </div>
-
-
       </article>
       </div>
 
@@ -259,23 +251,23 @@
         <h3>Portfolio</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ullam facere! Eum, nam voluptatibus! Veritatis?</p>
 
-        <div class="d-grid col-2">
+        <div class="d-grid">
           <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
-            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design">
+            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
             <div class="overlay">
               <div class="text"><h4>Friendly Store</h4>
               <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
             </div>
           </a>
           <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
-            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design">
+            <img src="./images/491-4913117_web-designing-images-png.webp" alt="web design" loading="lazy">
             <div class="overlay">
               <div class="text"><h4>Neuron Network</h4>
               <p>Lorem ipsum, dolor sit amet consectetur lit.</p></div>
             </div>
           </a>
           <a href="http://localhost:3000/" target="_blank" class="d-flex jcc servicebox">
-            <img src="./images/124-1247377_website-development-png.webp" alt="web design">
+            <img src="./images/124-1247377_website-development-png.webp" alt="web design" loading="lazy">
             <div class="overlay">
               <div class="text"><h4>Chatty</h4>
               <p>Lorem ipsum, dolor sit amet consectetur adipi.</p></div>
@@ -293,7 +285,7 @@
     
       <!-- contact -->
       <div id="contact">
-        <article class="contact d-grid col-2">
+        <article class="contact d-grid">
         
           <div class="contact-details">
             <h3>Contact</h3>
@@ -410,8 +402,6 @@
    <div class="bottomshaddow"></div>
    
    <script src="./js/index.js" defer></script>
-   <script src="./js/animate.js"></script>
-  
   </body>
 </html>
 

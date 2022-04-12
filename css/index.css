@@ -166,6 +166,12 @@ button:focus, button:active {
           justify-content: center;
 }
 
+.jcsb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .cg-05 {
   -webkit-column-gap: 0.5rem;
           column-gap: 0.5rem;
@@ -447,17 +453,26 @@ main section .intro .check-cont .check {
   background-color: #fff;
 }
 
-main section .intro .check-cont .check p > span:first-of-type {
-  font-size: 1.2rem;
+main section .intro .check-cont .check svg {
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+main section .intro .check-cont .check p span {
+  display: block;
   text-align: center;
-  color: #f5af31;
   font-weight: bold;
 }
 
+main section .intro .check-cont .check p > span:first-of-type {
+  font-size: 1.2rem;
+  color: #f5af31;
+}
+
 main section .intro .check-cont .check p > span:last-of-type {
-  text-align: center;
   font-size: 0.825rem;
-  font-weight: bold;
 }
 
 main section .intro .check-cont .check div {
@@ -605,37 +620,23 @@ main section .skills .sets .stackboxcont.show .stackbox {
   transition: all 0.3s;
 }
 
-main section .skills .sets .stackboxcont .stackbox {
+main section .skills .sets .stackboxcont img {
   cursor: pointer;
-  visibility: hidden;
   opacity: 0;
   -webkit-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
-  height: 98px;
-  width: 98px;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 3px 15px -4px #808080ab;
           box-shadow: 0 3px 15px -4px #808080ab;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: #fff;
-}
-
-main section .skills .sets .stackboxcont .stackbox img {
   display: block;
-  width: 42px;
-  height: 42px;
+  width: 98px;
+  height: 98px;
+  padding: 28px;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
 
 main section .services > div,

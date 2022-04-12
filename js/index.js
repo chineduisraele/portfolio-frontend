@@ -1,15 +1,15 @@
 let backend_URL = "https://chineduisraeleportfolio.herokuapp.com/",
   // nav
-  menu = document.querySelector(".menu"),
-  menubar = menu.querySelector("svg"),
-  listCont = document.querySelector(".listcont"),
-  menuList = menu.querySelector("ul"),
-  links = menu.querySelectorAll("li"),
+  nav = document.querySelector(".navinner"),
+  toggleButton = nav.querySelector("svg"),
+  linksCont = document.querySelector(".linkscont"),
+  navList = nav.querySelector("ul"),
+  links = nav.querySelectorAll("li"),
   // tool boxes
   switch_buttons = document.querySelector(".switch").children,
   set_boxes = document.querySelector(".sets").children,
-  skillBox = set_boxes[0].querySelectorAll(".stackbox"),
-  toolBox = set_boxes[1].querySelectorAll(".stackbox"),
+  skillBox = set_boxes[0].querySelectorAll("img"),
+  toolBox = set_boxes[1].querySelectorAll("img"),
   // form
   form = document.querySelector(".contact-form"),
   submitBtn = form.querySelector("button"),
@@ -17,22 +17,22 @@ let backend_URL = "https://chineduisraeleportfolio.herokuapp.com/",
   topbtn = document.querySelector(".topbtn");
 
 // nav
-menubar.addEventListener("click", () => {
-  let contHeight = listCont.clientHeight,
-    menuHeight = menuList.clientHeight;
+toggleButton.addEventListener("click", () => {
+  let contHeight = linksCont.clientHeight,
+    navHeight = navList.clientHeight;
 
   // toggle height
   contHeight === 0
-    ? (listCont.style.height = `${menuHeight}px`)
-    : (listCont.style.height = 0);
+    ? (linksCont.style.height = `${navHeight}px`)
+    : (linksCont.style.height = 0);
 });
 
 //change nav links color
 links.forEach((li) => {
   li.addEventListener("click", (e) => {
-    menuList.querySelector("li.active").classList.remove("active");
+    navList.querySelector("li.active").classList.remove("active");
     e.currentTarget.classList.add("active");
-    listCont.style.height = 0;
+    linksCont.style.height = 0;
   });
 });
 
@@ -41,7 +41,6 @@ links.forEach((li) => {
 const showBox = (e, i, show) => {
   setTimeout(() => {
     e.style.opacity = show ? "1" : "0";
-    e.style.visibility = show ? "visible" : "hidden";
     e.style.transform = show ? "translate(0,0)" : "translate(50%,50%)";
   }, 75 * i);
 };

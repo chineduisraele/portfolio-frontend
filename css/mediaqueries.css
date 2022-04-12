@@ -166,6 +166,12 @@ button:focus, button:active {
           justify-content: center;
 }
 
+.jcsb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .cg-05 {
   -webkit-column-gap: 0.5rem;
           column-gap: 0.5rem;
@@ -309,7 +315,7 @@ button:focus, button:active {
   main nav .navinner .menu i.fa-bars {
     display: block;
   }
-  main nav .navinner .menu .listcont {
+  main nav .navinner .menu .linkscont {
     height: 0;
     overflow: hidden;
     position: absolute;
@@ -319,7 +325,7 @@ button:focus, button:active {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  main nav .navinner .menu .listcont ul {
+  main nav .navinner .menu .linkscont ul {
     -webkit-box-shadow: 0 9px 15px -4px #808080ab;
             box-shadow: 0 9px 15px -4px #808080ab;
     border-radius: 0.5rem;
@@ -331,10 +337,10 @@ button:focus, button:active {
     display: grid;
     row-gap: 1rem;
   }
-  main nav .navinner .menu .listcont ul li {
+  main nav .navinner .menu .linkscont ul li {
     border-bottom: 1px solid rgba(117, 117, 117, 0.24);
   }
-  main nav .navinner .menu .listcont ul li a {
+  main nav .navinner .menu .linkscont ul li a {
     display: block;
     padding: 0.5rem 1rem;
   }
