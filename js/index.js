@@ -23,8 +23,7 @@ toggleButton.addEventListener("click", () => {
 //change nav links color
 links.forEach((li) => {
   li.addEventListener("click", (e) => {
-    linksCont.classList.toggle("show");
-    navList.querySelector("li.active").classList.remove("active");
+    linksCont.querySelector("li.active").classList.remove("active");
     e.currentTarget.classList.add("active");
   });
 });

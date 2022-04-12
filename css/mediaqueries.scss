@@ -90,36 +90,35 @@
     nav .navinner {
       padding-top: 0.7rem;
       padding-bottom: 0.7rem;
-      .menu {
-        position: relative;
-        z-index: 50;
-        i.fa-bars {
-          display: block;
-        }
-        .linkscont {
-          height: 0;
-          overflow: hidden;
-          position: absolute;
-          margin-top: 1rem;
-          right: -1rem;
-          width: 100vw;
-          transition: all 0.3s;
-          ul {
-            box-shadow: 0 9px 15px -4px #808080ab;
-            border-radius: $defaultBorderRadius;
-            padding: $defaultPadding;
-            padding-bottom: 1rem;
-            padding-top: 1.5rem;
-            background-color: #fff;
-            display: grid;
-            row-gap: 1rem;
 
-            li {
-              border-bottom: 1px solid rgba(117, 117, 117, 0.24);
-              a {
-                display: block;
-                padding: 0.5rem 1rem;
-              }
+      .togglebtn {
+        display: block;
+      }
+
+      .linkscont {
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        top: 3.5rem;
+        left: 0;
+        z-index: 50;
+        box-shadow: 0 12px 15px -4px #808080ab;
+        transition: height 0.3s;
+        ul {
+          border-radius: $defaultBorderRadius;
+          padding: $defaultPadding;
+          padding-bottom: 1rem;
+          padding-top: 1.5rem;
+          background-color: #fff;
+          display: grid;
+          row-gap: 1rem;
+
+          li {
+            border-bottom: 1px solid rgba(117, 117, 117, 0.24);
+            a {
+              display: block;
+              padding: 0.5rem 1rem;
             }
           }
         }
@@ -135,9 +134,7 @@
       .testimonials,
       .contact {
         background-color: #fff;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        border-radius: $defaultBorderRadius;
+
         h4 {
           font-size: 1.125rem !important;
         }
@@ -172,7 +169,7 @@
         }
         .email {
           flex-direction: column;
-          row-gap: 0.4rem;
+          row-gap: 0.5rem;
         }
         .name .buttons .btn {
           width: 50%;
@@ -180,7 +177,7 @@
         .check-cont {
           margin-top: 3rem;
           .check {
-            grid-template-columns: 1fr 8fr 1fr;
+            grid-template-columns: 1fr 8fr;
             padding: 0.8rem 1rem;
             i {
               display: block;
@@ -194,30 +191,19 @@
         width: 40%;
       }
 
-      .skills .stackboxcont {
-        row-gap: 1rem !important;
-        column-gap: 1rem;
-        .stackbox {
-          height: 98px;
-          width: auto !important;
+      .skills {
+        .stackboxcont {
+          gap: 1rem;
           img {
-            display: block;
-            width: 42px;
-            height: 42px;
+            padding: 1rem !important;
           }
         }
       }
-      .services,
+
       .portfolio {
         > div {
           grid-template-columns: 1fr;
           height: max-content;
-        }
-      }
-
-      .services .servicebox {
-        .text {
-          background-color: #fff;
         }
       }
     }
@@ -247,20 +233,6 @@
           p {
             max-width: 100%;
           }
-        }
-      }
-
-      .skills .stackboxcont {
-        display: none !important;
-        // column-gap: 0.5rem !important;
-        // display: flex !important;
-        // width: 100% !important;
-        // flex-wrap: wrap;
-
-        img {
-          height: 75px !important;
-          width: 23.2% !important;
-          padding: 1rem !important;
         }
       }
     }

@@ -239,7 +239,7 @@ main .services,
 main .portfolio,
 main .testimonials,
 main .contact {
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -312,8 +312,8 @@ main .social a:hover {
 }
 
 main .social a svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 main nav {
@@ -324,6 +324,7 @@ main nav {
   opacity: 1;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  background-color: #fff;
 }
 
 main nav .navinner {
@@ -341,8 +342,28 @@ main nav .navinner .logo {
           animation-timing-function: linear;
 }
 
-main nav .navinner svg {
+main nav .navinner .togglebtn {
   cursor: pointer;
+  display: none;
+}
+
+main nav .navinner .linkscont {
+  margin-left: auto;
+  position: relative;
+}
+
+main nav .navinner .linkscont ul {
+  font-size: 0.875rem;
+}
+
+main nav .navinner .linkscont ul li {
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #2a2a2a;
+}
+
+main nav .navinner .linkscont ul li.active a {
+  color: #f5af31;
 }
 
 main section .intro {
@@ -452,6 +473,27 @@ main section .intro .check-cont .check p > span:first-of-type {
 
 main section .intro .check-cont .check p > span:last-of-type {
   font-size: 0.825rem;
+}
+
+main section .intro {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+main section .about,
+main section .portfolio,
+main section .contact {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
+}
+
+main section .about,
+main section .skills,
+main section .portfolio,
+main section .contact {
+  padding: 2rem 0.5rem;
 }
 
 main section .about {
@@ -573,8 +615,8 @@ main section .skills .sets .stackboxcont img {
           box-shadow: 0 3px 15px -4px #808080ab;
   background-color: #fff;
   display: block;
-  width: 98px;
-  height: 98px;
+  width: 100%;
+  height: 100%;
   padding: 28px;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -589,15 +631,15 @@ main section .portfolio > p {
 
 main section .portfolio > div {
   margin: 0.4rem 0.7rem;
-  margin-top: 1rem;
-  gap: 1rem;
+  margin-top: 2rem;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  row-gap: 2rem;
 }
 
 main section .portfolio > div .portfoliobox {
   background-color: #fff;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
-          box-shadow: 0 3px 15px -4px #808080ab;
 }
 
 main section .portfolio > div .portfoliobox img {
@@ -626,7 +668,7 @@ main section .portfolio > div .portfoliobox .text p {
 
 main section .contact .contact-details .social {
   padding: 0.4rem 0.7rem;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
 }
 
 main section .contact .contact-details > p {
@@ -642,6 +684,7 @@ main section .contact .contact-details .contactbox {
 
 main section .contact .contact-details .contactbox svg {
   margin-top: 4px;
+  margin-right: 2px;
   width: 20px;
   height: 20px;
 }

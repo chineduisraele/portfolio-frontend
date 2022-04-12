@@ -70,8 +70,8 @@ main {
         background-color: $logoYellow;
       }
       svg {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
       }
     }
   }
@@ -83,6 +83,7 @@ main {
     top: 0;
     opacity: 1;
     transition: opacity $time;
+    background-color: #fff;
     .navinner {
       padding: $defaultPadding;
       max-width: $defaultWidth1;
@@ -94,55 +95,26 @@ main {
         animation-timing-function: linear;
       }
 
-      svg {
+      .togglebtn {
         cursor: pointer;
+        display: none;
       }
 
       .linkscont {
-        // // margin-left: auto;
-        // transition: transform 0.35s;
-        // transform: translateX(-110%);
-        // width: 100%;
-        // position: absolute;
-        // z-index: 100;
-        // top: 3.5rem;
-        // left: 0;
-        // height: 100vh;
-        // background-color: #fff;
-        // box-shadow: 0 9px 15px -4px #808080ab;
-        // position: fixed;
-        // &.show {
-        //   transform: translateX(0);
-        // }
-        // ul {
-        //   align-items: start;
-        //   border-radius: $defaultBorderRadius;
-        //   padding: $defaultPadding;
-        //   padding-bottom: 1rem;
-        //   padding-top: 1.5rem;
-        //   background-color: #fff;
-        //   display: grid;
-        //   row-gap: 1rem;
+        margin-left: auto;
+        position: relative;
 
-        //   li {
-        //     border-bottom: 1px solid rgba(117, 117, 117, 0.24);
-        //     a {
-        //       display: block;
-        //       padding: 0.5rem 1rem;
-        //     }
-        //   }
-        //   font-size: 0.875rem;
-        //   // li {
-        //   //   font-weight: bold;
-        //   //   font-size: 0.875rem;
-        //   //   color: $logoBlack;
-        //   // }
-        //   // li {
-        //   //   &.active a {
-        //   //     color: $logoYellow;
-        //   //   }
-        //   // }
-        // }
+        ul {
+          font-size: 0.875rem;
+          li {
+            font-weight: bold;
+            font-size: 0.875rem;
+            color: $logoBlack;
+            &.active a {
+              color: $logoYellow;
+            }
+          }
+        }
       }
     }
   }
@@ -234,6 +206,27 @@ main {
           }
         }
       }
+    }
+    .intro {
+      padding: {
+        left: 0.5rem;
+        right: 0.5rem;
+      }
+    }
+
+    .about,
+    .portfolio,
+    .contact {
+      background-color: #fff;
+      border-radius: $defaultBorderRadius;
+      box-shadow: $shad2;
+    }
+
+    .about,
+    .skills,
+    .portfolio,
+    .contact {
+      padding: 2rem 0.5rem;
     }
 
     // about
@@ -330,8 +323,8 @@ main {
             box-shadow: $shad2;
             background-color: #fff;
             display: block;
-            width: 98px;
-            height: 98px;
+            width: 100%;
+            height: 100%;
             padding: 28px;
             transition: opacity 0.35s, transform 0.35s;
           }
@@ -347,12 +340,13 @@ main {
       }
       > div {
         margin: $defaultPaddingSmall;
-        margin-top: 1rem;
-        gap: 1rem;
+        margin-top: 2rem;
+        column-gap: 1rem;
+        row-gap: 2rem;
         .portfoliobox {
           background-color: #fff;
           border-radius: $defaultBorderRadius;
-          box-shadow: $shad2;
+          // box-shadow: $shad2;
           img {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -382,7 +376,7 @@ main {
       .contact-details {
         .social {
           padding: $defaultPaddingSmall;
-          margin-top: 0.5rem;
+          margin-top: 2rem;
         }
         > p {
           padding: $defaultPaddingSmall;
@@ -393,6 +387,7 @@ main {
           column-gap: 0.725rem;
           svg {
             margin-top: 4px;
+            margin-right: 2px;
             width: 20px;
             height: 20px;
           }
