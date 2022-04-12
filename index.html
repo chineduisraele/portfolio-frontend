@@ -16,10 +16,50 @@
     
       <!-- animate script -->
       <script src="./js/animate.js"></script>
+
+      <style>
+        @keyframes grow {
+            0% {
+              transform: scale(0.8);
+            }
+            25% {
+              transform: scale(0.9);
+            }
+            50% {
+              transform: scale(1);
+            }
+            75% {
+              transform: scale(1.05);
+            }
+
+            100% {
+              transform: scale(1.1);
+            }
+          }
+      </style>
+      <script>
+        window.addEventListener("load",()=>{document.querySelector("#loading").style.display="none"})
+      </script>
   </head>
   <body>
   
-
+    <!-- loading -->
+    <div id="loading" style="height:100vh;width:100vw;z-index:10000;position:fixed;display: flex; align-items: center;justify-content: center;background-color: #fff;">
+      <svg class="logo" viewBox="0 0 68.000000 68.000000" style="background-color:#f5af31;height:45px;width:45px;display:inline-block;border-radius: 50%;animation: grow 0.78s alternate-reverse infinite;
+        animation-timing-function: linear;">
+              <g transform="translate(0.000000,68.000000) scale(0.100000,-0.100000)">
+            <path d="M240 661 c-89 -29 -174 -104 -213 -189 -33 -72 -31 -198 4 -273 34
+            -73 96 -134 168 -167 45 -22 71 -26 136 -27 71 0 88 4 147 33 81 40 139 102
+            169 181 17 45 20 71 17 136 -5 94 -36 163 -99 225 -64 62 -120 85 -219 87 -47
+            1 -96 -1 -110 -6z m296 -156 c-2 -7 -26 -17 -52 -21 -43 -6 -46 -8 -29 -20 10
+            -8 29 -14 42 -14 21 0 22 -3 13 -20 -13 -24 -48 -26 -76 -5 -12 9 -42 14 -82
+            15 -59 0 -63 -1 -73 -27 -23 -59 10 -163 54 -171 11 -2 14 2 10 17 -4 15 5 31
+            30 56 39 39 79 46 109 18 17 -15 17 -17 -18 -41 -30 -20 -35 -28 -30 -51 19
+            -79 19 -108 -2 -129 -27 -27 -92 -45 -164 -46 -102 -2 -127 46 -128 236 0 122
+            17 185 54 193 11 3 93 16 181 28 166 24 177 22 161 -18z"/>
+        </g>
+        </svg>
+    </div>
 
    <main>
       <!-- navbar -->
