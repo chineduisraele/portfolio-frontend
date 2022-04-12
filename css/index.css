@@ -290,8 +290,8 @@ main .social {
 }
 
 main .social a {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -310,6 +310,11 @@ main .social a {
 
 main .social a:hover {
   background-color: #f5af31;
+}
+
+main .social a svg {
+  width: 20px;
+  height: 20px;
 }
 
 main nav {
@@ -733,15 +738,10 @@ main section .contact .contact-details .contactbox {
           column-gap: 0.725rem;
 }
 
-main section .contact .contact-details .contactbox i {
+main section .contact .contact-details .contactbox svg {
   margin-top: 4px;
-  font-size: 1rem;
-}
-
-main section .contact .contact-details .contactbox i.fa-phone-volume {
-  font-size: 1.2rem;
-  -webkit-transform: rotateZ(-5deg);
-          transform: rotateZ(-5deg);
+  width: 20px;
+  height: 20px;
 }
 
 main section .contact .contact-details .contactbox p {
@@ -774,23 +774,19 @@ main section .contact form label {
   row-gap: 0.3rem;
 }
 
-main section .contact form label i {
-  color: gray;
+main section .contact form label svg {
+  fill: rgba(128, 128, 128, 0.637);
   position: absolute;
-  -webkit-transform: translate(0.65rem, 32px);
-          transform: translate(0.65rem, 32px);
-}
-
-main section .contact form label i.fa-phone {
-  -webkit-transform: translate(0.65rem, 29px) rotateZ(90deg);
-          transform: translate(0.65rem, 29px) rotateZ(90deg);
+  height: 13px;
+  -webkit-transform: translate(0.15rem, 36px);
+          transform: translate(0.15rem, 36px);
 }
 
 main section .contact form label input,
 main section .contact form label textarea {
   border: none;
   border-radius: 0.5rem;
-  padding: 0.45rem 0.45rem 0.45rem 2.1rem;
+  padding: 0.75rem 0.75rem 0.75rem 2.1rem;
   line-height: 1.2rem;
 }
 
