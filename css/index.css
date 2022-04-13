@@ -54,6 +54,33 @@
   font-display: swap;
 }
 
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0.625rem;
+}
+
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 0.625rem;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #80808081;
+}
+
+body::-webkit-scrollbar-thumb:active,
+textarea::-webkit-scrollbar-thumb:active {
+  background: gray;
+}
+
 body {
   background-color: #c4ced0;
 }
@@ -192,6 +219,11 @@ button:focus, button:active {
 }
 
 main {
+  background-image: url("/images/hero.webp");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-attachment: fixed;
+  background-size: 100vw;
   max-width: 1190px;
   margin: auto;
   background-color: #fff;
@@ -508,6 +540,7 @@ main section .about p:last-of-type {
 main section .skills {
   -ms-grid-columns: 1fr 1.5fr;
       grid-template-columns: 1fr 1.5fr;
+  overflow: hidden;
 }
 
 main section .skills .stackscont p {
@@ -590,7 +623,7 @@ main section .skills .sets .stackboxcont img {
   background-color: #fff;
   display: block;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1 / 1;
   padding: 28px;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, -webkit-transform 0.35s;

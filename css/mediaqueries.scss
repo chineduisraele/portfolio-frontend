@@ -200,7 +200,7 @@
         .stackboxcont {
           gap: 1rem;
           img {
-            padding: 1rem !important;
+            padding: 1.8rem !important;
           }
         }
       }
@@ -237,6 +237,15 @@
           }
           p {
             max-width: 100%;
+          }
+        }
+      }
+
+      .skills {
+        .stackboxcont {
+          gap: 1rem;
+          img {
+            padding: 1rem !important;
           }
         }
       }
