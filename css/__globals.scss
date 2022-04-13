@@ -47,7 +47,7 @@ $time1: 1s;
 // setup
 * {
   scroll-behavior: smooth;
-  scroll-margin-top: 6rem;
+  // scroll-margin-top: 6rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -59,26 +59,26 @@ $time1: 1s;
   font-display: swap;
 }
 
-body,
-textarea {
-  &::-webkit-scrollbar {
-    width: 0.5rem;
-  }
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 0.625rem;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 0.625rem;
-    &:hover {
-      background: #80808081;
-    }
-    &:active {
-      background: gray;
-    }
-  }
-}
+// body,
+// textarea {
+//   &::-webkit-scrollbar {
+//     width: 0.5rem;
+//   }
+//   &::-webkit-scrollbar-track {
+//     background: #f1f1f1;
+//     border-radius: 0.625rem;
+//   }
+//   &::-webkit-scrollbar-thumb {
+//     background: #c1c1c1;
+//     border-radius: 0.625rem;
+//     &:hover {
+//       background: #80808081;
+//     }
+//     &:active {
+//       background: gray;
+//     }
+//   }
+// }
 
 body {
   background-color: $logoGrey;
