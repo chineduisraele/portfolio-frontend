@@ -1,85 +1,50 @@
-@import "./index.scss";
-// for nest hub
-@media (height: 600px) and (width: 1024px) {
-  section .intro {
-    margin-top: 4.5rem !important;
-  }
-}
+// @import "./index.scss";
+@import "./__globals.scss";
 
 // background
-@media screen and (max-width: 1212px) {
+@media screen and (max-width: 1185px) {
   main {
-    background-position: 100% 100%;
-    background-size: 110vw;
     .buttons .yellow {
       box-shadow: 0 3px 15px -4px #808080 !important;
     }
   }
 }
 
-@media screen and (max-width: 1102px) {
+// banner img
+@media screen and (max-width: 1050px) {
   main {
-    nav {
-      background-color: #fff;
+    .banner {
+      object-position: 70% 0;
     }
   }
 }
+@media screen and (max-width: 840px) {
+  main {
+    overflow: hidden;
+    .banner {
+      // background-position: 80% 10%;
+      object-fit: contain;
+      transform: translate(-50%, -5%);
+      width: 200vw;
+    }
+  }
+}
+// main styles
 
-@media screen and (max-width: 1010px) {
+@media (min-width: 641px) and (max-width: 740px) {
   main {
-    background-size: 120vw;
-  }
-}
-@media screen and (max-width: 925px) {
-  main {
-    background-position: 90% 100%;
-    background-size: 130vw;
-  }
-}
-@media screen and (max-width: 854px) {
-  main {
-    background-position: 80% 100%;
-    background-size: 150vw;
-  }
-}
-@media screen and (max-width: 737px) {
-  main {
-    background-position: 80% 100%;
-    background-size: 180vw;
-  }
-}
-@media screen and (max-width: 737px) {
-  main {
-    background-position: 77% 100%;
-    background-size: 180vw;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  main {
-    background-position: 75% 0%;
-    background-size: 180vw;
-  }
-}
-@media screen and (max-width: 560px) {
-  main {
-    background-position: 80% 0%;
-    background-size: 250vw;
-  }
-}
-@media screen and (max-width: 480px) {
-  main {
-    background-position: 80% 10%;
-    background-size: 250vw;
-  }
-}
-
-// styles
-@media screen and (max-width: 720px) {
-  main section .about {
-    .imgcont {
-      max-width: 90%;
-      max-height: 90%;
+    section {
+      .intro {
+        .name .buttons .btn {
+          width: 28%;
+        }
+        .check-cont {
+          column-gap: 0.5rem;
+        }
+      }
+      .skills .stackboxcont img {
+        padding: 1.4rem !important;
+      }
     }
   }
 }
@@ -129,10 +94,27 @@
     }
 
     section {
+      transform: translateY(32vh);
+      background-color: #fff;
+      border-radius: 1rem;
+      .intro {
+        .name {
+          padding-top: 1.5rem;
+          h2:last-of-type {
+            width: 100%;
+            font-size: 28px;
+          }
+          p {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    section {
       .intro .check-cont,
       .about,
       .skills,
-      .services,
       .portfolio,
       .testimonials,
       .contact {
@@ -192,11 +174,13 @@
       }
 
       .about .imgcont {
-        margin: auto;
-        width: 40%;
+        transform: translate(-5%, 0);
       }
 
       .skills {
+        .switchcontrol {
+          width: 49% !important;
+        }
         .stackboxcont {
           gap: 1rem;
           img {
@@ -210,6 +194,9 @@
           grid-template-columns: 1fr;
           height: max-content;
         }
+        h4 {
+          margin-bottom: 0.175rem !important;
+        }
       }
     }
   }
@@ -222,8 +209,6 @@
 
 @media screen and (max-width: 475px) {
   main {
-    background-position: 100% 0%;
-    background-size: 200vw;
     section {
       transform: translateY(32vh);
       background-color: #fff;

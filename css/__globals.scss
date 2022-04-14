@@ -5,7 +5,11 @@ $defaultBorderRadius: 0.5rem;
 
 $logoRed: #e60023;
 $logoYellow: #f5af31;
+// $logoYellow: #f5af31;
 // $logoYellow: #7c3efa;
+// $logoYellow: #169b28;
+// $logoYellow: #1f28a7;
+// $logoYellow: #b91f79;
 $logoBlack: #2a2a2a;
 // $logoBlack: #2a2a2a;
 $logoGrey: #c4ced0;
@@ -57,7 +61,6 @@ $time1: 1s;
   font-display: swap;
 }
 
-body,
 textarea {
   &::-webkit-scrollbar {
     width: 0.5rem;

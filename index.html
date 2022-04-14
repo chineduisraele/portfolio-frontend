@@ -13,11 +13,26 @@
     <!-- preload hero image -->
     <!-- <link rel="preload" href="./images/hero.webp" as="image"> -->
 
+    <link rel="stylesheet" href="./css/index.css" />
     <!-- css -->
     <link rel="preload stylesheet" href="./css/mediaqueries.css" as="style" />
 
     <!-- animate script -->
-    <script src="./js/animate.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        let intro = [
+          document.querySelector(".name"),
+          document.querySelector(".social"),
+          document.querySelector(".check-cont"),
+        ];
+
+        intro.forEach((it) => {
+          it.style.transform = "translateX(0)";
+          it.style.opacity = "1";
+          it.style.zIndex = "0";
+        });
+      });
+    </script>
 
     <style>
       @keyframes grow {
@@ -133,6 +148,9 @@
           </div>
         </div>
       </nav>
+
+      <!-- <div class="bannerimg"></div> -->
+      <img src="./images/hero.webp" alt="banner" class="banner" />
 
       <!-- main -->
       <section>
@@ -258,11 +276,6 @@
               solutions. I’m always curious about learning new skills, tools,
               and concepts.
             </p>
-            <p>
-              In addition to working on various solo full stack projects, I have
-              worked with creative teams, which involves communications, source
-              control, and project management.
-            </p>
           </div>
         </article>
 
@@ -271,9 +284,9 @@
           <div class="stackscont">
             <h3>My Skills</h3>
             <p>
-              I develop simple, intuitive and responsive user interface that
-              helps users get things done with less effort and time with those
-              technologies.
+              I develop simple, intuitive and responsive user interfaces and
+              high performance web apps that help users get things done with
+              less effort and time with these technologies.
             </p>
 
             <div class="switch d-flex">
@@ -409,7 +422,7 @@
                 loading="lazy"
               />
 
-              <div class="text">
+              <div class="text service">
                 <h4>Web Design</h4>
                 <p>Lorem ipsum, dolor sit amet consectetur adipi.</p>
               </div>
@@ -421,7 +434,7 @@
                 loading="lazy"
               />
 
-              <div class="text">
+              <div class="text service">
                 <h4>Web Development</h4>
                 <p>Lorem ipsum, dolor sit amet consectetur lit.</p>
               </div>
@@ -433,11 +446,58 @@
         <article class="portfolio" id="portfolio">
           <h3>Portfolio</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
-            ullam facere! Eum, nam voluptatibus! Veritatis?
+            I have worked on various solo full stack projects, with real world
+            application and a detailed description of each project can be found
+            by following the link to the desired page.
+          </p>
+          <p>
+            It contains an in-depth description of the project, including
+            development process, tool stack and functionalities.
           </p>
 
           <div class="d-grid col-2">
+            <!-- friendly store -->
+            <a
+              href="http://localhost:3000/"
+              target="_blank"
+              class="d-grid jcc portfoliobox"
+            >
+              <img
+                src="./images/491-4913117_web-designing-images-png.webp"
+                alt="store"
+                loading="lazy"
+              />
+
+              <div class="text">
+                <h4>Friendly Store</h4>
+                <p>
+                  A fully functional e-commerce platform built with React JS and
+                  powered by Python Django
+                </p>
+              </div>
+            </a>
+
+            <!-- fashionista -->
+            <a
+              href="http://localhost:3000/"
+              target="_blank"
+              class="d-grid jcc portfoliobox"
+            >
+              <img
+                src="./images/124-1247377_website-development-png.webp"
+                alt="fashion blog"
+                loading="lazy"
+              />
+
+              <div class="text">
+                <h4>Fashionista Blog</h4>
+                <p>
+                  Fashion blog built with React JS and powered by Python Django
+                </p>
+              </div>
+            </a>
+
+            <!-- Chatly -->
             <a
               href="http://localhost:3000/"
               target="_blank"
@@ -448,30 +508,17 @@
                 alt="web design"
                 loading="lazy"
               />
-              <div class="overlay">
-                <div class="text">
-                  <h4>Friendly Store</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipi.</p>
-                </div>
+
+              <div class="text">
+                <h4>Chatty</h4>
+                <p>
+                  Online Messaging Web App built with React JS and powered by
+                  Python Django
+                </p>
               </div>
             </a>
-            <a
-              href="http://localhost:3000/"
-              target="_blank"
-              class="d-grid jcc portfoliobox"
-            >
-              <img
-                src="./images/491-4913117_web-designing-images-png.webp"
-                alt="web design"
-                loading="lazy"
-              />
-              <div class="overlay">
-                <div class="text">
-                  <h4>Neuron Network</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur lit.</p>
-                </div>
-              </div>
-            </a>
+
+            <!-- Neurone network -->
             <a
               href="http://localhost:3000/"
               target="_blank"
@@ -482,11 +529,10 @@
                 alt="web design"
                 loading="lazy"
               />
-              <div class="overlay">
-                <div class="text">
-                  <h4>Chatty</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipi.</p>
-                </div>
+
+              <div class="text">
+                <h4>Neurone Network</h4>
+                <p>Work in progress...</p>
               </div>
             </a>
           </div>

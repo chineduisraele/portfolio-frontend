@@ -54,29 +54,24 @@
   font-display: swap;
 }
 
-body::-webkit-scrollbar,
 textarea::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-body::-webkit-scrollbar-track,
 textarea::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 0.625rem;
 }
 
-body::-webkit-scrollbar-thumb,
 textarea::-webkit-scrollbar-thumb {
   background: #c1c1c1;
   border-radius: 0.625rem;
 }
 
-body::-webkit-scrollbar-thumb:hover,
 textarea::-webkit-scrollbar-thumb:hover {
   background: #80808081;
 }
 
-body::-webkit-scrollbar-thumb:active,
 textarea::-webkit-scrollbar-thumb:active {
   background: gray;
 }
@@ -219,21 +214,26 @@ button:focus, button:active {
 }
 
 main {
-  background-image: url("/images/hero.webp");
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
-  background-attachment: fixed;
-  background-size: 100vw;
   max-width: 1190px;
   margin: auto;
   background-color: #fff;
   border-radius: 0.5rem;
+  position: relative;
+}
+
+main .banner {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 687px;
+  position: absolute;
+  -o-object-position: 100% 0;
+     object-position: 100% 0;
 }
 
 main .intro,
 main .about,
 main .skills,
-main .services,
 main .portfolio,
 main .testimonials,
 main .contact {
@@ -243,7 +243,6 @@ main .contact {
 
 main .about,
 main .skills,
-main .services,
 main .portfolio,
 main .testimonials,
 main .contact {
@@ -262,7 +261,6 @@ main .contact {
 
 main .about h3,
 main .skills h3,
-main .services h3,
 main .portfolio h3,
 main .testimonials h3,
 main .contact h3 {
@@ -278,7 +276,6 @@ main .contact h3 {
 
 main .about h3::after,
 main .skills h3::after,
-main .services h3::after,
 main .portfolio h3::after,
 main .testimonials h3::after,
 main .contact h3::after {
@@ -307,7 +304,6 @@ main .social a {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50%;
-  color: black;
   background-color: #c4ced0;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -318,6 +314,7 @@ main .social a:hover {
 }
 
 main .social a svg {
+  fill: #2a2a2a;
   width: 18px;
   height: 18px;
 }
@@ -331,6 +328,8 @@ main nav {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   background-color: #fff;
+  z-index: 100;
+  position: relative;
 }
 
 main nav .navinner {
@@ -511,19 +510,23 @@ main section .about {
 
 main section .about .imgcont {
   margin: 0.4rem 0.7rem;
-  border: 7px solid #f5af31;
+  outline: 7px solid #f5af31;
+  outline-offset: -7px;
   border-radius: 0.5rem;
   -webkit-transform: translateY(5%);
           transform: translateY(5%);
+  width: 235px;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 main section .about .imgcont img {
   border-radius: 0.5rem;
   border: 7px solid #2a2a2a;
-  width: calc(100% + 14px);
-  height: calc(100% + 14px);
   -o-object-fit: cover;
      object-fit: cover;
+  width: 235px;
+  display: block;
   -webkit-transform: translate(10%, -10%);
           transform: translate(10%, -10%);
 }
@@ -531,6 +534,7 @@ main section .about .imgcont img {
 main section .about p {
   padding: 0.4rem 0.7rem;
   color: #5e5e5e;
+  text-align: justify;
 }
 
 main section .about p:last-of-type {
@@ -546,6 +550,7 @@ main section .skills {
 main section .skills .stackscont p {
   padding: 0.4rem 0.7rem;
   color: #5e5e5e;
+  text-align: justify;
 }
 
 main section .skills .stackscont .switch {
@@ -571,8 +576,8 @@ main section .skills .stackscont .switch .switchcontrol {
   position: absolute;
   background-color: #f5af31;
   z-index: 1;
-  height: calc(100% - 0.6rem);
-  width: calc(50% - 4px);
+  height: 78%;
+  width: 48.3%;
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-transition: -webkit-transform 0.3s;
@@ -634,23 +639,26 @@ main section .skills .sets .stackboxcont img {
 main section .portfolio > p {
   padding: 0.4rem 0.7rem;
   color: #5e5e5e;
+  text-align: justify;
 }
 
 main section .portfolio > div {
   margin: 0.4rem 0.7rem;
   margin-top: 2rem;
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
   row-gap: 2rem;
 }
 
 main section .portfolio > div .portfoliobox {
   background-color: #fff;
   border-radius: 0.5rem;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
+  overflow: hidden;
 }
 
 main section .portfolio > div .portfoliobox img {
-  width: 100%;
   aspect-ratio: 16 / 9;
   -o-object-fit: cover;
      object-fit: cover;
@@ -658,7 +666,15 @@ main section .portfolio > div .portfoliobox img {
 }
 
 main section .portfolio > div .portfoliobox .text {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+main section .portfolio > div .portfoliobox .text.service {
+  background-color: #2a2a2a;
+}
+
+main section .portfolio > div .portfoliobox .text.service p {
+  color: #fff;
 }
 
 main section .portfolio > div .portfoliobox .text h4 {
@@ -670,7 +686,7 @@ main section .portfolio > div .portfoliobox .text h4 {
 main section .portfolio > div .portfoliobox .text p {
   text-align: center;
   font-size: 0.75rem;
-  color: #5e5e5e;
+  color: black;
 }
 
 main section .contact .contact-details .social {
