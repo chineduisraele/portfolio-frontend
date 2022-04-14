@@ -527,6 +527,7 @@ main section .about .imgcont img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 235px;
+  height: auto;
   display: block;
   -webkit-transform: translate(10%, -10%);
           transform: translate(10%, -10%);
@@ -660,9 +661,7 @@ main section .portfolio > div .portfoliobox {
 }
 
 main section .portfolio > div .portfoliobox img {
-  aspect-ratio: 16 / 9;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
   display: block;
 }
 

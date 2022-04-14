@@ -256,6 +256,7 @@ main {
           border: 7px solid $logoBlack;
           object-fit: cover;
           width: 235px;
+          height: auto;
           display: block;
           transform: translate(10%, -10%);
         }
@@ -364,7 +365,6 @@ main {
           overflow: hidden;
           img {
             width: 100%;
-            aspect-ratio: 16 / 9;
             display: block;
           }
 

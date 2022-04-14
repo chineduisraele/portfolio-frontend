@@ -171,3 +171,5 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+// add onLoad event listener
