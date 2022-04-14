@@ -2,17 +2,12 @@
 // main styles
 
 main {
-  // background-image: url("/images/hero.webp");
-  // background-repeat: no-repeat;
-  // background-position: 100% 50%;
-  // background-attachment: fixed;
-  // background-size: 100vw;
   max-width: $defaultWidth;
   margin: auto;
   background-color: #fff;
   border-radius: $defaultBorderRadius;
-
   position: relative;
+  overflow: hidden;
   .banner {
     width: 100%;
     object-fit: cover;

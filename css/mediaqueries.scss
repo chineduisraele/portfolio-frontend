@@ -1,5 +1,5 @@
 // @import "./index.scss";
-@import "./__globals.scss";
+@import "./index.scss";
 
 // background
 @media screen and (max-width: 1185px) {
@@ -20,15 +20,24 @@
 }
 @media screen and (max-width: 840px) {
   main {
-    overflow: hidden;
     .banner {
-      // background-position: 80% 10%;
-      object-fit: contain;
-      transform: translate(-50%, -5%);
-      width: 200vw;
+      object-position: 79% 0;
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  main {
+    .banner {
+      // object-fit: contain;
+      height: auto;
+      transform: translate(-44.2%, -10%);
+      width: 180vw;
+      background-attachment: fixed;
+    }
+  }
+}
+
 // main styles
 
 @media (min-width: 641px) and (max-width: 740px) {

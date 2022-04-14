@@ -156,8 +156,8 @@ window.addEventListener(
 let others = [
   document.querySelector(".about"),
   document.querySelector(".skills"),
-  document.querySelector("#services"),
-  document.querySelector("#portfolio"),
+  document.querySelector(".services"),
+  document.querySelector(".portfolio-main"),
   document.querySelector(".contact"),
 ];
 

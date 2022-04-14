@@ -122,7 +122,7 @@ button:focus, button:active {
 }
 
 .btn.yellow {
-  background-color: #f5af31;
+  background-color: #7c3efa;
 }
 
 .btn.black {
@@ -213,6 +213,661 @@ button:focus, button:active {
   margin-top: 3rem;
 }
 
+main {
+  max-width: 1190px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+main .banner {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 687px;
+  position: absolute;
+  -o-object-position: 100% 0;
+     object-position: 100% 0;
+}
+
+main .intro,
+main .about,
+main .skills,
+main .portfolio,
+main .testimonials,
+main .contact {
+  max-width: 800px;
+  margin: auto;
+}
+
+main .about,
+main .skills,
+main .portfolio,
+main .testimonials,
+main .contact {
+  margin-top: 6rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  -webkit-transform: translateY(10rem);
+          transform: translateY(10rem);
+  opacity: 0;
+  z-index: -10;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+main .about h3,
+main .skills h3,
+main .portfolio h3,
+main .testimonials h3,
+main .contact h3 {
+  padding: 0.4rem 0.7rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.3rem;
+  font-display: swap;
+  margin-bottom: 1rem;
+}
+
+main .about h3::after,
+main .skills h3::after,
+main .portfolio h3::after,
+main .testimonials h3::after,
+main .contact h3::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #7c3efa;
+  padding-top: 0.5rem;
+  -webkit-transform: translateX(-25%) scaleX(50%);
+          transform: translateX(-25%) scaleX(50%);
+}
+
+main .social {
+  margin-top: 1rem;
+}
+
+main .social a {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: #c4ced0;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+main .social a:hover {
+  background-color: #7c3efa;
+}
+
+main .social a svg {
+  fill: #2a2a2a;
+  width: 18px;
+  height: 18px;
+}
+
+main nav {
+  -webkit-box-shadow: 0 6px 15px -5px #80808049;
+          box-shadow: 0 6px 15px -5px #80808049;
+  max-width: 1190px;
+  top: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  background-color: #fff;
+  z-index: 100;
+  position: relative;
+}
+
+main nav .navinner {
+  padding: 0.5rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+main nav .navinner .logo {
+  animation: grow 0.78s alternate-reverse infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+main nav .navinner .togglebtn {
+  cursor: pointer;
+  display: none;
+}
+
+main nav .navinner .linkscont {
+  margin-left: auto;
+  position: relative;
+}
+
+main nav .navinner .linkscont ul {
+  font-size: 0.875rem;
+}
+
+main nav .navinner .linkscont ul li {
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #2a2a2a;
+}
+
+main nav .navinner .linkscont ul li.active a {
+  color: #7c3efa;
+}
+
+main section .intro {
+  margin-top: 5.5rem;
+}
+
+main section .intro .name {
+  position: relative;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  opacity: 0;
+  z-index: -10;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+main section .intro .name p {
+  max-width: 60%;
+}
+
+main section .intro .name > header,
+main section .intro .name > p,
+main section .intro .name > div {
+  padding: 0.4rem 0.7rem;
+}
+
+main section .intro .name p {
+  color: #5e5e5e;
+}
+
+main section .intro .name p span {
+  color: black;
+  font-weight: bold;
+}
+
+main section .intro .name p a {
+  color: #5e5e5e;
+}
+
+main section .intro .name .buttons {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+main section .intro .name .buttons .btn {
+  font-size: 1rem !important;
+  width: 24%;
+  text-align: center;
+}
+
+main section .intro .name h2 {
+  font-size: 2.15rem;
+  font-family: Roboto;
+}
+
+main section .intro .name h2:last-of-type {
+  color: #7c3efa;
+}
+
+main section .intro .social,
+main section .intro .check-cont {
+  padding: 0.4rem 0.7rem;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+main section .intro .check-cont {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin-top: 4rem;
+}
+
+main section .intro .check-cont .check {
+  padding: 0.5rem 0.7rem;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
+  border-radius: 0.5rem;
+  -ms-grid-columns: 1fr 8fr;
+      grid-template-columns: 1fr 8fr;
+  background-color: #fff;
+}
+
+main section .intro .check-cont .check svg {
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+main section .intro .check-cont .check p span {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+main section .intro .check-cont .check p > span:first-of-type {
+  font-size: 1.2rem;
+  color: #7c3efa;
+}
+
+main section .intro .check-cont .check p > span:last-of-type {
+  font-size: 0.825rem;
+}
+
+main section .intro {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+main section .about,
+main section .portfolio,
+main section .contact {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
+}
+
+main section .about,
+main section .skills,
+main section .portfolio,
+main section .contact {
+  padding: 2rem 0.5rem;
+}
+
+main section .about {
+  -ms-grid-columns: 1fr 1.8fr;
+      grid-template-columns: 1fr 1.8fr;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+main section .about .imgcont {
+  margin: 0.4rem 0.7rem;
+  outline: 7px solid #7c3efa;
+  outline-offset: -7px;
+  border-radius: 0.5rem;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+  width: 235px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+main section .about .imgcont img {
+  border-radius: 0.5rem;
+  border: 7px solid #2a2a2a;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 235px;
+  display: block;
+  -webkit-transform: translate(10%, -10%);
+          transform: translate(10%, -10%);
+}
+
+main section .about p {
+  padding: 0.4rem 0.7rem;
+  color: #5e5e5e;
+  text-align: justify;
+}
+
+main section .about p:last-of-type {
+  padding-bottom: 1rem;
+}
+
+main section .skills {
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
+  overflow: hidden;
+}
+
+main section .skills .stackscont p {
+  padding: 0.4rem 0.7rem;
+  color: #5e5e5e;
+  text-align: justify;
+}
+
+main section .skills .stackscont .switch {
+  margin: 0.4rem 0.7rem;
+  margin-top: 1rem;
+  background-color: #2a2a2a;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  position: relative;
+}
+
+main section .skills .stackscont .switch button {
+  width: 50%;
+  z-index: 3;
+  font-size: 1rem;
+  padding: 0.5rem 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+main section .skills .stackscont .switch .switchcontrol {
+  position: absolute;
+  background-color: #7c3efa;
+  z-index: 1;
+  height: 78%;
+  width: 48.3%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+main section .skills .stackscont .switch .switchcontrol.move {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+main section .skills .sets {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section .skills .sets .stackboxcont {
+  padding: 0.5rem 1rem;
+  row-gap: 1rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  display: none;
+}
+
+main section .skills .sets .stackboxcont.show {
+  display: -ms-grid;
+  display: grid;
+}
+
+main section .skills .sets .stackboxcont.show .stackbox {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main section .skills .sets .stackboxcont img {
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
+  background-color: #fff;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 28px;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+
+main section .portfolio > p {
+  padding: 0.4rem 0.7rem;
+  color: #5e5e5e;
+  text-align: justify;
+}
+
+main section .portfolio > div {
+  margin: 0.4rem 0.7rem;
+  margin-top: 2rem;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  row-gap: 2rem;
+}
+
+main section .portfolio > div .portfoliobox {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
+  overflow: hidden;
+}
+
+main section .portfolio > div .portfoliobox img {
+  aspect-ratio: 16 / 9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+main section .portfolio > div .portfoliobox .text {
+  padding: 1rem 1.5rem;
+}
+
+main section .portfolio > div .portfoliobox .text.service {
+  background-color: #2a2a2a;
+}
+
+main section .portfolio > div .portfoliobox .text.service p {
+  color: #fff;
+}
+
+main section .portfolio > div .portfoliobox .text h4 {
+  color: #7c3efa;
+  font-weight: bold;
+  text-align: center;
+}
+
+main section .portfolio > div .portfoliobox .text p {
+  text-align: center;
+  font-size: 0.75rem;
+  color: black;
+}
+
+main section .contact .contact-details .social {
+  padding: 0.4rem 0.7rem;
+  margin-top: 2rem;
+}
+
+main section .contact .contact-details > p {
+  padding: 0.4rem 0.7rem;
+  color: #5e5e5e;
+}
+
+main section .contact .contact-details .contactbox {
+  padding: 0.4rem 0.7rem;
+  -webkit-column-gap: 0.725rem;
+          column-gap: 0.725rem;
+}
+
+main section .contact .contact-details .contactbox svg {
+  margin-top: 4px;
+  margin-right: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+main section .contact .contact-details .contactbox p {
+  display: -ms-grid;
+  display: grid;
+}
+
+main section .contact .contact-details .contactbox p span:first-of-type {
+  font-weight: bold;
+}
+
+main section .contact .contact-details .contactbox p span:last-of-type {
+  color: #5e5e5e;
+}
+
+main section .contact form {
+  margin: 0.4rem 0.7rem;
+  row-gap: 1rem;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #2a2a2a;
+}
+
+main section .contact form label {
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  font-size: 0.825rem;
+  font-weight: bold;
+  row-gap: 0.3rem;
+}
+
+main section .contact form label svg {
+  fill: rgba(128, 128, 128, 0.637);
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  -webkit-transform: translate(0.6rem, 33px);
+          transform: translate(0.6rem, 33px);
+}
+
+main section .contact form label input,
+main section .contact form label textarea {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.6rem 0.6rem 2.1rem;
+  line-height: 1.2rem;
+}
+
+main section .contact form label input::-webkit-input-placeholder,
+main section .contact form label textarea::-webkit-input-placeholder {
+  color: gray;
+}
+
+main section .contact form label input:-ms-input-placeholder,
+main section .contact form label textarea:-ms-input-placeholder {
+  color: gray;
+}
+
+main section .contact form label input::-ms-input-placeholder,
+main section .contact form label textarea::-ms-input-placeholder {
+  color: gray;
+}
+
+main section .contact form label input::placeholder,
+main section .contact form label textarea::placeholder {
+  color: gray;
+}
+
+main section .contact form label input:focus,
+main section .contact form label textarea:focus {
+  outline: 2.5px solid #7c3efa;
+}
+
+main section .contact form label textarea {
+  padding-left: 0.6rem;
+  height: 7rem;
+  resize: none;
+}
+
+footer {
+  padding: 0.5rem 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer p {
+  color: #2a2a2a;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+}
+
+footer p span {
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.alert {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000bd;
+  z-index: -10;
+  opacity: 0;
+  -webkit-transition: z-index 0.5s, opacity 0.5s;
+  transition: z-index 0.5s, opacity 0.5s;
+}
+
+.alert.show {
+  z-index: 1500;
+  opacity: 1;
+}
+
+.alert .inner {
+  padding: 2rem;
+  padding-left: 3.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.topbtn {
+  position: fixed;
+  bottom: 0.75rem;
+  left: 90vw;
+  color: #7c3efa;
+  background-color: #2a2a2a;
+  font-size: 1.25rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
+  z-index: -10;
+  animation: grow 2s infinite alternate-reverse ease-in;
+}
+
+.topbtn.show {
+  z-index: 100;
+}
+
 @media screen and (max-width: 1185px) {
   main .buttons .yellow {
     -webkit-box-shadow: 0 3px 15px -4px #808080 !important;
@@ -228,15 +883,19 @@ button:focus, button:active {
 }
 
 @media screen and (max-width: 840px) {
-  main {
-    overflow: hidden;
-  }
   main .banner {
-    -o-object-fit: contain;
-       object-fit: contain;
-    -webkit-transform: translate(-50%, -5%);
-            transform: translate(-50%, -5%);
-    width: 200vw;
+    -o-object-position: 79% 0;
+       object-position: 79% 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main .banner {
+    height: auto;
+    -webkit-transform: translate(-44.2%, -10%);
+            transform: translate(-44.2%, -10%);
+    width: 180vw;
+    background-attachment: fixed;
   }
 }
 
