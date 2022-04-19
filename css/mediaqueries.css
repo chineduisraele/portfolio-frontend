@@ -351,6 +351,8 @@ main nav .navinner .logo {
 main nav .navinner .togglebtn {
   cursor: pointer;
   display: none;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 main nav .navinner .linkscont {

@@ -105,6 +105,7 @@ main {
       .togglebtn {
         cursor: pointer;
         display: none;
+        transform: scale(0.8);
       }
 
       .linkscont {
@@ -329,18 +330,29 @@ main {
               transition: all 0.3s;
             }
           }
-          img {
-            cursor: pointer;
-            opacity: 0;
-            transform: translate(50%, 50%);
-            border-radius: $defaultBorderRadius;
-            box-shadow: $shad2;
-            background-color: #fff;
+          .imgcont {
             display: block;
+            position: relative;
+            display: block;
+            padding-top: 100%;
             width: 100%;
-            aspect-ratio: 1 / 1;
-            padding: 28px;
-            transition: opacity 0.35s, transform 0.35s;
+            height: 0;
+
+            img {
+              cursor: pointer;
+              opacity: 0;
+              transform: translate(50%, 50%);
+              border-radius: $defaultBorderRadius;
+              box-shadow: $shad2;
+              background-color: #fff;
+              display: block;
+              width: 100%;
+              padding: 28px;
+              transition: opacity 0.35s, transform 0.35s;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
           }
         }
       }
@@ -362,10 +374,26 @@ main {
           background-color: #fff;
           border-radius: $defaultBorderRadius;
           box-shadow: $shad2;
-          overflow: hidden;
-          img {
-            width: 100%;
+          .imgcont {
+            position: relative;
             display: block;
+            padding-top: 56.25%;
+            width: 100%;
+            height: 0;
+            img {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              display: block;
+              object-fit: cover;
+              object-position: 0 0;
+            }
+            // img {
+            //   width: 100%;
+            //   display: block;
+            // }
           }
 
           .text {

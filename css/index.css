@@ -351,6 +351,8 @@ main nav .navinner .logo {
 main nav .navinner .togglebtn {
   cursor: pointer;
   display: none;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 main nav .navinner .linkscont {
@@ -619,7 +621,16 @@ main section .skills .sets .stackboxcont.show .stackbox {
   transition: all 0.3s;
 }
 
-main section .skills .sets .stackboxcont img {
+main section .skills .sets .stackboxcont .imgcont {
+  display: block;
+  position: relative;
+  display: block;
+  padding-top: 100%;
+  width: 100%;
+  height: 0;
+}
+
+main section .skills .sets .stackboxcont .imgcont img {
   cursor: pointer;
   opacity: 0;
   -webkit-transform: translate(50%, 50%);
@@ -630,12 +641,14 @@ main section .skills .sets .stackboxcont img {
   background-color: #fff;
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
   padding: 28px;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 main section .portfolio > p {
@@ -657,12 +670,27 @@ main section .portfolio > div .portfoliobox {
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 3px 15px -4px #808080ab;
           box-shadow: 0 3px 15px -4px #808080ab;
-  overflow: hidden;
 }
 
-main section .portfolio > div .portfoliobox img {
-  width: 100%;
+main section .portfolio > div .portfoliobox .imgcont {
+  position: relative;
   display: block;
+  padding-top: 56.25%;
+  width: 100%;
+  height: 0;
+}
+
+main section .portfolio > div .portfoliobox .imgcont img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 main section .portfolio > div .portfoliobox .text {
