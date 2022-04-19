@@ -518,7 +518,7 @@ main section .about .imgcont {
   border-radius: 0.5rem;
   -webkit-transform: translateY(5%);
           transform: translateY(5%);
-  width: 235px;
+  width: 200px;
   -ms-grid-column-align: center;
       justify-self: center;
 }
@@ -528,8 +528,8 @@ main section .about .imgcont img {
   border: 7px solid #2a2a2a;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 235px;
-  height: auto;
+  width: 200px;
+  height: 264px;
   display: block;
   -webkit-transform: translate(10%, -10%);
           transform: translate(10%, -10%);
@@ -621,7 +621,16 @@ main section .skills .sets .stackboxcont.show .stackbox {
   transition: all 0.3s;
 }
 
-main section .skills .sets .stackboxcont img {
+main section .skills .sets .stackboxcont .imgcont {
+  display: block;
+  position: relative;
+  display: block;
+  padding-top: 100%;
+  width: 100%;
+  height: 0;
+}
+
+main section .skills .sets .stackboxcont .imgcont img {
   cursor: pointer;
   opacity: 0;
   -webkit-transform: translate(50%, 50%);
@@ -632,12 +641,14 @@ main section .skills .sets .stackboxcont img {
   background-color: #fff;
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
   padding: 28px;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 main section .portfolio > p {
@@ -662,9 +673,25 @@ main section .portfolio > div .portfoliobox {
   overflow: hidden;
 }
 
-main section .portfolio > div .portfoliobox img {
-  width: 100%;
+main section .portfolio > div .portfoliobox .imgcont {
+  position: relative;
   display: block;
+  padding-top: 56.25%;
+  width: 100%;
+  height: 0;
+}
+
+main section .portfolio > div .portfoliobox .imgcont img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 main section .portfolio > div .portfoliobox .text {

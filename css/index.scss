@@ -249,15 +249,15 @@ main {
         outline-offset: -7px;
         border-radius: $defaultBorderRadius;
         transform: translateY(5%);
-        width: 235px;
+        width: 200px;
         justify-self: center;
 
         img {
           border-radius: $defaultBorderRadius;
           border: 7px solid $logoBlack;
           object-fit: cover;
-          width: 235px;
-          height: auto;
+          width: 200px;
+          height: 264px;
           display: block;
           transform: translate(10%, -10%);
         }
@@ -374,6 +374,7 @@ main {
           background-color: #fff;
           border-radius: $defaultBorderRadius;
           box-shadow: $shad2;
+          overflow: hidden;
           .imgcont {
             position: relative;
             display: block;

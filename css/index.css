@@ -518,7 +518,7 @@ main section .about .imgcont {
   border-radius: 0.5rem;
   -webkit-transform: translateY(5%);
           transform: translateY(5%);
-  width: 235px;
+  width: 200px;
   -ms-grid-column-align: center;
       justify-self: center;
 }
@@ -528,8 +528,8 @@ main section .about .imgcont img {
   border: 7px solid #2a2a2a;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 235px;
-  height: auto;
+  width: 200px;
+  height: 264px;
   display: block;
   -webkit-transform: translate(10%, -10%);
           transform: translate(10%, -10%);
@@ -670,6 +670,7 @@ main section .portfolio > div .portfoliobox {
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 3px 15px -4px #808080ab;
           box-shadow: 0 3px 15px -4px #808080ab;
+  overflow: hidden;
 }
 
 main section .portfolio > div .portfoliobox .imgcont {
