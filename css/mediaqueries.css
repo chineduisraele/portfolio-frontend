@@ -850,7 +850,7 @@ footer p span {
 .topbtn {
   position: fixed;
   bottom: 0.75rem;
-  left: 90vw;
+  right: 0.5rem;
   color: #7c3efa;
   background-color: #2a2a2a;
   font-size: 1.25rem;
@@ -1170,6 +1170,7 @@ footer p span {
     display: -ms-grid;
     display: grid;
     row-gap: 1rem;
+    margin-top: 200px;
   }
 }
 
@@ -1195,9 +1196,6 @@ footer p span {
   }
   main section .skills .stackboxcont img {
     padding: 1rem !important;
-  }
-  footer {
-    margin-top: 40vh;
   }
 }
 /*# sourceMappingURL=mediaqueries.css.map */

@@ -16,25 +16,18 @@ let backend_URL = "https://chineduisraeleportfolio.herokuapp.com/",
   topbtn = document.querySelector(".topbtn");
 
 // nav
-toggleButton.addEventListener(
-  "click",
-  () => {
-    linksCont.classList.toggle("show");
-  },
-  { passive: true }
-);
+toggleButton.addEventListener("click", () => {
+  linksCont.classList.toggle("show");
+});
 
 //change nav links color
-links.forEach(
-  (li) => {
-    li.addEventListener("click", (e) => {
-      linksCont.querySelector("li.active").classList.remove("active");
-      e.currentTarget.classList.add("active");
-      linksCont.classList.toggle("show");
-    });
-  },
-  { passive: true }
-);
+links.forEach((li) => {
+  li.addEventListener("click", (e) => {
+    linksCont.querySelector("li.active").classList.remove("active");
+    e.currentTarget.classList.add("active");
+    linksCont.classList.toggle("show");
+  });
+});
 
 // tool boxes
 // toolbox accessory function
@@ -65,32 +58,20 @@ const toggleBox = (show, hide) => {
   });
 };
 
-window.addEventListener(
-  "load",
-  () => {
-    skillBox.forEach((e, i) => {
-      showBox(e, i, true);
-    });
-  },
-  { passive: true }
-);
+window.addEventListener("load", () => {
+  skillBox.forEach((e, i) => {
+    showBox(e, i, true);
+  });
+});
 
 // switch buttons
-switch_buttons[0].addEventListener(
-  "click",
-  () => {
-    toggleBox(skillBox, toolBox);
-  },
-  { passive: true }
-);
+switch_buttons[0].addEventListener("click", () => {
+  toggleBox(skillBox, toolBox);
+});
 
-switch_buttons[1].addEventListener(
-  "click",
-  () => {
-    toggleBox(toolBox, skillBox);
-  },
-  { passive: true }
-);
+switch_buttons[1].addEventListener("click", () => {
+  toggleBox(toolBox, skillBox);
+});
 
 // form handler accesory functions
 const submitButtonChange = (opacity, inner, disabled) => {
@@ -115,41 +96,33 @@ const formAlert = (errorcls, message) => {
 };
 
 // form hander
-form.addEventListener(
-  "submit",
-  (e) => {
-    e.preventDefault();
-    let data = new FormData(e.target);
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let data = new FormData(e.target);
 
-    // disable submit btn
-    submitButtonChange(0.5, "Sending...", true);
+  // disable submit btn
+  submitButtonChange(0.5, "Sending...", true);
 
-    fetch(backend_URL + "message/", { method: "POST", body: data })
-      .then(() => {
-        // reset form
-        form.reset();
+  fetch(backend_URL + "message/", { method: "POST", body: data })
+    .then(() => {
+      // reset form
+      form.reset();
 
-        formAlert("success", "Your Message was sent successfully!");
-      })
-      .catch(() => {
-        formAlert("error", "There was a problem sending your message!");
-      });
-  },
-  { passive: true }
-);
+      formAlert("success", "Your Message was sent successfully!");
+    })
+    .catch(() => {
+      formAlert("error", "There was a problem sending your message!");
+    });
+});
 
 // top button
-window.addEventListener(
-  "scroll",
-  () => {
-    if (window.scrollY > 1200) {
-      topbtn.classList.add("show");
-    } else {
-      topbtn.classList.remove("show");
-    }
-  },
-  { passive: true }
-);
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 1200) {
+    topbtn.classList.add("show");
+  } else {
+    topbtn.classList.remove("show");
+  }
+});
 
 // On load animation
 

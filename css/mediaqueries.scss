@@ -213,6 +213,7 @@
   footer {
     display: grid;
     row-gap: 1rem;
+    margin-top: 200px;
   }
 }
 
@@ -244,8 +245,5 @@
         }
       }
     }
-  }
-  footer {
-    margin-top: 40vh;
   }
 }
