@@ -34,7 +34,7 @@
       });
     </script>
 
-    <style>
+    <!-- <style>
       @keyframes grow {
         0% {
           transform: scale(0.8);
@@ -53,16 +53,16 @@
           transform: scale(1.1);
         }
       }
-    </style>
-    <script>
+    </style> -->
+    <!-- <script>
       window.addEventListener("load", () => {
         document.querySelector("#loading").style.display = "none";
       });
-    </script>
+    </script> -->
   </head>
   <body>
     <!-- loading -->
-    <div
+    <!-- <div
       id="loading"
       style="
         height: 100vh;
@@ -102,7 +102,7 @@
           />
         </g>
       </svg>
-    </div>
+    </div> -->
 
     <main>
       <!-- navbar -->
@@ -113,7 +113,7 @@
             class="logo"
             viewBox="0 0 68.000000 68.000000"
             style="
-              background: #f5af31;
+              background: #25a3ad;
               height: 40px;
               width: 40px;
               display: inline-block;
@@ -150,7 +150,7 @@
       </nav>
 
       <!-- <div class="bannerimg"></div> -->
-      <img src="./images/hero.webp" alt="banner" class="banner" />
+      <!-- <img src="./images/hero.jpg" alt="banner" class="banner" /> -->
 
       <!-- main -->
       <section>
@@ -163,7 +163,7 @@
             <p>
               Founder of Five Fingers Dev.<br />
               Professional UI/UX Designer and Full Stack Web developer based in
-              Nigeria. <br />Sometimes works as a freelancer.
+              Nigeria. <br />Works at Maryland Computer Institute.
             </p>
             <!-- email and phone -->
             <div class="email d-flex cg-1">
@@ -181,7 +181,7 @@
 
             <!-- Download Cv and Hire me buttons -->
             <div class="d-flex cg-1 buttons">
-              <a href="#" class="btn black">Hire Me</a>
+              <a href="#contact" class="btn black">Hire Me</a>
               <a href="./files/cv.pdf" class="btn yellow" download
                 >Download CV</a
               >
@@ -191,25 +191,29 @@
           <!-- social links -->
           <div class="d-flex social cg-05">
             <!-- linkedin -->
-            <a href="#" aria-label="linkedin link">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/chineduisraele"
+              aria-label="linkedin link"
+            >
               <svg viewBox="0 0 2000.000000 2000.000000">
                 <use href="./sprite.svg#linkedin"></use>
               </svg>
             </a>
             <!-- twitter -->
-            <a href="#" aria-label="twitter link">
+            <a href="#" target="_blank" aria-label="twitter link">
               <svg viewBox="0 0 365.000000 319.000000">
                 <use href="./sprite.svg#twitter"></use>
               </svg>
             </a>
             <!-- facebook -->
-            <a href="#" aria-label="facebook link">
+            <a href="#" target="_blank" aria-label="facebook link">
               <svg viewBox="0 0 980.000000 980.000000">
                 <use href="./sprite.svg#facebook"></use>
               </svg>
             </a>
             <!-- github -->
-            <a href="#" aria-label="github link">
+            <a href="#" target="_blank" aria-label="github link">
               <svg viewBox="0 0 460.000000 450.000000">
                 <use href="./sprite.svg#github"></use>
               </svg>
@@ -227,7 +231,7 @@
                 <use href="./sprite.svg#emblem"></use>
               </svg>
               <p>
-                <span>2+</span>
+                <span>1+</span>
                 <span>Years of Experience</span>
               </p>
             </div>
@@ -235,7 +239,7 @@
             <div class="check d-grid aic">
               <svg
                 viewBox="0 0 64.000000 64.000000"
-                style="background-color: #f5af31; fill: #fff"
+                style="background-color: #25a3ad; fill: #fff"
               >
                 <use href="./sprite.svg#check"></use>
               </svg>
@@ -254,8 +258,8 @@
               </svg>
 
               <p>
-                <span>5+</span>
-                <span>Happy Clients</span>
+                <span>25+</span>
+                <span>Positive Reviews</span>
               </p>
             </div>
           </div>
@@ -274,11 +278,22 @@
             <div>
               <h3>About Me</h3>
               <p>
-                Hi! I’m Chinedu Israel and I’m a developer who has passion for
-                building clean web applications with intuitive functionality. I
-                enjoy the process of turning ideas into reality using creative
-                solutions. I’m always curious about learning new skills, tools,
-                and concepts.
+                Hi! I’m Chinedu Israel and I’m a creative Full-stack Web
+                Developer with 1+ years of experience in web development and
+                design.
+              </p>
+              <p>
+                I’m a developer with a passion for building clean web
+                applications using responsive design principles, industry
+                standard best practices and modern frontend and backend web
+                development tools to deliver high performing applications with
+                intuitive functionality.
+              </p>
+              <p>
+                I posess a wide range of applicable and transferable skills
+                gained through industry related experience as well as personal
+                projects, studies and passion and I enjoy the process of turning
+                ideas into reality using creative solutions.
               </p>
             </div>
           </article>
@@ -484,13 +499,13 @@
             <div class="d-grid col-2">
               <!-- friendly store -->
               <a
-                href="http://localhost:3000/"
+                href="https://friendlee.netlify.app/"
                 target="_blank"
                 class="d-grid portfoliobox"
               >
                 <span class="imgcont">
                   <img
-                    src="./images/491-4913117_web-designing-images-png.webp"
+                    src="./images/projects/friendlee.webp"
                     alt="store"
                     loading="lazy"
                   />
@@ -499,7 +514,7 @@
                 <div class="text">
                   <h4>Friendly Store</h4>
                   <p>
-                    A fully functional e-commerce platform built with React JS
+                    A fully functional e-commerce web app built with React JS
                     and powered by Python Django
                   </p>
                 </div>
@@ -530,24 +545,21 @@
 
               <!-- Chatly -->
               <a
-                href="http://localhost:3000/"
+                href="https://voom.netlify.app/"
                 target="_blank"
                 class="d-grid portfoliobox"
               >
                 <span class="imgcont">
                   <img
-                    src="./images/491-4913117_web-designing-images-png.webp"
+                    src="./images/projects/voom.webp"
                     alt="web design"
                     loading="lazy"
                   />
                 </span>
 
                 <div class="text">
-                  <h4>Chatty</h4>
-                  <p>
-                    Online Messaging Web App built with React JS and powered by
-                    Python Django
-                  </p>
+                  <h4>Voom</h4>
+                  <p>Courier Service site built with React JS</p>
                 </div>
               </a>
 
@@ -624,22 +636,26 @@
 
               <!-- social links -->
               <div class="d-flex social cg-05">
-                <a href="#" aria-label="linkedin link">
+                <a
+                  href="https://www.linkedin.com/in/chineduisraele"
+                  target="_blank"
+                  aria-label="linkedin link"
+                >
                   <svg viewBox="0 0 2000.000000 2000.000000">
                     <use href="./sprite.svg#linkedin"></use>
                   </svg>
                 </a>
-                <a href="#" aria-label="twitter link">
+                <a href="#" target="_blank" aria-label="twitter link">
                   <svg viewBox="0 0 365.000000 319.000000">
                     <use href="./sprite.svg#twitter"></use>
                   </svg>
                 </a>
-                <a href="#" aria-label="github link">
+                <a href="#" target="_blank" aria-label="github link">
                   <svg viewBox="0 0 460.000000 450.000000">
                     <use href="./sprite.svg#github"></use>
                   </svg>
                 </a>
-                <a href="#" aria-label="facebook link">
+                <a href="#" target="_blank" aria-label="facebook link">
                   <svg viewBox="0 0 980.000000 980.000000">
                     <use href="./sprite.svg#facebook"></use>
                   </svg>
@@ -715,10 +731,10 @@
           </svg>
           by
           <span style="margin-left: 0.5rem">
-            <svg
+            <!-- <svg
               viewBox="0 0 68.000000 68.000000"
               style="
-                background: #f5af31;
+                background: #25a3ad;
                 height: 28px;
                 width: 28px;
                 display: inline-block;
@@ -727,8 +743,8 @@
               "
             >
               <use href="./sprite.svg#logo"></use>
-            </svg>
-            ingers Dev.
+            </svg> -->
+            Chinedu Israele
           </span>
         </p>
         <p>Powered by Django. &copy; 2022</p>

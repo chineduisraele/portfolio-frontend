@@ -7,6 +7,7 @@ $logoRed: #e60023;
 $logoYellow: #f5af31;
 $logoYellow: #f5af31;
 $logoYellow: #7c3efa;
+$logoYellow: #25a3ad;
 // $logoYellow: #169b28;
 // $logoYellow: #1f28a7;
 // $logoYellow: #b91f79;
@@ -59,6 +60,14 @@ $time1: 1s;
     "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   font-display: swap;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+select {
+  user-select: auto;
 }
 
 textarea {

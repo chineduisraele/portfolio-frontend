@@ -227,7 +227,7 @@ main {
     .contact {
       background-color: #fff;
       border-radius: $defaultBorderRadius;
-      box-shadow: $shad2;
+      // box-shadow: $shad2;
     }
 
     .about,
@@ -399,12 +399,12 @@ main {
 
           .text {
             padding: 1rem 1.5rem;
-            &.service {
-              background-color: $logoBlack;
-              p {
-                color: #fff;
-              }
-            }
+            // &.service {
+            //   background-color: $logoBlack;
+            //   p {
+            //     color: #fff;
+            //   }
+            // }
             h4 {
               color: $logoYellow;
               font-weight: bold;
@@ -412,7 +412,7 @@ main {
             }
             p {
               text-align: center;
-              font-size: 0.75rem;
+              font-size: 0.8rem;
               color: black;
             }
           }
