@@ -7,6 +7,12 @@
   width: 100%;
 }
 
+// bg vid
+video {
+  width: 100%;
+  position: fixed;
+}
+
 // nav
 nav {
   box-shadow: $shad;
@@ -21,7 +27,8 @@ nav {
     flex-wrap: wrap;
     position: relative;
     .logo {
-      background: #9b4bfc;
+      fill: #169b28;
+      background-color: #fff;
       height: 40px;
       width: 40px;
       display: inline-block;
@@ -85,6 +92,7 @@ main {
       width: max-content;
       font-size: 1.3rem;
       margin-bottom: 1rem;
+      // color: $logoYellow;
 
       &::after {
         content: "";
@@ -130,7 +138,7 @@ main {
 
   section {
     .intro {
-      margin-top: 5.5rem;
+      margin-top: 8rem;
       padding: {
         left: 0.5rem;
         right: 0.5rem;
@@ -167,7 +175,7 @@ main {
             font-size: 1rem;
             width: 24%;
             text-align: center;
-            box-shadow: $shad2;
+            // box-shadow: $shad2;
           }
         }
         h2 {
@@ -227,7 +235,8 @@ main {
     .contact {
       background-color: #fff;
       border-radius: $defaultBorderRadius;
-      box-shadow: $shad2;
+      box-shadow: transparent;
+      // box-shadow: 0 3px 15px -4px $logoYellow;
     }
 
     .about,
@@ -537,5 +546,52 @@ footer {
   &.show {
     z-index: 100;
     visibility: visible;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  nav {
+    background-color: transparent !important;
+    box-shadow: none;
+    .navinner .linkscont ul li a {
+      color: #fff;
+    }
+  }
+  main section {
+    .about,
+    .skills,
+    .portfolio,
+    .testimonials,
+    .contact {
+      background-color: transparent;
+      h3 {
+        color: $logoYellow;
+      }
+      p {
+        color: #fff;
+      }
+    }
+    .intro .name {
+      h2 {
+        color: #fff;
+      }
+      p {
+        color: #fff;
+        span {
+          color: $logoYellow;
+        }
+      }
+    }
+
+    .contact {
+      .contact-details {
+        .contactbox svg {
+          fill: $logoYellow;
+        }
+        p span:first-of-type {
+          color: $logoYellow !important;
+        }
+      }
+    }
   }
 }
