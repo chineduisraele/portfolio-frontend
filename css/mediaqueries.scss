@@ -1,42 +1,42 @@
 // @import "./index.scss";
-@import "./index.scss";
+@import "./_globals";
 
 // background
-@media screen and (max-width: 1185px) {
-  main {
-    .buttons .yellow {
-      box-shadow: 0 3px 15px -4px #808080 !important;
-    }
-  }
-}
+// @media screen and (max-width: 1185px) {
+//   main {
+//     .buttons .yellow {
+//       box-shadow: 0 3px 15px -4px #808080 !important;
+//     }
+//   }
+// }
 
 // banner img
-@media screen and (max-width: 1050px) {
-  main {
-    .banner {
-      object-position: 70% 0;
-    }
-  }
-}
-@media screen and (max-width: 840px) {
-  main {
-    .banner {
-      object-position: 79% 0;
-    }
-  }
-}
+// @media screen and (max-width: 1050px) {
+//   main {
+//     .banner {
+//       object-position: 70% 0;
+//     }
+//   }
+// }
+// @media screen and (max-width: 840px) {
+//   main {
+//     .banner {
+//       object-position: 79% 0;
+//     }
+//   }
+// }
 
-@media screen and (max-width: 640px) {
-  main {
-    .banner {
-      // object-fit: contain;
-      height: auto;
-      transform: translate(-44.2%, -10%);
-      width: 180vw;
-      background-attachment: fixed;
-    }
-  }
-}
+// @media screen and (max-width: 640px) {
+//   main {
+//     .banner {
+//       // object-fit: contain;
+//       height: auto;
+//       transform: translate(-44.2%, -10%);
+//       width: 180vw;
+//       background-attachment: fixed;
+//     }
+//   }
+// }
 
 // main styles
 
@@ -59,49 +59,48 @@
 }
 
 @media screen and (max-width: 640px) {
-  main {
-    // nav
-    nav .navinner {
-      padding-top: 0.7rem;
-      padding-bottom: 0.7rem;
+  // nav
+  nav .navinner {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
 
-      .togglebtn {
-        display: block;
+    .togglebtn {
+      display: block;
+    }
+
+    .linkscont {
+      &.show {
+        height: 324px;
       }
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      top: 3.5rem;
+      left: 0;
+      z-index: 50;
+      box-shadow: 0 12px 15px -4px #808080ab;
+      transition: height 0.3s;
+      ul {
+        border-radius: $defaultBorderRadius;
+        padding: $defaultPadding;
+        padding-bottom: 1rem;
+        padding-top: 1.5rem;
+        background-color: #fff;
+        display: grid;
+        row-gap: 1rem;
 
-      .linkscont {
-        &.show {
-          height: 324px;
-        }
-        height: 0;
-        overflow: hidden;
-        position: absolute;
-        width: 100%;
-        top: 3.5rem;
-        left: 0;
-        z-index: 50;
-        box-shadow: 0 12px 15px -4px #808080ab;
-        transition: height 0.3s;
-        ul {
-          border-radius: $defaultBorderRadius;
-          padding: $defaultPadding;
-          padding-bottom: 1rem;
-          padding-top: 1.5rem;
-          background-color: #fff;
-          display: grid;
-          row-gap: 1rem;
-
-          li {
-            border-bottom: 1px solid rgba(117, 117, 117, 0.24);
-            a {
-              display: block;
-              padding: 0.5rem 1rem;
-            }
+        li {
+          border-bottom: 1px solid rgba(117, 117, 117, 0.24);
+          a {
+            display: block;
+            padding: 0.5rem 1rem;
           }
         }
       }
     }
-
+  }
+  main {
     section {
       transform: translateY(32vh);
       background-color: #fff;

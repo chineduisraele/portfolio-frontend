@@ -1,20 +1,74 @@
 @import "./_globals";
-// main styles
+@mixin resimage {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+}
 
+// nav
+nav {
+  box-shadow: $shad;
+  background-color: #fff;
+  top: 0;
+  z-index: 100;
+  position: sticky;
+  .navinner {
+    padding: $defaultPadding;
+    max-width: $defaultWidth1;
+    margin: auto;
+    flex-wrap: wrap;
+    position: relative;
+    .logo {
+      background: #9b4bfc;
+      height: 40px;
+      width: 40px;
+      display: inline-block;
+      transform: translate(-5%, 28%);
+      border-radius: 50%;
+      animation: grow 0.78s alternate-reverse infinite;
+      animation-timing-function: linear;
+    }
+
+    .togglebtn {
+      cursor: pointer;
+      display: none;
+      transform: scale(0.8);
+    }
+
+    .linkscont {
+      margin-left: auto;
+      position: relative;
+
+      ul {
+        li {
+          font-weight: bold;
+          font-size: 0.875rem;
+          &.active a {
+            color: $logoYellow;
+          }
+        }
+      }
+    }
+  }
+}
+
+// main styles
 main {
   max-width: $defaultWidth;
   margin: auto;
-  background-color: #fff;
-  border-radius: $defaultBorderRadius;
   position: relative;
-  overflow: hidden;
-  .banner {
-    width: 100%;
-    object-fit: cover;
-    height: 687px;
-    position: absolute;
-    object-position: 100% 0;
-  }
+  // .banner {
+  //   width: 40%;
+  //   object-fit: cover;
+  //   // height: 687px;
+  //   position: absolute;
+  //   transform: scaleX(-1);
+  //   right: 0%;
+  //   top: -20px;
+  //   object-position: 100% 0;
+  // }
 
   .intro,
   .about,
@@ -34,17 +88,12 @@ main {
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
     transform: translateY(10rem);
-    opacity: 0;
-    z-index: -10;
-    transition: transform $time1, opacity $time1;
+    transition: transform $time1;
 
     h3 {
       padding: $defaultPaddingSmall;
       width: max-content;
-      font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       font-size: 1.3rem;
-      font-display: swap;
       margin-bottom: 1rem;
 
       &::after {
@@ -60,7 +109,6 @@ main {
   // social
   .social {
     margin-top: 1rem;
-
     a {
       width: 2.5rem;
       height: 2.5rem;
@@ -72,67 +120,34 @@ main {
       transition: background-color $time;
       &:hover {
         background-color: $logoYellow;
+        svg {
+          fill: #fff;
+        }
       }
       svg {
+        transition: fill $time;
         fill: $logoBlack;
         width: 18px;
         height: 18px;
       }
     }
   }
-
-  // nav
-  nav {
-    box-shadow: $shad;
-    max-width: $defaultWidth;
-    top: 0;
-    opacity: 1;
-    transition: opacity $time;
-    background-color: #fff;
-    z-index: 100;
-    position: relative;
-    .navinner {
-      padding: $defaultPadding;
-      max-width: $defaultWidth1;
-      margin: auto;
-      flex-wrap: wrap;
-      position: relative;
-      .logo {
-        animation: grow 0.78s alternate-reverse infinite;
-        animation-timing-function: linear;
-      }
-
-      .togglebtn {
-        cursor: pointer;
-        display: none;
-        transform: scale(0.8);
-      }
-
-      .linkscont {
-        margin-left: auto;
-        position: relative;
-
-        ul {
-          font-size: 0.875rem;
-          li {
-            font-weight: bold;
-            font-size: 0.875rem;
-            color: $logoBlack;
-            &.active a {
-              color: $logoYellow;
-            }
-          }
-        }
-      }
-    }
+  // p
+  p {
+    color: $fontGrey;
+    text-align: justify;
   }
 
   section {
     .intro {
       margin-top: 5.5rem;
+      padding: {
+        left: 0.5rem;
+        right: 0.5rem;
+      }
       .name {
         position: relative;
-        transform: translateX(-10%);
+        transform: translateX(-12%);
         opacity: 0;
         z-index: -10;
         transition: transform $time1, opacity $time1;
@@ -147,31 +162,30 @@ main {
 
         // email
         p {
-          color: $fontGrey;
           span {
             color: black;
             font-weight: bold;
           }
           a {
-            color: $fontGrey;
+            color: inherit;
           }
         }
 
         .buttons {
           margin-top: 1rem;
-          width: 100%;
+          // width: 100%;
           .btn {
-            font-size: 1rem !important;
+            font-size: 1rem;
             width: 24%;
             text-align: center;
+            box-shadow: $shad2;
           }
         }
         h2 {
+          font-size: 2.15rem;
           &:last-of-type {
             color: $logoYellow;
           }
-          font-size: 2.15rem;
-          font-family: Roboto;
         }
       }
       .social,
@@ -188,10 +202,12 @@ main {
         margin-top: 4rem;
         .check {
           padding: 0.5rem 0.7rem;
-          box-shadow: $shad2;
+          border: 1px solid $hoverGrey;
           border-radius: $defaultBorderRadius;
           grid-template-columns: 1fr 8fr;
           background-color: #fff;
+          box-shadow: $shad2;
+
           svg {
             width: 45px;
             height: 45px;
@@ -199,6 +215,7 @@ main {
             border-radius: 50%;
           }
           p {
+            color: black;
             span {
               display: block;
               text-align: center;
@@ -215,19 +232,13 @@ main {
         }
       }
     }
-    .intro {
-      padding: {
-        left: 0.5rem;
-        right: 0.5rem;
-      }
-    }
 
     .about,
     .portfolio,
     .contact {
       background-color: #fff;
       border-radius: $defaultBorderRadius;
-      // box-shadow: $shad2;
+      box-shadow: $shad2;
     }
 
     .about,
@@ -251,11 +262,13 @@ main {
         transform: translateY(5%);
         width: 200px;
         justify-self: center;
+        align-self: flex-start;
 
         img {
           border-radius: $defaultBorderRadius;
           border: 7px solid $logoBlack;
           object-fit: cover;
+          object-position: center;
           width: 200px;
           height: 264px;
           display: block;
@@ -264,8 +277,7 @@ main {
       }
       p {
         padding: $defaultPaddingSmall;
-        color: $fontGrey;
-        text-align: justify;
+
         &:last-of-type {
           padding-bottom: 1rem;
         }
@@ -280,8 +292,6 @@ main {
       .stackscont {
         p {
           padding: $defaultPaddingSmall;
-          color: $fontGrey;
-          text-align: justify;
         }
 
         .switch {
@@ -333,25 +343,22 @@ main {
           .imgcont {
             display: block;
             position: relative;
-            display: block;
             padding-top: 100%;
             width: 100%;
+            border: 2px solid $hoverGrey;
             height: 0;
+            border-radius: $defaultBorderRadius;
 
             img {
+              border-radius: $defaultBorderRadius;
               cursor: pointer;
               opacity: 0;
               transform: translate(50%, 50%);
-              border-radius: $defaultBorderRadius;
-              box-shadow: $shad2;
+              // box-shadow: $shad2;
               background-color: #fff;
-              display: block;
-              width: 100%;
               padding: 28px;
               transition: opacity 0.35s, transform 0.35s;
-              position: absolute;
-              top: 0;
-              left: 0;
+              @include resimage();
             }
           }
         }
@@ -362,8 +369,6 @@ main {
     .portfolio {
       > p {
         padding: $defaultPaddingSmall;
-        color: $fontGrey;
-        text-align: justify;
       }
       > div {
         margin: $defaultPaddingSmall;
@@ -373,7 +378,7 @@ main {
         .portfoliobox {
           background-color: #fff;
           border-radius: $defaultBorderRadius;
-          box-shadow: $shad2;
+          border: 1px solid $hoverGrey;
           overflow: hidden;
           .imgcont {
             position: relative;
@@ -382,38 +387,21 @@ main {
             width: 100%;
             height: 0;
             img {
-              position: absolute;
-              width: 100%;
+              @include resimage();
               height: 100%;
-              top: 0;
-              left: 0;
-              display: block;
+              object-position: 51% 0;
               object-fit: cover;
-              object-position: 0 0;
             }
-            // img {
-            //   width: 100%;
-            //   display: block;
-            // }
           }
 
           .text {
-            padding: 1rem 1.5rem;
-            // &.service {
-            //   background-color: $logoBlack;
-            //   p {
-            //     color: #fff;
-            //   }
-            // }
+            padding: 1rem;
             h4 {
               color: $logoYellow;
               font-weight: bold;
-              text-align: center;
             }
             p {
-              text-align: center;
               font-size: 0.8rem;
-              color: black;
             }
           }
         }
@@ -423,16 +411,15 @@ main {
     // contact
     .contact {
       .contact-details {
-        .social {
-          padding: $defaultPaddingSmall;
-          margin-top: 2rem;
-        }
-        > p {
-          padding: $defaultPaddingSmall;
-          color: $fontGrey;
-        }
+        > p,
+        .social,
         .contactbox {
           padding: $defaultPaddingSmall;
+        }
+        .social {
+          margin-top: 2rem;
+        }
+        .contactbox {
           column-gap: 0.725rem;
           svg {
             margin-top: 4px;
@@ -445,9 +432,7 @@ main {
             span {
               &:first-of-type {
                 font-weight: bold;
-              }
-              &:last-of-type {
-                color: $fontGrey;
+                color: black;
               }
             }
           }
@@ -557,9 +542,11 @@ footer {
   height: 40px;
   border-radius: 50%;
   box-shadow: $shad2;
-  z-index: -10;
+  z-index: -90;
+  visibility: hidden;
   animation: grow 2s infinite alternate-reverse ease-in;
   &.show {
     z-index: 100;
+    visibility: visible;
   }
 }

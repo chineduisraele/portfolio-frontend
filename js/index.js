@@ -27,7 +27,7 @@ links.forEach((li) => {
     e.currentTarget.classList.add("active");
     linksCont.classList.toggle("show");
   });
-});
+}, true);
 
 // tool boxes
 // toolbox accessory function
@@ -95,7 +95,7 @@ const formAlert = (errorcls, message) => {
   }, 1500);
 };
 
-// form hander
+// form handler
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let data = new FormData(e.target);
@@ -125,7 +125,6 @@ window.addEventListener("scroll", () => {
 });
 
 // On load animation
-
 let others = [
   document.querySelector(".about"),
   document.querySelector(".skills"),

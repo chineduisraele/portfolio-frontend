@@ -59,6 +59,44 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0.625rem;
+}
+
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 0.625rem;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #80808081;
+}
+
+body::-webkit-scrollbar-thumb:active,
+textarea::-webkit-scrollbar-thumb:active {
+  background: gray;
+}
+
+body {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 input,
 textarea,
 select {
@@ -66,32 +104,6 @@ select {
      -moz-user-select: auto;
       -ms-user-select: auto;
           user-select: auto;
-}
-
-textarea::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-textarea::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 0.625rem;
-}
-
-textarea::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 0.625rem;
-}
-
-textarea::-webkit-scrollbar-thumb:hover {
-  background: #80808081;
-}
-
-textarea::-webkit-scrollbar-thumb:active {
-  background: gray;
-}
-
-body {
-  background-color: #c4ced0;
 }
 
 img {
@@ -136,7 +148,7 @@ button:focus, button:active {
 }
 
 .btn.yellow {
-  background-color: #25a3ad;
+  background-color: #b91f79;
 }
 
 .btn.black {
@@ -227,23 +239,63 @@ button:focus, button:active {
   margin-top: 3rem;
 }
 
+nav {
+  -webkit-box-shadow: 0 6px 15px -5px #80808049;
+          box-shadow: 0 6px 15px -5px #80808049;
+  background-color: #fff;
+  top: 0;
+  z-index: 100;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+nav .navinner {
+  padding: 0.5rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+nav .navinner .logo {
+  background: #9b4bfc;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  -webkit-transform: translate(-5%, 28%);
+          transform: translate(-5%, 28%);
+  border-radius: 50%;
+  animation: grow 0.78s alternate-reverse infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+nav .navinner .togglebtn {
+  cursor: pointer;
+  display: none;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+nav .navinner .linkscont {
+  margin-left: auto;
+  position: relative;
+}
+
+nav .navinner .linkscont ul li {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+nav .navinner .linkscont ul li.active a {
+  color: #b91f79;
+}
+
 main {
   max-width: 1190px;
   margin: auto;
-  background-color: #fff;
-  border-radius: 0.5rem;
   position: relative;
-  overflow: hidden;
-}
-
-main .banner {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 687px;
-  position: absolute;
-  -o-object-position: 100% 0;
-     object-position: 100% 0;
 }
 
 main .intro,
@@ -252,7 +304,7 @@ main .skills,
 main .portfolio,
 main .testimonials,
 main .contact {
-  max-width: 800px;
+  max-width: 910px;
   margin: auto;
 }
 
@@ -266,12 +318,10 @@ main .contact {
   padding-bottom: 0.5rem;
   -webkit-transform: translateY(10rem);
           transform: translateY(10rem);
-  opacity: 0;
-  z-index: -10;
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, -webkit-transform 1s;
-  transition: transform 1s, opacity 1s;
-  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 main .about h3,
@@ -283,9 +333,7 @@ main .contact h3 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.3rem;
-  font-display: swap;
   margin-bottom: 1rem;
 }
 
@@ -296,7 +344,7 @@ main .testimonials h3::after,
 main .contact h3::after {
   content: "";
   display: block;
-  border-bottom: 3px solid #25a3ad;
+  border-bottom: 3px solid #b91f79;
   padding-top: 0.5rem;
   -webkit-transform: translateX(-25%) scaleX(50%);
           transform: translateX(-25%) scaleX(50%);
@@ -325,77 +373,36 @@ main .social a {
 }
 
 main .social a:hover {
-  background-color: #25a3ad;
+  background-color: #b91f79;
+}
+
+main .social a:hover svg {
+  fill: #fff;
 }
 
 main .social a svg {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
   fill: #2a2a2a;
   width: 18px;
   height: 18px;
 }
 
-main nav {
-  -webkit-box-shadow: 0 6px 15px -5px #80808049;
-          box-shadow: 0 6px 15px -5px #80808049;
-  max-width: 1190px;
-  top: 0;
-  opacity: 1;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  background-color: #fff;
-  z-index: 100;
-  position: relative;
-}
-
-main nav .navinner {
-  padding: 0.5rem 1rem;
-  max-width: 1100px;
-  margin: auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  position: relative;
-}
-
-main nav .navinner .logo {
-  animation: grow 0.78s alternate-reverse infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-
-main nav .navinner .togglebtn {
-  cursor: pointer;
-  display: none;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-}
-
-main nav .navinner .linkscont {
-  margin-left: auto;
-  position: relative;
-}
-
-main nav .navinner .linkscont ul {
-  font-size: 0.875rem;
-}
-
-main nav .navinner .linkscont ul li {
-  font-weight: bold;
-  font-size: 0.875rem;
-  color: #2a2a2a;
-}
-
-main nav .navinner .linkscont ul li.active a {
-  color: #25a3ad;
+main p {
+  color: #5e5e5e;
+  text-align: justify;
 }
 
 main section .intro {
   margin-top: 5.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 main section .intro .name {
   position: relative;
-  -webkit-transform: translateX(-10%);
-          transform: translateX(-10%);
+  -webkit-transform: translateX(-12%);
+          transform: translateX(-12%);
   opacity: 0;
   z-index: -10;
   -webkit-transition: opacity 1s, -webkit-transform 1s;
@@ -414,37 +421,33 @@ main section .intro .name > div {
   padding: 0.4rem 0.7rem;
 }
 
-main section .intro .name p {
-  color: #5e5e5e;
-}
-
 main section .intro .name p span {
   color: black;
   font-weight: bold;
 }
 
 main section .intro .name p a {
-  color: #5e5e5e;
+  color: inherit;
 }
 
 main section .intro .name .buttons {
   margin-top: 1rem;
-  width: 100%;
 }
 
 main section .intro .name .buttons .btn {
-  font-size: 1rem !important;
+  font-size: 1rem;
   width: 24%;
   text-align: center;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
 }
 
 main section .intro .name h2 {
   font-size: 2.15rem;
-  font-family: Roboto;
 }
 
 main section .intro .name h2:last-of-type {
-  color: #25a3ad;
+  color: #b91f79;
 }
 
 main section .intro .social,
@@ -467,12 +470,13 @@ main section .intro .check-cont {
 
 main section .intro .check-cont .check {
   padding: 0.5rem 0.7rem;
-  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
-          box-shadow: 0 3px 15px -4px #808080ab;
+  border: 1px solid #8080802f;
   border-radius: 0.5rem;
   -ms-grid-columns: 1fr 8fr;
       grid-template-columns: 1fr 8fr;
   background-color: #fff;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
 }
 
 main section .intro .check-cont .check svg {
@@ -480,6 +484,10 @@ main section .intro .check-cont .check svg {
   height: 45px;
   padding: 10px;
   border-radius: 50%;
+}
+
+main section .intro .check-cont .check p {
+  color: black;
 }
 
 main section .intro .check-cont .check p span {
@@ -490,16 +498,11 @@ main section .intro .check-cont .check p span {
 
 main section .intro .check-cont .check p > span:first-of-type {
   font-size: 1.2rem;
-  color: #25a3ad;
+  color: #b91f79;
 }
 
 main section .intro .check-cont .check p > span:last-of-type {
   font-size: 0.825rem;
-}
-
-main section .intro {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 main section .about,
@@ -507,6 +510,8 @@ main section .portfolio,
 main section .contact {
   background-color: #fff;
   border-radius: 0.5rem;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
 }
 
 main section .about,
@@ -525,7 +530,7 @@ main section .about {
 
 main section .about .imgcont {
   margin: 0.4rem 0.7rem;
-  outline: 7px solid #25a3ad;
+  outline: 7px solid #b91f79;
   outline-offset: -7px;
   border-radius: 0.5rem;
   -webkit-transform: translateY(5%);
@@ -533,6 +538,8 @@ main section .about .imgcont {
   width: 200px;
   -ms-grid-column-align: center;
       justify-self: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 main section .about .imgcont img {
@@ -540,6 +547,8 @@ main section .about .imgcont img {
   border: 7px solid #2a2a2a;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 200px;
   height: 264px;
   display: block;
@@ -549,8 +558,6 @@ main section .about .imgcont img {
 
 main section .about p {
   padding: 0.4rem 0.7rem;
-  color: #5e5e5e;
-  text-align: justify;
 }
 
 main section .about p:last-of-type {
@@ -565,8 +572,6 @@ main section .skills {
 
 main section .skills .stackscont p {
   padding: 0.4rem 0.7rem;
-  color: #5e5e5e;
-  text-align: justify;
 }
 
 main section .skills .stackscont .switch {
@@ -590,7 +595,7 @@ main section .skills .stackscont .switch button {
 
 main section .skills .stackscont .switch .switchcontrol {
   position: absolute;
-  background-color: #25a3ad;
+  background-color: #b91f79;
   z-index: 1;
   height: 78%;
   width: 48.3%;
@@ -636,37 +641,34 @@ main section .skills .sets .stackboxcont.show .stackbox {
 main section .skills .sets .stackboxcont .imgcont {
   display: block;
   position: relative;
-  display: block;
   padding-top: 100%;
   width: 100%;
+  border: 2px solid #8080802f;
   height: 0;
+  border-radius: 0.5rem;
 }
 
 main section .skills .sets .stackboxcont .imgcont img {
+  border-radius: 0.5rem;
   cursor: pointer;
   opacity: 0;
   -webkit-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
-          box-shadow: 0 3px 15px -4px #808080ab;
   background-color: #fff;
-  display: block;
-  width: 100%;
   padding: 28px;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-  position: absolute;
   top: 0;
   left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
 }
 
 main section .portfolio > p {
   padding: 0.4rem 0.7rem;
-  color: #5e5e5e;
-  text-align: justify;
 }
 
 main section .portfolio > div {
@@ -680,8 +682,7 @@ main section .portfolio > div {
 main section .portfolio > div .portfoliobox {
   background-color: #fff;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
-          box-shadow: 0 3px 15px -4px #808080ab;
+  border: 1px solid #8080802f;
   overflow: hidden;
 }
 
@@ -694,46 +695,42 @@ main section .portfolio > div .portfoliobox .imgcont {
 }
 
 main section .portfolio > div .portfoliobox .imgcont img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  position: absolute;
   display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-position: 51% 0;
+     object-position: 51% 0;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 0 0;
-     object-position: 0 0;
 }
 
 main section .portfolio > div .portfoliobox .text {
-  padding: 1rem 1.5rem;
+  padding: 1rem;
 }
 
 main section .portfolio > div .portfoliobox .text h4 {
-  color: #25a3ad;
+  color: #b91f79;
   font-weight: bold;
-  text-align: center;
 }
 
 main section .portfolio > div .portfoliobox .text p {
-  text-align: center;
   font-size: 0.8rem;
-  color: black;
+}
+
+main section .contact .contact-details > p,
+main section .contact .contact-details .social,
+main section .contact .contact-details .contactbox {
+  padding: 0.4rem 0.7rem;
 }
 
 main section .contact .contact-details .social {
-  padding: 0.4rem 0.7rem;
   margin-top: 2rem;
 }
 
-main section .contact .contact-details > p {
-  padding: 0.4rem 0.7rem;
-  color: #5e5e5e;
-}
-
 main section .contact .contact-details .contactbox {
-  padding: 0.4rem 0.7rem;
   -webkit-column-gap: 0.725rem;
           column-gap: 0.725rem;
 }
@@ -752,10 +749,7 @@ main section .contact .contact-details .contactbox p {
 
 main section .contact .contact-details .contactbox p span:first-of-type {
   font-weight: bold;
-}
-
-main section .contact .contact-details .contactbox p span:last-of-type {
-  color: #5e5e5e;
+  color: black;
 }
 
 main section .contact form {
@@ -814,7 +808,7 @@ main section .contact form label textarea::placeholder {
 
 main section .contact form label input:focus,
 main section .contact form label textarea:focus {
-  outline: 2.5px solid #25a3ad;
+  outline: 2.5px solid #b91f79;
 }
 
 main section .contact form label textarea {
@@ -884,7 +878,7 @@ footer p span {
   position: fixed;
   bottom: 0.75rem;
   right: 0.5rem;
-  color: #25a3ad;
+  color: #b91f79;
   background-color: #2a2a2a;
   font-size: 1.25rem;
   width: 40px;
@@ -892,11 +886,13 @@ footer p span {
   border-radius: 50%;
   -webkit-box-shadow: 0 3px 15px -4px #808080ab;
           box-shadow: 0 3px 15px -4px #808080ab;
-  z-index: -10;
+  z-index: -90;
+  visibility: hidden;
   animation: grow 2s infinite alternate-reverse ease-in;
 }
 
 .topbtn.show {
   z-index: 100;
+  visibility: visible;
 }
 /*# sourceMappingURL=index.css.map */

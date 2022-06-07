@@ -8,9 +8,10 @@ $logoYellow: #f5af31;
 $logoYellow: #f5af31;
 $logoYellow: #7c3efa;
 $logoYellow: #25a3ad;
+$logoYellow: #6947f9;
 // $logoYellow: #169b28;
 // $logoYellow: #1f28a7;
-// $logoYellow: #b91f79;
+$logoYellow: #b91f79;
 $logoBlack: #2a2a2a;
 // $logoBlack: #2a2a2a;
 $logoGrey: #c4ced0;
@@ -20,7 +21,7 @@ $muted: #80808081;
 
 $defaultWidth: 1190px;
 $defaultWidth1: 1100px;
-$defaultWidth2: 800px;
+$defaultWidth2: 910px;
 
 $shad: 0 6px 15px -5px #80808049;
 $shad1: 0 6px 30px -10px #80808049;
@@ -64,12 +65,10 @@ $time1: 1s;
   -webkit-tap-highlight-color: transparent;
 }
 
-input,
-textarea,
-select {
-  user-select: auto;
+html {
+  scroll-padding-top: 80px;
 }
-
+body,
 textarea {
   &::-webkit-scrollbar {
     width: 0.5rem;
@@ -91,7 +90,11 @@ textarea {
 }
 
 body {
-  background-color: $logoGrey;
+  // background-color: $logoGrey;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 // general styles
@@ -99,6 +102,12 @@ body {
 // i.fab {
 //   font-size: 1.1rem;
 // }
+
+input,
+textarea,
+select {
+  user-select: auto;
+}
 
 img {
   display: inline-block;

@@ -13,7 +13,7 @@
     <!-- preload hero image -->
     <!-- <link rel="preload" href="./images/hero.webp" as="image"> -->
 
-    <!-- <link rel="stylesheet" href="./css/index.css" /> -->
+    <link rel="stylesheet" href="./css/index.css" />
     <link rel="preload stylesheet" href="./css/mediaqueries.css" as="style" />
     <!-- css -->
 
@@ -61,96 +61,41 @@
     </script> -->
   </head>
   <body>
-    <!-- loading -->
-    <!-- <div
-      id="loading"
-      style="
-        height: 100vh;
-        width: 100vw;
-        z-index: 10000;
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #fff;
-      "
-    >
-      <svg
-        class="logo"
-        viewBox="0 0 68.000000 68.000000"
-        style="
-          background-color: #f5af31;
-          height: 45px;
-          width: 45px;
-          display: inline-block;
-          border-radius: 50%;
-          animation: grow 0.78s alternate-reverse infinite;
-          animation-timing-function: linear;
-        "
-      >
-        <g transform="translate(0.000000,68.000000) scale(0.100000,-0.100000)">
-          <path
-            d="M240 661 c-89 -29 -174 -104 -213 -189 -33 -72 -31 -198 4 -273 34
-            -73 96 -134 168 -167 45 -22 71 -26 136 -27 71 0 88 4 147 33 81 40 139 102
-            169 181 17 45 20 71 17 136 -5 94 -36 163 -99 225 -64 62 -120 85 -219 87 -47
-            1 -96 -1 -110 -6z m296 -156 c-2 -7 -26 -17 -52 -21 -43 -6 -46 -8 -29 -20 10
-            -8 29 -14 42 -14 21 0 22 -3 13 -20 -13 -24 -48 -26 -76 -5 -12 9 -42 14 -82
-            15 -59 0 -63 -1 -73 -27 -23 -59 10 -163 54 -171 11 -2 14 2 10 17 -4 15 5 31
-            30 56 39 39 79 46 109 18 17 -15 17 -17 -18 -41 -30 -20 -35 -28 -30 -51 19
-            -79 19 -108 -2 -129 -27 -27 -92 -45 -164 -46 -102 -2 -127 46 -128 236 0 122
-            17 185 54 193 11 3 93 16 181 28 166 24 177 22 161 -18z"
-          />
-        </g>
-      </svg>
-    </div> -->
+    <!-- navbar -->
+    <nav>
+      <div class="navinner d-flex aic jcsb">
+        <!-- logo svg -->
+        <svg class="logo" viewBox="0 0 68.000000 68.000000">
+          <use href="./sprite.svg#logo"></use>
+        </svg>
 
-    <main>
-      <!-- navbar -->
-      <nav>
-        <div class="navinner d-flex aic jcsb">
-          <!-- logo svg -->
-          <svg
-            class="logo"
-            viewBox="0 0 68.000000 68.000000"
-            style="
-              background: #25a3ad;
-              height: 40px;
-              width: 40px;
-              display: inline-block;
-              transform: translate(-5%, 28%);
-              border-radius: 50%;
-            "
-          >
-            <use href="./sprite.svg#logo"></use>
-          </svg>
+        <!-- toggle button -->
+        <svg
+          class="togglebtn"
+          viewBox="0 0 1750.000000 1250.000000"
+          style="width: 30px; height: 30px"
+          role="button"
+          aria-labelledby="toggle button"
+        >
+          <use href="./sprite.svg#menubar"></use>
+        </svg>
 
-          <!-- toggle button -->
-          <svg
-            class="togglebtn"
-            viewBox="0 0 1750.000000 1250.000000"
-            style="width: 30px; height: 30px"
-            role="button"
-            aria-labelledby="toggle button"
-          >
-            <use href="./sprite.svg#menubar"></use>
-          </svg>
-
-          <!-- nav links -->
-          <div class="linkscont">
-            <ul class="d-flex cg-1">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
+        <!-- nav links -->
+        <div class="linkscont">
+          <ul class="d-flex cg-1">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-      </nav>
-
+      </div>
+    </nav>
+    <main>
       <!-- <div class="bannerimg"></div> -->
-      <!-- <img src="./images/hero.jpg" alt="banner" class="banner" /> -->
+      <!-- <img src="./images/geek.png" alt="banner" class="banner" /> -->
 
       <!-- main -->
       <section>
@@ -158,12 +103,12 @@
           <div class="name">
             <header>
               <h2>Hi! I'm Israel</h2>
-              <h2>Web Designer & Developer</h2>
+              <h2>Full-Stack Web Developer</h2>
             </header>
             <p>
               Founder of Five Fingers Dev.<br />
-              Professional UI/UX Designer and Full Stack Web developer based in
-              Nigeria. <br />Works at Maryland Computer Institute.
+              Professional Full Stack Web developer based in Nigeria.
+              <br />Works at Maryland Computer Institute.
             </p>
             <!-- email and phone -->
             <div class="email d-flex cg-1">
@@ -213,7 +158,11 @@
               </svg>
             </a>
             <!-- github -->
-            <a href="#" target="_blank" aria-label="github link">
+            <a
+              href="https://github.com/chineduisraele"
+              target="_blank"
+              aria-label="github link"
+            >
               <svg viewBox="0 0 460.000000 450.000000">
                 <use href="./sprite.svg#github"></use>
               </svg>
@@ -239,7 +188,7 @@
             <div class="check d-grid aic">
               <svg
                 viewBox="0 0 64.000000 64.000000"
-                style="background-color: #25a3ad; fill: #fff"
+                style="background-color: #6947f9; fill: #fff"
               >
                 <use href="./sprite.svg#check"></use>
               </svg>
@@ -279,15 +228,11 @@
               <h3>About Me</h3>
               <p>
                 Hi! I’m Chinedu Israel and I’m a creative Full-stack Web
-                Developer with 1+ years of experience in web development and
-                design.
-              </p>
-              <p>
-                I’m a developer with a passion for building clean web
-                applications using responsive design principles, industry
-                standard best practices and modern frontend and backend web
-                development tools to deliver high performing applications with
-                intuitive functionality.
+                Developer with a passion for building clean web applications
+                using responsive design principles, industry standard best
+                practices and modern frontend and backend web development tools
+                to deliver high performing applications with intuitive
+                functionality.
               </p>
               <p>
                 I posess a wide range of applicable and transferable skills
@@ -487,13 +432,13 @@
           <article class="portfolio portfolio-main">
             <h3>Portfolio</h3>
             <p>
-              I have worked on various solo full stack projects, with real world
+              <!-- I have worked on various solo full stack projects, with real world
               application and a detailed description of each project can be
-              found by following the link to the desired page.
+              found by following the link to the desired page. -->
             </p>
             <p>
-              It contains an in-depth description of the project, including
-              development process, tool stack and functionalities.
+              <!-- It contains an in-depth description of the project, including
+              development process, tool stack and functionalities. -->
             </p>
 
             <div class="d-grid col-2">
@@ -522,13 +467,13 @@
 
               <!-- fashionista -->
               <a
-                href="http://localhost:3000/"
+                href="http://fashionistablog.netlify.app/"
                 target="_blank"
                 class="d-grid portfoliobox"
               >
                 <span class="imgcont">
                   <img
-                    src="./images/124-1247377_website-development-png.webp"
+                    src="./images/projects/fashionista.webp"
                     alt="fashion blog"
                     loading="lazy"
                   />
@@ -564,7 +509,7 @@
               </a>
 
               <!-- Neurone network -->
-              <a
+              <!-- <a
                 href="http://localhost:3000/"
                 target="_blank"
                 class="d-grid portfoliobox"
@@ -580,7 +525,7 @@
                   <h4>Neurone Network</h4>
                   <p>Work in progress...</p>
                 </div>
-              </a>
+              </a> -->
             </div>
           </article>
         </div>
@@ -650,7 +595,11 @@
                     <use href="./sprite.svg#twitter"></use>
                   </svg>
                 </a>
-                <a href="#" target="_blank" aria-label="github link">
+                <a
+                  href="https://github.com/chineduisraele"
+                  target="_blank"
+                  aria-label="github link"
+                >
                   <svg viewBox="0 0 460.000000 450.000000">
                     <use href="./sprite.svg#github"></use>
                   </svg>
