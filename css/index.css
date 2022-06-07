@@ -91,7 +91,7 @@ textarea::-webkit-scrollbar-thumb:active {
 }
 
 body {
-  background-color: #c4ced0;
+  background-color: #0c0811;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -148,7 +148,7 @@ button:focus, button:active {
 }
 
 .btn.yellow {
-  background-color: #169b28;
+  background-color: #f5af31;
 }
 
 .btn.black {
@@ -239,19 +239,76 @@ button:focus, button:active {
   margin-top: 3rem;
 }
 
+@-webkit-keyframes typewriterwidth {
+  to {
+    width: 14ch;
+  }
+}
+
+@keyframes typewriterwidth {
+  to {
+    width: 14ch;
+  }
+}
+
+@-webkit-keyframes typewriterwidth2 {
+  to {
+    width: 24ch;
+  }
+}
+
+@keyframes typewriterwidth2 {
+  to {
+    width: 24ch;
+  }
+}
+
+@-webkit-keyframes blink {
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes blink {
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@-webkit-keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hideblink {
+  to {
+    border-right: none;
+  }
+}
+
+@keyframes hideblink {
+  to {
+    border-right: none;
+  }
+}
+
 video {
-  width: 100%;
+  min-width: 100%;
+  min-height: 770px;
   position: fixed;
 }
 
 nav {
   -webkit-box-shadow: 0 6px 15px -5px #80808049;
           box-shadow: 0 6px 15px -5px #80808049;
-  background-color: #fff;
-  top: 0;
   z-index: 100;
-  position: -webkit-sticky;
-  position: sticky;
 }
 
 nav .navinner {
@@ -264,8 +321,7 @@ nav .navinner {
 }
 
 nav .navinner .logo {
-  fill: #169b28;
-  background-color: #fff;
+  fill: #f5af31;
   height: 40px;
   width: 40px;
   display: inline-block;
@@ -282,6 +338,7 @@ nav .navinner .togglebtn {
   display: none;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+  fill: #fff;
 }
 
 nav .navinner .linkscont {
@@ -295,7 +352,7 @@ nav .navinner .linkscont ul li {
 }
 
 nav .navinner .linkscont ul li.active a {
-  color: #169b28;
+  color: #f5af31;
 }
 
 main {
@@ -322,12 +379,6 @@ main .contact {
   margin-top: 6rem;
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
-  -webkit-transform: translateY(10rem);
-          transform: translateY(10rem);
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
 }
 
 main .about h3,
@@ -350,7 +401,7 @@ main .testimonials h3::after,
 main .contact h3::after {
   content: "";
   display: block;
-  border-bottom: 3px solid #169b28;
+  border-bottom: 3px solid #f5af31;
   padding-top: 0.5rem;
   -webkit-transform: translateX(-25%) scaleX(50%);
           transform: translateX(-25%) scaleX(50%);
@@ -379,7 +430,7 @@ main .social a {
 }
 
 main .social a:hover {
-  background-color: #169b28;
+  background-color: #f5af31;
 }
 
 main .social a:hover svg {
@@ -448,110 +499,26 @@ main section .intro .name .buttons .btn {
 
 main section .intro .name h2 {
   font-size: 2.15rem;
-  position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.25rem solid #fff;
 }
 
 main section .intro .name h2:last-of-type {
-  color: #169b28;
-}
-
-main section .intro .name h2::before,
-main section .intro .name h2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-main section .intro .name h2::before {
-  background-color: #0c080f;
-}
-
-main section .intro .name h2::after {
-  width: 0.25rem;
-}
-
-main section .intro .name h2:first-of-type::after {
-  background-color: #fff;
-  opacity: 1;
-}
-
-main section .intro .name h2:last-of-type::after {
-  background-color: #169b28;
+  border-right: 0.25rem solid #f5af31;
+  color: #f5af31;
   opacity: 0;
 }
 
-main section .intro .name h2:first-of-type::before {
-  -webkit-animation: typewriter 2.8s steps(14) 1s forwards;
-          animation: typewriter 2.8s steps(14) 1s forwards;
+main section .intro .name h2:first-of-type {
+  -webkit-animation: typewriterwidth 1.64s steps(14) 1.5s forwards, blink 750ms 7, hideblink 100ms 3.2s 1 forwards;
+          animation: typewriterwidth 1.64s steps(14) 1.5s forwards, blink 750ms 7, hideblink 100ms 3.2s 1 forwards;
 }
 
-main section .intro .name h2:first-of-type::after {
-  -webkit-animation: typewriter 2.8s steps(14) 1s forwards, blink 750ms steps(14) 10, hideblink 100ms 4s forwards;
-          animation: typewriter 2.8s steps(14) 1s forwards, blink 750ms steps(14) 10, hideblink 100ms 4s forwards;
-}
-
-main section .intro .name h2:last-of-type::before {
-  -webkit-animation: typewriter 4.8s steps(24) 4s forwards;
-          animation: typewriter 4.8s steps(24) 4s forwards;
-}
-
-main section .intro .name h2:last-of-type::after {
-  -webkit-animation: typewriter 4.8s steps(24) 4s forwards, blink 750ms steps(24) infinite, showblink 0ms 4s forwards;
-          animation: typewriter 4.8s steps(24) 4s forwards, blink 750ms steps(24) infinite, showblink 0ms 4s forwards;
-}
-
-@-webkit-keyframes typewriter {
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes typewriter {
-  to {
-    left: 100%;
-  }
-}
-
-@-webkit-keyframes blink {
-  to {
-    background-color: transparent;
-  }
-}
-
-@keyframes blink {
-  to {
-    background-color: transparent;
-  }
-}
-
-@-webkit-keyframes hideblink {
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes hideblink {
-  to {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes showblink {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes showblink {
-  to {
-    opacity: 1;
-  }
+main section .intro .name h2:last-of-type {
+  -webkit-animation: show 1ms 3.2s forwards, typewriterwidth2 2.8s steps(24) 3.2s forwards, blink 750ms 3.2s infinite;
+          animation: show 1ms 3.2s forwards, typewriterwidth2 2.8s steps(24) 3.2s forwards, blink 750ms 3.2s infinite;
 }
 
 main section .intro .social,
@@ -602,7 +569,7 @@ main section .intro .check-cont .check p span {
 
 main section .intro .check-cont .check p > span:first-of-type {
   font-size: 1.2rem;
-  color: #169b28;
+  color: #f5af31;
 }
 
 main section .intro .check-cont .check p > span:last-of-type {
@@ -634,7 +601,7 @@ main section .about {
 
 main section .about .imgcont {
   margin: 0.4rem 0.7rem;
-  outline: 7px solid #169b28;
+  outline: 7px solid #f5af31;
   outline-offset: -7px;
   border-radius: 0.5rem;
   -webkit-transform: translateY(5%);
@@ -699,7 +666,7 @@ main section .skills .stackscont .switch button {
 
 main section .skills .stackscont .switch .switchcontrol {
   position: absolute;
-  background-color: #169b28;
+  background-color: #f5af31;
   z-index: 1;
   height: 78%;
   width: 48.3%;
@@ -747,12 +714,12 @@ main section .skills .sets .stackboxcont .imgcont {
   position: relative;
   padding-top: 100%;
   width: 100%;
-  border: 2px solid #8080802f;
   height: 0;
   border-radius: 0.5rem;
 }
 
 main section .skills .sets .stackboxcont .imgcont img {
+  border: 2px solid #8080802f;
   border-radius: 0.5rem;
   cursor: pointer;
   opacity: 0;
@@ -816,9 +783,9 @@ main section .portfolio > div .portfoliobox .text {
 }
 
 main section .portfolio > div .portfoliobox .text h4 {
-  color: #169b28;
+  color: #f5af31;
   font-weight: bold;
-  margin: 0.5rem 0;
+  margin: 0.75rem 0;
 }
 
 main section .portfolio > div .portfoliobox .text p {
@@ -826,12 +793,16 @@ main section .portfolio > div .portfoliobox .text p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.2rem;
+  -webkit-column-gap: 0.25rem;
+          column-gap: 0.25rem;
+  row-gap: 0.5rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 main section .portfolio > div .portfoliobox .text p span {
+  font-size: 11px;
+  font-weight: bold;
   padding: 0 0.6rem;
   color: #fff;
   border-radius: 0.5rem;
@@ -949,7 +920,7 @@ main section .contact form label textarea::placeholder {
 
 main section .contact form label input:focus,
 main section .contact form label textarea:focus {
-  outline: 2.5px solid #169b28;
+  outline: 2.5px solid #f5af31;
 }
 
 main section .contact form label textarea {
@@ -1019,7 +990,7 @@ footer p span {
   position: fixed;
   bottom: 0.75rem;
   right: 0.5rem;
-  color: #169b28;
+  color: #fff;
   background-color: #2a2a2a;
   font-size: 1.25rem;
   width: 40px;
@@ -1058,7 +1029,7 @@ footer p span {
   main section .portfolio h3,
   main section .testimonials h3,
   main section .contact h3 {
-    color: #169b28;
+    color: #f5af31;
   }
   main section .about p,
   main section .skills p,
@@ -1074,16 +1045,16 @@ footer p span {
     color: #fff;
   }
   main section .intro .name p span {
-    color: #169b28;
+    color: #f5af31;
   }
   main section .portfolio > div .portfoliobox p {
     color: #5e5e5e;
   }
   main section .contact .contact-details .contactbox svg {
-    fill: #169b28;
+    fill: #f5af31;
   }
   main section .contact .contact-details p span:first-of-type {
-    color: #169b28 !important;
+    color: #f5af31 !important;
   }
 }
 /*# sourceMappingURL=index.css.map */

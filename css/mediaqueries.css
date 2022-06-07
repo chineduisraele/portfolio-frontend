@@ -91,7 +91,7 @@ textarea::-webkit-scrollbar-thumb:active {
 }
 
 body {
-  background-color: #c4ced0;
+  background-color: #0c0811;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -148,7 +148,7 @@ button:focus, button:active {
 }
 
 .btn.yellow {
-  background-color: #169b28;
+  background-color: #f5af31;
 }
 
 .btn.black {

@@ -1,4 +1,32 @@
 @import "./_globals";
+// animations
+@keyframes typewriterwidth {
+  to {
+    width: 14ch;
+  }
+}
+@keyframes typewriterwidth2 {
+  to {
+    width: 24ch;
+  }
+}
+
+@keyframes blink {
+  to {
+    border-right-color: transparent;
+  }
+}
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hideblink {
+  to {
+    border-right: none;
+  }
+}
+
 @mixin resimage {
   top: 0;
   left: 0;
@@ -9,17 +37,18 @@
 
 // bg vid
 video {
-  width: 100%;
+  min-width: 100%;
+  min-height: 770px;
   position: fixed;
 }
 
 // nav
 nav {
   box-shadow: $shad;
-  background-color: #fff;
-  top: 0;
+  // background-color: #fff;
+  // top: 0;
   z-index: 100;
-  position: sticky;
+  // position: sticky;
   .navinner {
     padding: $defaultPadding;
     max-width: $defaultWidth1;
@@ -27,8 +56,8 @@ nav {
     flex-wrap: wrap;
     position: relative;
     .logo {
-      fill: #169b28;
-      background-color: #fff;
+      fill: $logoYellow;
+      // background-color: #fff;
       height: 40px;
       width: 40px;
       display: inline-block;
@@ -42,6 +71,7 @@ nav {
       cursor: pointer;
       display: none;
       transform: scale(0.8);
+      fill: #fff;
     }
 
     .linkscont {
@@ -84,15 +114,12 @@ main {
     margin-top: 6rem;
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
-    transform: translateY(10rem);
-    transition: transform $time1;
 
     h3 {
       padding: $defaultPaddingSmall;
       width: max-content;
       font-size: 1.3rem;
       margin-bottom: 1rem;
-      // color: $logoYellow;
 
       &::after {
         content: "";
@@ -180,76 +207,31 @@ main {
         }
         h2 {
           font-size: 2.15rem;
-          position: relative;
-          width: max-content;
+          width: 0;
+          overflow: hidden;
+          white-space: nowrap;
+          border-right: 0.25rem solid #fff;
           &:last-of-type {
+            border-right: 0.25rem solid $logoYellow;
             color: $logoYellow;
+            opacity: 0;
           }
         }
 
         // typewriter animation
-        h2::before,
-        h2::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-        }
-        h2::before {
-          background-color: #0c080f;
-        }
-        h2::after {
-          width: 0.25rem;
-        }
-        h2:first-of-type::after {
-          background-color: #fff;
-          opacity: 1;
-        }
-        h2:last-of-type::after {
-          background-color: $logoYellow;
-          opacity: 0;
-        }
-        // first
-        h2:first-of-type::before {
-          animation: typewriter 2.8s steps(14) 1s forwards;
-        }
-        h2:first-of-type::after {
-          animation: typewriter 2.8s steps(14) 1s forwards,
-            blink 750ms steps(14) 10, hideblink 100ms 4s forwards;
-        }
 
-        // LAST
-        h2:last-of-type::before {
-          animation: typewriter 4.8s steps(24) 4s forwards;
+        h2:first-of-type {
+          animation: typewriterwidth 1.64s steps(14) 1.5s forwards,
+            blink 750ms 7, hideblink 100ms 3.2s 1 forwards;
         }
-        h2:last-of-type::after {
-          animation: typewriter 4.8s steps(24) 4s forwards,
-            blink 750ms steps(24) infinite, showblink 0ms 4s forwards;
-        }
-
-        @keyframes typewriter {
-          to {
-            left: 100%;
-          }
-        }
-        @keyframes blink {
-          to {
-            background-color: transparent;
-          }
-        }
-        @keyframes hideblink {
-          to {
-            opacity: 0;
-          }
-        }
-        @keyframes showblink {
-          to {
-            opacity: 1;
-          }
+        h2:last-of-type {
+          animation: show 1ms 3.2s forwards,
+            typewriterwidth2 2.8s steps(24) 3.2s forwards,
+            blink 750ms 3.2s infinite;
         }
       }
+
+      // social
       .social,
       .check-cont {
         padding: $defaultPaddingSmall;
@@ -408,11 +390,11 @@ main {
             position: relative;
             padding-top: 100%;
             width: 100%;
-            border: 2px solid $hoverGrey;
             height: 0;
             border-radius: $defaultBorderRadius;
 
             img {
+              border: 2px solid $hoverGrey;
               border-radius: $defaultBorderRadius;
               cursor: pointer;
               opacity: 0;
@@ -462,14 +444,17 @@ main {
             h4 {
               color: $logoYellow;
               font-weight: bold;
-              margin: 0.5rem 0;
+              margin: 0.75rem 0;
             }
             p {
               font-size: 0.8rem;
               display: flex;
-              gap: 0.2rem;
+              column-gap: 0.25rem;
+              row-gap: 0.5rem;
               flex-wrap: wrap;
               span {
+                font-size: 11px;
+                font-weight: bold;
                 padding: 0 0.6rem;
                 color: #fff;
                 border-radius: $defaultBorderRadius;
@@ -625,7 +610,7 @@ footer {
   position: fixed;
   bottom: 0.75rem;
   right: 0.5rem;
-  color: $logoYellow;
+  color: #fff;
   background-color: $logoBlack;
   font-size: 1.25rem;
   width: 40px;
