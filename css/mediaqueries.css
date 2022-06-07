@@ -50,7 +50,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Roboto, "system ui", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: monospace, Roboto, "system ui", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-display: swap;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -91,7 +91,7 @@ textarea::-webkit-scrollbar-thumb:active {
 }
 
 body {
-  background-image: url("../images/bg.jpg");
+  background-color: #c4ced0;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
