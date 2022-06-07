@@ -1,42 +1,5 @@
-// @import "./index.scss";
+@import "./index.scss";
 @import "./_globals";
-
-// background
-// @media screen and (max-width: 1185px) {
-//   main {
-//     .buttons .yellow {
-//       box-shadow: 0 3px 15px -4px #808080 !important;
-//     }
-//   }
-// }
-
-// banner img
-// @media screen and (max-width: 1050px) {
-//   main {
-//     .banner {
-//       object-position: 70% 0;
-//     }
-//   }
-// }
-// @media screen and (max-width: 840px) {
-//   main {
-//     .banner {
-//       object-position: 79% 0;
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 640px) {
-//   main {
-//     .banner {
-//       // object-fit: contain;
-//       height: auto;
-//       transform: translate(-44.2%, -10%);
-//       width: 180vw;
-//       background-attachment: fixed;
-//     }
-//   }
-// }
 
 // main styles
 
@@ -59,6 +22,9 @@
 }
 
 @media screen and (max-width: 640px) {
+  video {
+    transform: translateX(-15%);
+  }
   // nav
   nav .navinner {
     padding-top: 0.7rem;
@@ -70,17 +36,15 @@
 
     .linkscont {
       &.show {
-        height: 324px;
+        display: grid;
       }
-      height: 0;
+      display: none;
       overflow: hidden;
       position: absolute;
       width: 100%;
       top: 3.5rem;
       left: 0;
       z-index: 50;
-      box-shadow: 0 12px 15px -4px #808080ab;
-      transition: height 0.3s;
       ul {
         border-radius: $defaultBorderRadius;
         padding: $defaultPadding;
@@ -93,6 +57,7 @@
         li {
           border-bottom: 1px solid rgba(117, 117, 117, 0.24);
           a {
+            color: $fontGrey;
             display: block;
             padding: 0.5rem 1rem;
           }
@@ -102,24 +67,6 @@
   }
   main {
     section {
-      transform: translateY(32vh);
-      background-color: #fff;
-      border-radius: 1rem;
-      .intro {
-        .name {
-          padding-top: 1.5rem;
-          h2:last-of-type {
-            width: 100%;
-            font-size: 28px;
-          }
-          p {
-            max-width: 100%;
-          }
-        }
-      }
-    }
-
-    section {
       .intro .check-cont,
       .about,
       .skills,
@@ -127,7 +74,6 @@
       .testimonials,
       .contact {
         border-radius: $defaultBorderRadius;
-        background-color: #fff;
         box-shadow: none;
 
         h4 {
@@ -154,10 +100,14 @@
 
       .intro {
         margin-top: 3.7rem;
+        padding-top: 2.5rem;
+        h2:last-of-type {
+          font-size: 28px;
+        }
+        p {
+          max-width: 100%;
+        }
         .name {
-          h2:last-of-type {
-            width: 70%;
-          }
           > p .location {
             display: none;
           }
@@ -212,22 +162,17 @@
   footer {
     display: grid;
     row-gap: 1rem;
-    margin-top: 200px;
   }
 }
 
 @media screen and (max-width: 475px) {
   main {
     section {
-      transform: translateY(32vh);
-      background-color: #fff;
-      border-radius: 1rem;
       .intro {
         .name {
           padding-top: 1.5rem;
           h2:last-of-type {
-            width: 100%;
-            font-size: 28px;
+            font-size: 26px;
           }
           p {
             max-width: 100%;

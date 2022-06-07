@@ -306,8 +306,7 @@ video {
 }
 
 nav {
-  -webkit-box-shadow: 0 6px 15px -5px #80808049;
-          box-shadow: 0 6px 15px -5px #80808049;
+  background-color: transparent !important;
   z-index: 100;
 }
 
@@ -349,6 +348,10 @@ nav .navinner .linkscont {
 nav .navinner .linkscont ul li {
   font-weight: bold;
   font-size: 0.875rem;
+}
+
+nav .navinner .linkscont ul li a {
+  color: #fff;
 }
 
 nav .navinner .linkscont ul li.active a {
@@ -469,7 +472,7 @@ main section .intro .name {
 }
 
 main section .intro .name p {
-  max-width: 60%;
+  max-width: 80%;
 }
 
 main section .intro .name > header,
@@ -540,7 +543,7 @@ main section .intro .check-cont {
 }
 
 main section .intro .check-cont .check {
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem 0.5rem;
   border: 1px solid #8080802f;
   border-radius: 0.5rem;
   -ms-grid-columns: 1fr 8fr;
@@ -551,8 +554,8 @@ main section .intro .check-cont .check {
 }
 
 main section .intro .check-cont .check svg {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   padding: 10px;
   border-radius: 50%;
 }
@@ -593,10 +596,12 @@ main section .contact {
 }
 
 main section .about {
-  -ms-grid-columns: 1fr 1.8fr;
-      grid-template-columns: 1fr 1.8fr;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
   background-color: #fff;
   border-radius: 0.5rem;
+  -webkit-column-gap: 2.5rem;
+          column-gap: 2.5rem;
 }
 
 main section .about .imgcont {
@@ -747,7 +752,7 @@ main section .portfolio > div {
   margin-top: 2rem;
   -webkit-column-gap: 1.5rem;
           column-gap: 1.5rem;
-  row-gap: 2rem;
+  row-gap: 3rem;
 }
 
 main section .portfolio > div .portfoliobox {
@@ -935,7 +940,6 @@ footer {
   padding-bottom: 1.5rem;
   max-width: 1100px;
   margin: auto;
-  margin-top: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1008,53 +1012,51 @@ footer p span {
   visibility: visible;
 }
 
-@media screen and (min-width: 641px) {
-  nav {
-    background-color: transparent !important;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  nav .navinner .linkscont ul li a {
-    color: #fff;
-  }
-  main section .about,
-  main section .skills,
-  main section .portfolio,
-  main section .testimonials,
-  main section .contact {
-    background-color: transparent;
-  }
-  main section .about h3,
-  main section .skills h3,
-  main section .portfolio h3,
-  main section .testimonials h3,
-  main section .contact h3 {
-    color: #f5af31;
-  }
-  main section .about p,
-  main section .skills p,
-  main section .portfolio p,
-  main section .testimonials p,
-  main section .contact p {
-    color: #fff;
-  }
-  main section .intro .name h2 {
-    color: #fff;
-  }
-  main section .intro .name p {
-    color: #fff;
-  }
-  main section .intro .name p span {
-    color: #f5af31;
-  }
-  main section .portfolio > div .portfoliobox p {
-    color: #5e5e5e;
-  }
-  main section .contact .contact-details .contactbox svg {
-    fill: #f5af31;
-  }
-  main section .contact .contact-details p span:first-of-type {
-    color: #f5af31 !important;
-  }
+main section .about,
+main section .skills,
+main section .portfolio,
+main section .testimonials,
+main section .contact {
+  background-color: transparent;
+}
+
+main section .about h3,
+main section .skills h3,
+main section .portfolio h3,
+main section .testimonials h3,
+main section .contact h3 {
+  color: #f5af31;
+}
+
+main section .about p,
+main section .skills p,
+main section .portfolio p,
+main section .testimonials p,
+main section .contact p {
+  color: #fff;
+}
+
+main section .intro .name h2 {
+  color: #fff;
+}
+
+main section .intro .name p {
+  color: #fff;
+}
+
+main section .intro .name p span {
+  color: #f5af31;
+}
+
+main section .portfolio > div .portfoliobox p {
+  color: #5e5e5e;
+}
+
+main section .contact .contact-details .contactbox svg {
+  fill: #f5af31;
+}
+
+main section .contact .contact-details p span:first-of-type {
+  color: #f5af31 !important;
 }
 /*# sourceMappingURL=index.css.map */

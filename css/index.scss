@@ -44,11 +44,8 @@ video {
 
 // nav
 nav {
-  box-shadow: $shad;
-  // background-color: #fff;
-  // top: 0;
+  background-color: transparent !important;
   z-index: 100;
-  // position: sticky;
   .navinner {
     padding: $defaultPadding;
     max-width: $defaultWidth1;
@@ -57,7 +54,6 @@ nav {
     position: relative;
     .logo {
       fill: $logoYellow;
-      // background-color: #fff;
       height: 40px;
       width: 40px;
       display: inline-block;
@@ -82,6 +78,9 @@ nav {
         li {
           font-weight: bold;
           font-size: 0.875rem;
+          a {
+            color: #fff;
+          }
           &.active a {
             color: $logoYellow;
           }
@@ -177,7 +176,7 @@ main {
         z-index: -10;
         transition: transform $time1, opacity $time1;
         p {
-          max-width: 60%;
+          max-width: 80%;
         }
         > header,
         > p,
@@ -245,7 +244,7 @@ main {
         grid-template-columns: repeat(3, 1fr);
         margin-top: 4rem;
         .check {
-          padding: 0.5rem 0.7rem;
+          padding: 0.5rem 0.5rem;
           border: 1px solid $hoverGrey;
           border-radius: $defaultBorderRadius;
           grid-template-columns: 1fr 8fr;
@@ -253,8 +252,8 @@ main {
           box-shadow: $shad2;
 
           svg {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             padding: 10px;
             border-radius: 50%;
           }
@@ -295,9 +294,10 @@ main {
 
     // about
     .about {
-      grid-template-columns: 1fr 1.8fr;
+      grid-template-columns: 1fr 3fr;
       background-color: #fff;
       border-radius: $defaultBorderRadius;
+      column-gap: 2.5rem;
 
       .imgcont {
         margin: $defaultPaddingSmall;
@@ -410,7 +410,7 @@ main {
       }
     }
 
-    // service, portfolio
+    //portfolio
     .portfolio {
       > p {
         padding: $defaultPaddingSmall;
@@ -419,7 +419,7 @@ main {
         margin: $defaultPaddingSmall;
         margin-top: 2rem;
         column-gap: 1.5rem;
-        row-gap: 2rem;
+        row-gap: 3rem;
         .portfoliobox {
           background-color: #fff;
           border-radius: $defaultBorderRadius;
@@ -564,7 +564,7 @@ footer {
   }
   max-width: $defaultWidth1;
   margin: auto;
-  margin-top: 6rem;
+  // margin-top: 6rem;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -626,52 +626,44 @@ footer {
   }
 }
 
-@media screen and (min-width: 641px) {
-  nav {
-    background-color: transparent !important;
-    box-shadow: none;
-    .navinner .linkscont ul li a {
+// updated styles
+main section {
+  .about,
+  .skills,
+  .portfolio,
+  .testimonials,
+  .contact {
+    background-color: transparent;
+    h3 {
+      color: $logoYellow;
+    }
+    p {
       color: #fff;
     }
   }
-  main section {
-    .about,
-    .skills,
-    .portfolio,
-    .testimonials,
-    .contact {
-      background-color: transparent;
-      h3 {
+  .intro .name {
+    h2 {
+      color: #fff;
+    }
+    p {
+      color: #fff;
+      span {
         color: $logoYellow;
       }
-      p {
-        color: #fff;
-      }
     }
-    .intro .name {
-      h2 {
-        color: #fff;
-      }
-      p {
-        color: #fff;
-        span {
-          color: $logoYellow;
-        }
-      }
-    }
+  }
 
-    .portfolio > div .portfoliobox p {
-      color: $fontGrey;
-    }
+  .portfolio > div .portfoliobox p {
+    color: $fontGrey;
+  }
 
-    .contact {
-      .contact-details {
-        .contactbox svg {
-          fill: $logoYellow;
-        }
-        p span:first-of-type {
-          color: $logoYellow !important;
-        }
+  .contact {
+    .contact-details {
+      .contactbox svg {
+        fill: $logoYellow;
+      }
+      p span:first-of-type {
+        color: $logoYellow !important;
       }
     }
   }

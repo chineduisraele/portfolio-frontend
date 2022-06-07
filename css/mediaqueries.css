@@ -239,6 +239,1045 @@ button:focus, button:active {
   margin-top: 3rem;
 }
 
+@-webkit-keyframes typewriterwidth {
+  to {
+    width: 14ch;
+  }
+}
+
+@keyframes typewriterwidth {
+  to {
+    width: 14ch;
+  }
+}
+
+@-webkit-keyframes typewriterwidth2 {
+  to {
+    width: 24ch;
+  }
+}
+
+@keyframes typewriterwidth2 {
+  to {
+    width: 24ch;
+  }
+}
+
+@-webkit-keyframes blink {
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes blink {
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@-webkit-keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hideblink {
+  to {
+    border-right: none;
+  }
+}
+
+@keyframes hideblink {
+  to {
+    border-right: none;
+  }
+}
+
+video {
+  min-width: 100%;
+  min-height: 770px;
+  position: fixed;
+}
+
+nav {
+  background-color: transparent !important;
+  z-index: 100;
+}
+
+nav .navinner {
+  padding: 0.5rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+nav .navinner .logo {
+  fill: #f5af31;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  -webkit-transform: translate(-5%, 28%);
+          transform: translate(-5%, 28%);
+  border-radius: 50%;
+  animation: grow 0.78s alternate-reverse infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+nav .navinner .togglebtn {
+  cursor: pointer;
+  display: none;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  fill: #fff;
+}
+
+nav .navinner .linkscont {
+  margin-left: auto;
+  position: relative;
+}
+
+nav .navinner .linkscont ul li {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+nav .navinner .linkscont ul li a {
+  color: #fff;
+}
+
+nav .navinner .linkscont ul li.active a {
+  color: #f5af31;
+}
+
+main {
+  max-width: 1190px;
+  margin: auto;
+  position: relative;
+}
+
+main .intro,
+main .about,
+main .skills,
+main .portfolio,
+main .testimonials,
+main .contact {
+  max-width: 910px;
+  margin: auto;
+}
+
+main .about,
+main .skills,
+main .portfolio,
+main .testimonials,
+main .contact {
+  margin-top: 6rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+main .about h3,
+main .skills h3,
+main .portfolio h3,
+main .testimonials h3,
+main .contact h3 {
+  padding: 0.4rem 0.7rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+main .about h3::after,
+main .skills h3::after,
+main .portfolio h3::after,
+main .testimonials h3::after,
+main .contact h3::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #f5af31;
+  padding-top: 0.5rem;
+  -webkit-transform: translateX(-25%) scaleX(50%);
+          transform: translateX(-25%) scaleX(50%);
+}
+
+main .social {
+  margin-top: 1rem;
+}
+
+main .social a {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: #c4ced0;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+main .social a:hover {
+  background-color: #f5af31;
+}
+
+main .social a:hover svg {
+  fill: #fff;
+}
+
+main .social a svg {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+  fill: #2a2a2a;
+  width: 18px;
+  height: 18px;
+}
+
+main p {
+  color: #5e5e5e;
+  text-align: justify;
+}
+
+main section .intro {
+  margin-top: 8rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+main section .intro .name {
+  position: relative;
+  -webkit-transform: translateX(-12%);
+          transform: translateX(-12%);
+  opacity: 0;
+  z-index: -10;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+main section .intro .name p {
+  max-width: 80%;
+}
+
+main section .intro .name > header,
+main section .intro .name > p,
+main section .intro .name > div {
+  padding: 0.4rem 0.7rem;
+}
+
+main section .intro .name p span {
+  color: black;
+  font-weight: bold;
+}
+
+main section .intro .name p a {
+  color: inherit;
+}
+
+main section .intro .name .buttons {
+  margin-top: 1rem;
+}
+
+main section .intro .name .buttons .btn {
+  font-size: 1rem;
+  width: 24%;
+  text-align: center;
+}
+
+main section .intro .name h2 {
+  font-size: 2.15rem;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.25rem solid #fff;
+}
+
+main section .intro .name h2:last-of-type {
+  border-right: 0.25rem solid #f5af31;
+  color: #f5af31;
+  opacity: 0;
+}
+
+main section .intro .name h2:first-of-type {
+  -webkit-animation: typewriterwidth 1.64s steps(14) 1.5s forwards, blink 750ms 7, hideblink 100ms 3.2s 1 forwards;
+          animation: typewriterwidth 1.64s steps(14) 1.5s forwards, blink 750ms 7, hideblink 100ms 3.2s 1 forwards;
+}
+
+main section .intro .name h2:last-of-type {
+  -webkit-animation: show 1ms 3.2s forwards, typewriterwidth2 2.8s steps(24) 3.2s forwards, blink 750ms 3.2s infinite;
+          animation: show 1ms 3.2s forwards, typewriterwidth2 2.8s steps(24) 3.2s forwards, blink 750ms 3.2s infinite;
+}
+
+main section .intro .social,
+main section .intro .check-cont {
+  padding: 0.4rem 0.7rem;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+main section .intro .check-cont {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin-top: 4rem;
+}
+
+main section .intro .check-cont .check {
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #8080802f;
+  border-radius: 0.5rem;
+  -ms-grid-columns: 1fr 8fr;
+      grid-template-columns: 1fr 8fr;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
+}
+
+main section .intro .check-cont .check svg {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+main section .intro .check-cont .check p {
+  color: black;
+}
+
+main section .intro .check-cont .check p span {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+main section .intro .check-cont .check p > span:first-of-type {
+  font-size: 1.2rem;
+  color: #f5af31;
+}
+
+main section .intro .check-cont .check p > span:last-of-type {
+  font-size: 0.825rem;
+}
+
+main section .about,
+main section .portfolio,
+main section .contact {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: transparent;
+          box-shadow: transparent;
+}
+
+main section .about,
+main section .skills,
+main section .portfolio,
+main section .contact {
+  padding: 2rem 0.5rem;
+}
+
+main section .about {
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  -webkit-column-gap: 2.5rem;
+          column-gap: 2.5rem;
+}
+
+main section .about .imgcont {
+  margin: 0.4rem 0.7rem;
+  outline: 7px solid #f5af31;
+  outline-offset: -7px;
+  border-radius: 0.5rem;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+  width: 200px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+main section .about .imgcont img {
+  border-radius: 0.5rem;
+  border: 7px solid #2a2a2a;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 200px;
+  height: 264px;
+  display: block;
+  -webkit-transform: translate(10%, -10%);
+          transform: translate(10%, -10%);
+}
+
+main section .about p {
+  padding: 0.4rem 0.7rem;
+}
+
+main section .about p:last-of-type {
+  padding-bottom: 1rem;
+}
+
+main section .skills {
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
+  overflow: hidden;
+}
+
+main section .skills .stackscont p {
+  padding: 0.4rem 0.7rem;
+}
+
+main section .skills .stackscont .switch {
+  margin: 0.4rem 0.7rem;
+  margin-top: 1rem;
+  background-color: #2a2a2a;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  position: relative;
+}
+
+main section .skills .stackscont .switch button {
+  width: 50%;
+  z-index: 3;
+  font-size: 1rem;
+  padding: 0.5rem 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+main section .skills .stackscont .switch .switchcontrol {
+  position: absolute;
+  background-color: #f5af31;
+  z-index: 1;
+  height: 78%;
+  width: 48.3%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+main section .skills .stackscont .switch .switchcontrol.move {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+main section .skills .sets {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section .skills .sets .stackboxcont {
+  padding: 0.5rem 1rem;
+  row-gap: 1rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  display: none;
+}
+
+main section .skills .sets .stackboxcont.show {
+  display: -ms-grid;
+  display: grid;
+}
+
+main section .skills .sets .stackboxcont.show .stackbox {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main section .skills .sets .stackboxcont .imgcont {
+  display: block;
+  position: relative;
+  padding-top: 100%;
+  width: 100%;
+  height: 0;
+  border-radius: 0.5rem;
+}
+
+main section .skills .sets .stackboxcont .imgcont img {
+  border: 2px solid #8080802f;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  background-color: #fff;
+  padding: 28px;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+
+main section .portfolio > p {
+  padding: 0.4rem 0.7rem;
+}
+
+main section .portfolio > div {
+  margin: 0.4rem 0.7rem;
+  margin-top: 2rem;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  row-gap: 3rem;
+}
+
+main section .portfolio > div .portfoliobox {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  border: 1px solid #8080802f;
+  overflow: hidden;
+}
+
+main section .portfolio > div .portfoliobox .imgcont {
+  position: relative;
+  display: block;
+  padding-top: 56.25%;
+  width: 100%;
+  height: 0;
+}
+
+main section .portfolio > div .portfoliobox .imgcont img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-position: 51% 0;
+     object-position: 51% 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main section .portfolio > div .portfoliobox .text {
+  padding: 1rem;
+}
+
+main section .portfolio > div .portfoliobox .text h4 {
+  color: #f5af31;
+  font-weight: bold;
+  margin: 0.75rem 0;
+}
+
+main section .portfolio > div .portfoliobox .text p {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 0.25rem;
+          column-gap: 0.25rem;
+  row-gap: 0.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main section .portfolio > div .portfoliobox .text p span {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 0 0.6rem;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+main section .portfolio > div .portfoliobox .text p span.html {
+  background-color: #e65100;
+}
+
+main section .portfolio > div .portfoliobox .text p span.sass {
+  background-color: #cf649a;
+}
+
+main section .portfolio > div .portfoliobox .text p span.react {
+  background-color: #59a1ff;
+}
+
+main section .portfolio > div .portfoliobox .text p span.django {
+  background-color: #169b28;
+}
+
+main section .portfolio > div .portfoliobox .text p span.postgre {
+  background-color: #0079d6;
+}
+
+main section .portfolio > div .portfoliobox .text p span.aws {
+  background-color: #eb661a;
+}
+
+main section .contact .contact-details > p,
+main section .contact .contact-details .social,
+main section .contact .contact-details .contactbox {
+  padding: 0.4rem 0.7rem;
+}
+
+main section .contact .contact-details .social {
+  margin-top: 2rem;
+}
+
+main section .contact .contact-details .contactbox {
+  -webkit-column-gap: 0.725rem;
+          column-gap: 0.725rem;
+}
+
+main section .contact .contact-details .contactbox svg {
+  margin-top: 4px;
+  margin-right: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+main section .contact .contact-details .contactbox p {
+  display: -ms-grid;
+  display: grid;
+}
+
+main section .contact .contact-details .contactbox p span:first-of-type {
+  font-weight: bold;
+  color: black;
+}
+
+main section .contact form {
+  margin: 0.4rem 0.7rem;
+  row-gap: 1rem;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #2a2a2a;
+}
+
+main section .contact form label {
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  font-size: 0.825rem;
+  font-weight: bold;
+  row-gap: 0.3rem;
+}
+
+main section .contact form label svg {
+  fill: rgba(128, 128, 128, 0.637);
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  -webkit-transform: translate(0.6rem, 33px);
+          transform: translate(0.6rem, 33px);
+}
+
+main section .contact form label input,
+main section .contact form label textarea {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.6rem 0.6rem 2.1rem;
+  line-height: 1.2rem;
+}
+
+main section .contact form label input::-webkit-input-placeholder,
+main section .contact form label textarea::-webkit-input-placeholder {
+  color: gray;
+}
+
+main section .contact form label input:-ms-input-placeholder,
+main section .contact form label textarea:-ms-input-placeholder {
+  color: gray;
+}
+
+main section .contact form label input::-ms-input-placeholder,
+main section .contact form label textarea::-ms-input-placeholder {
+  color: gray;
+}
+
+main section .contact form label input::placeholder,
+main section .contact form label textarea::placeholder {
+  color: gray;
+}
+
+main section .contact form label input:focus,
+main section .contact form label textarea:focus {
+  outline: 2.5px solid #f5af31;
+}
+
+main section .contact form label textarea {
+  padding-left: 0.6rem;
+  height: 7rem;
+  resize: none;
+}
+
+footer {
+  padding: 0.5rem 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer p {
+  color: #2a2a2a;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+}
+
+footer p span {
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.alert {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000bd;
+  z-index: -10;
+  opacity: 0;
+  -webkit-transition: z-index 0.5s, opacity 0.5s;
+  transition: z-index 0.5s, opacity 0.5s;
+}
+
+.alert.show {
+  z-index: 1500;
+  opacity: 1;
+}
+
+.alert .inner {
+  padding: 2rem;
+  padding-left: 3.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.topbtn {
+  position: fixed;
+  bottom: 0.75rem;
+  right: 0.5rem;
+  color: #fff;
+  background-color: #2a2a2a;
+  font-size: 1.25rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
+  z-index: -90;
+  visibility: hidden;
+  animation: grow 2s infinite alternate-reverse ease-in;
+}
+
+.topbtn.show {
+  z-index: 100;
+  visibility: visible;
+}
+
+main section .about,
+main section .skills,
+main section .portfolio,
+main section .testimonials,
+main section .contact {
+  background-color: transparent;
+}
+
+main section .about h3,
+main section .skills h3,
+main section .portfolio h3,
+main section .testimonials h3,
+main section .contact h3 {
+  color: #f5af31;
+}
+
+main section .about p,
+main section .skills p,
+main section .portfolio p,
+main section .testimonials p,
+main section .contact p {
+  color: #fff;
+}
+
+main section .intro .name h2 {
+  color: #fff;
+}
+
+main section .intro .name p {
+  color: #fff;
+}
+
+main section .intro .name p span {
+  color: #f5af31;
+}
+
+main section .portfolio > div .portfoliobox p {
+  color: #5e5e5e;
+}
+
+main section .contact .contact-details .contactbox svg {
+  fill: #f5af31;
+}
+
+main section .contact .contact-details p span:first-of-type {
+  color: #f5af31 !important;
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  25% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: monospace, Roboto, "system ui", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-display: swap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0.625rem;
+}
+
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 0.625rem;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #80808081;
+}
+
+body::-webkit-scrollbar-thumb:active,
+textarea::-webkit-scrollbar-thumb:active {
+  background: gray;
+}
+
+body {
+  background-color: #0c0811;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+input,
+textarea,
+select {
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+}
+
+img {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+button:focus, button:active {
+  outline: none;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+}
+
+.btn:active {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.btn.yellow {
+  background-color: #f5af31;
+}
+
+.btn.black {
+  background-color: #2a2a2a;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.aic {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.acc {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.jcc {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.jcsb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cg-05 {
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
+.cg-1 {
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.cg-2 {
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.cg-3 {
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+}
+
+.cg-4 {
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+}
+
+.col-2 {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.mt-05 {
+  margin-top: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  padding: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
 @media (min-width: 641px) and (max-width: 740px) {
   main section .intro .name .buttons .btn {
     width: 28%;
@@ -253,6 +1292,10 @@ button:focus, button:active {
 }
 
 @media screen and (max-width: 640px) {
+  video {
+    -webkit-transform: translateX(-15%);
+            transform: translateX(-15%);
+  }
   nav .navinner {
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
@@ -261,20 +1304,17 @@ button:focus, button:active {
     display: block;
   }
   nav .navinner .linkscont {
-    height: 0;
+    display: none;
     overflow: hidden;
     position: absolute;
     width: 100%;
     top: 3.5rem;
     left: 0;
     z-index: 50;
-    -webkit-box-shadow: 0 12px 15px -4px #808080ab;
-            box-shadow: 0 12px 15px -4px #808080ab;
-    -webkit-transition: height 0.3s;
-    transition: height 0.3s;
   }
   nav .navinner .linkscont.show {
-    height: 324px;
+    display: -ms-grid;
+    display: grid;
   }
   nav .navinner .linkscont ul {
     border-radius: 0.5rem;
@@ -290,24 +1330,9 @@ button:focus, button:active {
     border-bottom: 1px solid rgba(117, 117, 117, 0.24);
   }
   nav .navinner .linkscont ul li a {
+    color: #5e5e5e;
     display: block;
     padding: 0.5rem 1rem;
-  }
-  main section {
-    -webkit-transform: translateY(32vh);
-            transform: translateY(32vh);
-    background-color: #fff;
-    border-radius: 1rem;
-  }
-  main section .intro .name {
-    padding-top: 1.5rem;
-  }
-  main section .intro .name h2:last-of-type {
-    width: 100%;
-    font-size: 28px;
-  }
-  main section .intro .name p {
-    max-width: 100%;
   }
   main section .intro .check-cont,
   main section .about,
@@ -316,7 +1341,6 @@ button:focus, button:active {
   main section .testimonials,
   main section .contact {
     border-radius: 0.5rem;
-    background-color: #fff;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -456,9 +1480,13 @@ button:focus, button:active {
   }
   main section .intro {
     margin-top: 3.7rem;
+    padding-top: 2.5rem;
   }
-  main section .intro .name h2:last-of-type {
-    width: 70%;
+  main section .intro h2:last-of-type {
+    font-size: 28px;
+  }
+  main section .intro p {
+    max-width: 100%;
   }
   main section .intro .name > p .location {
     display: none;
@@ -511,23 +1539,15 @@ button:focus, button:active {
     display: -ms-grid;
     display: grid;
     row-gap: 1rem;
-    margin-top: 200px;
   }
 }
 
 @media screen and (max-width: 475px) {
-  main section {
-    -webkit-transform: translateY(32vh);
-            transform: translateY(32vh);
-    background-color: #fff;
-    border-radius: 1rem;
-  }
   main section .intro .name {
     padding-top: 1.5rem;
   }
   main section .intro .name h2:last-of-type {
-    width: 100%;
-    font-size: 28px;
+    font-size: 26px;
   }
   main section .intro .name p {
     max-width: 100%;
