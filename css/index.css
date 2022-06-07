@@ -448,10 +448,110 @@ main section .intro .name .buttons .btn {
 
 main section .intro .name h2 {
   font-size: 2.15rem;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 main section .intro .name h2:last-of-type {
   color: #169b28;
+}
+
+main section .intro .name h2::before,
+main section .intro .name h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+main section .intro .name h2::before {
+  background-color: #0c080f;
+}
+
+main section .intro .name h2::after {
+  width: 0.25rem;
+}
+
+main section .intro .name h2:first-of-type::after {
+  background-color: #fff;
+  opacity: 1;
+}
+
+main section .intro .name h2:last-of-type::after {
+  background-color: #169b28;
+  opacity: 0;
+}
+
+main section .intro .name h2:first-of-type::before {
+  -webkit-animation: typewriter 2.8s steps(14) 1s forwards;
+          animation: typewriter 2.8s steps(14) 1s forwards;
+}
+
+main section .intro .name h2:first-of-type::after {
+  -webkit-animation: typewriter 2.8s steps(14) 1s forwards, blink 750ms steps(14) 10, hideblink 100ms 4s forwards;
+          animation: typewriter 2.8s steps(14) 1s forwards, blink 750ms steps(14) 10, hideblink 100ms 4s forwards;
+}
+
+main section .intro .name h2:last-of-type::before {
+  -webkit-animation: typewriter 4.8s steps(24) 4s forwards;
+          animation: typewriter 4.8s steps(24) 4s forwards;
+}
+
+main section .intro .name h2:last-of-type::after {
+  -webkit-animation: typewriter 4.8s steps(24) 4s forwards, blink 750ms steps(24) infinite, showblink 0ms 4s forwards;
+          animation: typewriter 4.8s steps(24) 4s forwards, blink 750ms steps(24) infinite, showblink 0ms 4s forwards;
+}
+
+@-webkit-keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+
+@-webkit-keyframes hideblink {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hideblink {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes showblink {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showblink {
+  to {
+    opacity: 1;
+  }
 }
 
 main section .intro .social,
@@ -718,7 +818,7 @@ main section .portfolio > div .portfoliobox .text {
 main section .portfolio > div .portfoliobox .text h4 {
   color: #169b28;
   font-weight: bold;
-  margin: 0.25rem 0;
+  margin: 0.5rem 0;
 }
 
 main section .portfolio > div .portfoliobox .text p {
