@@ -718,10 +718,47 @@ main section .portfolio > div .portfoliobox .text {
 main section .portfolio > div .portfoliobox .text h4 {
   color: #169b28;
   font-weight: bold;
+  margin: 0.25rem 0;
 }
 
 main section .portfolio > div .portfoliobox .text p {
   font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main section .portfolio > div .portfoliobox .text p span {
+  padding: 0 0.6rem;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+main section .portfolio > div .portfoliobox .text p span.html {
+  background-color: #e65100;
+}
+
+main section .portfolio > div .portfoliobox .text p span.sass {
+  background-color: #cf649a;
+}
+
+main section .portfolio > div .portfoliobox .text p span.react {
+  background-color: #59a1ff;
+}
+
+main section .portfolio > div .portfoliobox .text p span.django {
+  background-color: #169b28;
+}
+
+main section .portfolio > div .portfoliobox .text p span.postgre {
+  background-color: #0079d6;
+}
+
+main section .portfolio > div .portfoliobox .text p span.aws {
+  background-color: #eb661a;
 }
 
 main section .contact .contact-details > p,
@@ -938,6 +975,9 @@ footer p span {
   }
   main section .intro .name p span {
     color: #169b28;
+  }
+  main section .portfolio > div .portfoliobox p {
+    color: #5e5e5e;
   }
   main section .contact .contact-details .contactbox svg {
     fill: #169b28;

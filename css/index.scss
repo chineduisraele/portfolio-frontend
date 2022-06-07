@@ -397,9 +397,36 @@ main {
             h4 {
               color: $logoYellow;
               font-weight: bold;
+              margin: 0.25rem 0;
             }
             p {
               font-size: 0.8rem;
+              display: flex;
+              gap: 0.2rem;
+              flex-wrap: wrap;
+              span {
+                padding: 0 0.6rem;
+                color: #fff;
+                border-radius: $defaultBorderRadius;
+                &.html {
+                  background-color: #e65100;
+                }
+                &.sass {
+                  background-color: #cf649a;
+                }
+                &.react {
+                  background-color: #59a1ff;
+                }
+                &.django {
+                  background-color: #169b28;
+                }
+                &.postgre {
+                  background-color: #0079d6;
+                }
+                &.aws {
+                  background-color: rgb(235, 102, 26);
+                }
+              }
             }
           }
         }
@@ -581,6 +608,10 @@ footer {
           color: $logoYellow;
         }
       }
+    }
+
+    .portfolio > div .portfoliobox p {
+      color: $fontGrey;
     }
 
     .contact {
