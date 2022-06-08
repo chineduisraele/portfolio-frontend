@@ -44,6 +44,66 @@
   }
 }
 
+@-webkit-keyframes typewriterwidth {
+  to {
+    width: 14ch;
+  }
+}
+
+@keyframes typewriterwidth {
+  to {
+    width: 14ch;
+  }
+}
+
+@-webkit-keyframes typewriterwidth2 {
+  to {
+    width: 24ch;
+  }
+}
+
+@keyframes typewriterwidth2 {
+  to {
+    width: 24ch;
+  }
+}
+
+@-webkit-keyframes blink {
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes blink {
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@-webkit-keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hideblink {
+  to {
+    border-right: none;
+  }
+}
+
+@keyframes hideblink {
+  to {
+    border-right: none;
+  }
+}
+
 * {
   scroll-behavior: smooth;
   margin: 0;
@@ -91,10 +151,7 @@ textarea::-webkit-scrollbar-thumb:active {
 }
 
 body {
-  background-color: #0c0811;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #05121e;
 }
 
 input,
@@ -239,74 +296,16 @@ button:focus, button:active {
   margin-top: 3rem;
 }
 
-@-webkit-keyframes typewriterwidth {
-  to {
-    width: 14ch;
-  }
-}
-
-@keyframes typewriterwidth {
-  to {
-    width: 14ch;
-  }
-}
-
-@-webkit-keyframes typewriterwidth2 {
-  to {
-    width: 24ch;
-  }
-}
-
-@keyframes typewriterwidth2 {
-  to {
-    width: 24ch;
-  }
-}
-
-@-webkit-keyframes blink {
-  to {
-    border-right-color: transparent;
-  }
-}
-
-@keyframes blink {
-  to {
-    border-right-color: transparent;
-  }
-}
-
-@-webkit-keyframes show {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes show {
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes hideblink {
-  to {
-    border-right: none;
-  }
-}
-
-@keyframes hideblink {
-  to {
-    border-right: none;
-  }
-}
-
-video {
+.bgvideo video {
   min-width: 100%;
   min-height: 770px;
   position: fixed;
+  -webkit-transform: translateY(1%, -5%);
+          transform: translateY(1%, -5%);
 }
 
 nav {
-  background-color: transparent !important;
+  background-color: transparent;
   z-index: 100;
 }
 

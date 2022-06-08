@@ -1,7 +1,11 @@
-@import "./index.scss";
+// @import "./index.scss";
 @import "./_globals";
 
-// main styles
+@media screen and (min-width: 1081px) {
+  .bgvideo video {
+    min-width: 110%;
+  }
+}
 
 @media (min-width: 641px) and (max-width: 740px) {
   main {
@@ -22,44 +26,51 @@
 }
 
 @media screen and (max-width: 640px) {
-  video {
-    transform: translateX(-15%);
+  .bgvideo {
+    video {
+      transform: translateX(-12.5%);
+    }
   }
   // nav
-  nav .navinner {
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: $bgc;
+    .navinner {
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
 
-    .togglebtn {
-      display: block;
-    }
-
-    .linkscont {
-      &.show {
-        display: grid;
+      .togglebtn {
+        display: block;
       }
-      display: none;
-      overflow: hidden;
-      position: absolute;
-      width: 100%;
-      top: 3.5rem;
-      left: 0;
-      z-index: 50;
-      ul {
-        border-radius: $defaultBorderRadius;
-        padding: $defaultPadding;
-        padding-bottom: 1rem;
-        padding-top: 1.5rem;
-        background-color: #fff;
-        display: grid;
-        row-gap: 1rem;
 
-        li {
-          border-bottom: 1px solid rgba(117, 117, 117, 0.24);
-          a {
-            color: $fontGrey;
-            display: block;
-            padding: 0.5rem 1rem;
+      .linkscont {
+        &.show {
+          display: grid;
+        }
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        top: 3.5rem;
+        left: 0;
+        z-index: 50;
+        ul {
+          border-radius: $defaultBorderRadius;
+          padding: $defaultPadding;
+          padding-bottom: 1rem;
+          padding-top: 1.5rem;
+          background-color: #fff;
+          display: grid;
+          row-gap: 1rem;
+
+          li {
+            border-bottom: 1px solid rgba(117, 117, 117, 0.24);
+            a {
+              color: $fontGrey;
+              display: block;
+              padding: 0.5rem 1rem;
+            }
           }
         }
       }
@@ -166,6 +177,18 @@
 }
 
 @media screen and (max-width: 475px) {
+  // bg vid
+  .bgvideo {
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    video {
+      position: absolute;
+    }
+  }
+
   main {
     section {
       .intro {

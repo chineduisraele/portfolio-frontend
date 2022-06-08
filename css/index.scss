@@ -1,31 +1,4 @@
 @import "./_globals";
-// animations
-@keyframes typewriterwidth {
-  to {
-    width: 14ch;
-  }
-}
-@keyframes typewriterwidth2 {
-  to {
-    width: 24ch;
-  }
-}
-
-@keyframes blink {
-  to {
-    border-right-color: transparent;
-  }
-}
-@keyframes show {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes hideblink {
-  to {
-    border-right: none;
-  }
-}
 
 @mixin resimage {
   top: 0;
@@ -36,14 +9,17 @@
 }
 
 // bg vid
-video {
-  min-width: 100%;
-  min-height: 770px;
-  position: fixed;
+.bgvideo {
+  video {
+    min-width: 100%;
+    min-height: 770px;
+    position: fixed;
+    transform: translateY(1%, -5%);
+  }
 }
 // nav
 nav {
-  background-color: transparent !important;
+  background-color: transparent;
   z-index: 100;
   .navinner {
     padding: $defaultPadding;

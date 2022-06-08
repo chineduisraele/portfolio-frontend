@@ -15,7 +15,7 @@
     <!-- preload hero image -->
     <!-- <link rel="preload" href="./images/bg1.m4a" as="video" /> -->
 
-    <!-- <link rel="stylesheet" href="./css/index.css" /> -->
+    <link rel="stylesheet" href="./css/index.css" />
     <link rel="preload stylesheet" href="./css/mediaqueries.css" as="style" />
     <!-- css -->
 
@@ -38,14 +38,17 @@
   </head>
   <body>
     <!-- bg video -->
-    <video
-      src="./images/bg.mp4"
-      autoplay="true"
-      loop="true"
-      muted
-      preload="metadata"
-      poster="./images/preload.webp"
-    ></video>
+    <div class="bgvideo">
+      <video
+        src="./images/bg.mp4"
+        autoplay="true"
+        loop="true"
+        muted
+        preload="metadata"
+        poster="./images/preload.webp"
+      ></video>
+    </div>
+
     <!-- navbar -->
     <nav>
       <div class="navinner d-flex aic jcsb">
