@@ -305,6 +305,12 @@ video {
   position: fixed;
 }
 
+@media screen and (min-width: 1081px) {
+  video {
+    min-width: 110%;
+  }
+}
+
 nav {
   background-color: transparent !important;
   z-index: 100;
