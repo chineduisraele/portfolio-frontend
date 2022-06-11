@@ -374,7 +374,8 @@ main {
               cursor: pointer;
               opacity: 0;
               transform: translate(50%, 50%);
-              // box-shadow: $shad2;
+              box-shadow: $shad2;
+              aspect-ratio: 1 / 1;
               background-color: #fff;
               padding: 28px;
               transition: opacity 0.35s, transform 0.35s;

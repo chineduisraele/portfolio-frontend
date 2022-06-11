@@ -729,6 +729,9 @@ main section .skills .sets .stackboxcont .imgcont img {
   opacity: 0;
   -webkit-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
+  -webkit-box-shadow: 0 3px 15px -4px #808080ab;
+          box-shadow: 0 3px 15px -4px #808080ab;
+  aspect-ratio: 1 / 1;
   background-color: #fff;
   padding: 28px;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
